@@ -1,0 +1,19 @@
+{
+	"selector": "",
+
+	"settings": {
+		"ltex.enabled": true,
+
+		"ltex.language":"en-US",
+		"ltex.additionalRules.motherTongue": "ru-RU",
+
+		"ltex.checkFrequency": "edit",
+		"ltex.diagnosticSeverity": "information",
+		"ltex.clearDiagnosticsWhenClosingFile": true,
+
+		"ltex.completionEnabled": false,
+
+		"ltex.ltex-ls.logLevel": "severe",
+		"ltex.trace.server": "off",
+	}
+}

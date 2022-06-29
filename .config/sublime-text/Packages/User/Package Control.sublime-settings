@@ -1,0 +1,46 @@
+{
+	"bootstrapped": true,
+
+	"in_process_packages": [],
+
+	"installed_packages": [
+		"Package Control",
+
+		"PackageDev",
+		"PackageResourceViewer",
+		"OverrideAudit",
+
+		"A File Icon",
+		"Alignment",
+		"CloseMinimapOnMultiView",
+		"MoveTab",
+
+		"Rust Enhanced",
+		"TOML",
+
+		"Autotools",
+		"CMake",
+
+		"AsciiDoc",
+		"MarkdownEditing",
+
+		"LSP",
+		"LSP-ltex-ls",
+		"LSP-rust-analyzer",
+		"LSP-file-watcher-chokidar",
+
+		"Terminus",
+
+		"Debugger",
+		"Sourcetrail",
+		"Zeal",
+
+		"ApplySyntax",
+		"EditorConfig",
+
+		// "Smart Indent",
+
+		// "SyntaxManager",
+		// "Project Specific Syntax Settings",
+	]
+}

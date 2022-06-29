@@ -1,0 +1,21 @@
+[user]
+	name = Roman Titov
+	email = ffuugoo@users.noreply.github.com
+
+[core]
+	excludesFile = ~/.gitignore
+	editor = subl -w
+	pager = less -+X --mouse --wheel-lines=3
+
+[init]
+	defaultBranch = main
+
+[merge]
+	tool = smerge
+
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+
+[includeIf "gitdir:~/Development/nxlog*/"]
+	path = ~/.gitconfig-nxlog

@@ -1,0 +1,137 @@
+{
+	"selector": "source.rust",
+
+	"settings": {
+		"rust-analyzer.cargo.autoreload": true,
+
+		"rust-analyzer.cargo.noDefaultFeatures": false,
+		"rust-analyzer.cargo.allFeatures": false,
+		"rust-analyzer.cargo.features": [],
+
+		"rust-analyzer.cargo.runBuildScripts": true,
+		"rust-analyzer.cargo.useRustcWrapperForBuildScripts": true,
+
+		"rust-analyzer.cargo.unsetTest": ["core"],
+
+		"rust-analyzer.cargo.noSysroot": false,
+
+
+		"rust-analyzer.procMacro.enable": true,
+		"rust-analyzer.experimental.procAttrMacros": true,
+
+
+		"rust-analyzer.checkOnSave.enable": false,
+
+		"rust-analyzer.checkOnSave.command": "check",
+		"rust-analyzer.checkOnSave.extraArgs": [],
+
+		"rust-analyzer.checkOnSave.allTargets": true,
+		"rust-analyzer.checkOnSave.target": null,
+
+		"rust-analyzer.checkOnSave.noDefaultFeatures": null,
+		"rust-analyzer.checkOnSave.allFeatures": null,
+		"rust-analyzer.checkOnSave.features": null,
+
+
+		"rust-analyzer.diagnostics.enable": true,
+
+		"rust-analyzer.diagnostics.enableExperimental": true,
+		"rust-analyzer.diagnostics.disabled": [],
+
+
+		"rust-analyzer.callInfo.full": true,
+
+
+		"rust-analyzer.completion.addCallParenthesis": true,
+		"rust-analyzer.completion.addCallArgumentSnippets": true,
+
+		"rust-analyzer.completion.autoimport.enable": true,
+		"rust-analyzer.completion.autoself.enable": false,
+
+		"rust-analyzer.completion.postfix.enable": false,
+		"rust-analyzer.completion.snippets": {},
+
+
+		"rust-analyzer.inlayHints.enable": true,
+
+		"rust-analyzer.inlayHints.typeHints": true,
+		"rust-analyzer.inlayHints.parameterHints": true,
+		"rust-analyzer.inlayHints.chainingHints": true,
+
+		"rust-analyzer.inlayHints.hideNamedConstructorHints": false,
+
+		"rust-analyzer.inlayHints.maxLength": 25,
+		"rust-analyzer.inlayHints.smallerHints": true,
+
+
+		"rust-analyzer.highlighting.strings": true,
+
+
+		"rust-analyzer.highlightRelated.exitPoints": true,
+		"rust-analyzer.highlightRelated.breakPoints": true,
+		"rust-analyzer.highlightRelated.yieldPoints": true,
+		"rust-analyzer.highlightRelated.references": true,
+
+
+		"rust-analyzer.hover.documentation": true,
+
+		"rust-analyzer.hover.linksInHover": true,
+
+
+		"rust-analyzer.hoverActions.enable": true,
+
+		"rust-analyzer.hoverActions.gotoTypeDef": true,
+		"rust-analyzer.hoverActions.implementations": true,
+		"rust-analyzer.hoverActions.references": true,
+
+		"rust-analyzer.hoverActions.run": true,
+		"rust-analyzer.hoverActions.debug": false,
+
+		"rust-analyzer.hoverActions.linksInHover": true,
+
+
+		"rust-analyzer.lens.enable": true,
+
+		"rust-analyzer.lens.implementations": true,
+		"rust-analyzer.lens.references": false,
+		"rust-analyzer.lens.methodReferences": false,
+		"rust-analyzer.lens.enumVariantReferences": false,
+
+		"rust-analyzer.lens.run": true,
+		"rust-analyzer.lens.debug": false,
+
+		"rust-analyzer.lens.forceCustomCommands": true,
+
+
+		"rust-analyzer.assist.importGroup": true,
+		"rust-analyzer.assist.importPrefix": "plain",
+		"rust-analyzer.assist.importGranularity": "crate",
+		"rust-analyzer.assist.importEnforceGranularity": true,
+		"rust-analyzer.assist.allowMergingIntoGlobImports": true,
+
+		"rust-analyzer.assist.exprFillDefault": "todo",
+
+
+		"rust-analyzer.joinLines.joinAssignments": true,
+		"rust-analyzer.joinLines.joinElseIf": true,
+		"rust-analyzer.joinLines.removeTrailingComma": true,
+		"rust-analyzer.joinLines.unwrapTrivialBlock": true,
+
+
+		"rust-analyzer.workspace.symbol.search.scope": "workspace",
+		"rust-analyzer.workspace.symbol.search.kind": "only_types",
+
+
+		"rust-analyzer.rustfmt.enableRangeFormatting": true,
+		"rust-analyzer.rustfmt.extraArgs": [],
+
+
+		"rust-analyzer.cache.warmup": true,
+		"rust-analyzer.files.watcher": "client",
+		"rust-analyzer.notifications.cargoTomlNotFound": true,
+
+
+		"rust-analyzer.terminusAutoClose": false,
+		"rust-analyzer.terminusUsePanel": false,
+	}
+}

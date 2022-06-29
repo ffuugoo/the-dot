@@ -1,0 +1,7 @@
+{
+	"extensions": [".c", ".h"],
+
+	"translate_spaces_to_tabs": true,
+	"indent_size": 4,
+	"tab_size": 8,
+}

@@ -1,0 +1,64 @@
+[
+	{
+		"keys": ["primary+space"],
+		"command": "auto_complete",
+	},
+
+	{
+		"keys": ["primary+shift+space"],
+		"command": "lsp_signature_help_show",
+		"context": [{
+			"key": "lsp.signature_help_available",
+			"operator": "equal",
+			"operand": true,
+		}]
+	},
+	{
+		"keys": ["primary+shift+space"],
+		"command": "insert",
+		"context": [{
+			"key": "lsp.signature_help_available",
+			"operator": "equal",
+			"operand": false,
+		}]
+	},
+
+	{
+		"keys": ["primary+r"],
+		"command": "lsp_document_symbols",
+		"context": [{
+			"key": "lsp.session_with_capability",
+			"operator": "equal",
+			"operand": "documentSymbolProvider",
+		}]
+	},
+	{
+		"keys": ["primary+shift+r"],
+		"command": "lsp_workspace_symbols",
+		"context": [{
+			"key": "lsp.session_with_capability",
+			"operator": "equal",
+			"operand": "workspaceSymbolProvider",
+		}]
+	},
+
+	{
+		"keys": ["alt+enter"],
+		"command": "lsp_code_actions",
+		"context": [{
+			"key": "lsp.session_with_capability",
+			"operator": "equal",
+			"operand": "codeActionProvider",
+		}]
+	},
+	{
+		"keys": ["alt+shift+enter"],
+		"command": "lsp_code_actions",
+		"args": { "only_kinds": ["source"]},
+		"context": [{
+			"key": "lsp.session_with_capability",
+			"operator": "equal",
+			"operand": "codeActionProvider.codeActionKinds",
+		}]
+	}
+]

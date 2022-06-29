@@ -1,0 +1,52 @@
+{
+	"selector": "source.rust",
+	"keyfiles": ["Cargo.toml"],
+	"target": "cargo_exec",
+
+	"command": "build",
+
+	"variants": [
+		{
+			"name": "Automatic",
+			"command": "auto",
+		},
+		{
+			"name": "Check",
+			"command": "check",
+		},
+		{
+			"name": "Clippy",
+			"command": "clippy",
+		},
+		{
+			"name": "Run",
+			"command": "run",
+		},
+		{
+			"name": "Run (with args)...",
+			"command": "run",
+			"command_info": {
+				"wants_run_args": true,
+			}
+		},
+		{
+			"name": "Test",
+			"command": "test",
+		},
+		{
+			"name": "Test (with args)...",
+			"command": "test",
+			"command_info": {
+				"wants_run_args": true,
+			}
+		},
+		{
+			"name": "Document",
+			"command": "doc",
+		},
+		{
+			"name": "Clean",
+			"command": "clean",
+		}
+	]
+}

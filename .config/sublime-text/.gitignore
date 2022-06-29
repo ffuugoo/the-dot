@@ -1,0 +1,17 @@
+/*
+
+*.user-ca-bundle
+*.hidden-color-scheme
+
+!.gitignore
+
+!/Packages/
+/Packages/*
+
+!/Packages/User/
+/Packages/User/OverrideAudit.status
+
+!/Packages/Rust/
+!/Packages/Rust Enhanced/
+
+!/Packages/Old School Cool/
