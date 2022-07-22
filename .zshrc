@@ -67,6 +67,11 @@ then
 
 		# zcomet load romkatv/gitstatus
 
+		if [[ -v TERM_PROGRAM && $TERM_PROGRAM == 'iTerm.app' ]]
+		then
+			zcomet snippet /Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh
+		fi
+
 		zstyle ':zcomet:compinit' dump-file ~/.zcompdump
 
 		zcomet compinit
@@ -80,6 +85,11 @@ fi
 
 
 declare -A ps
+
+if functions iterm2_prompt_mark &>/dev/null
+then
+	ps[iterm2]="%{$(iterm2_prompt_mark)%}"
+fi
 
 if [[ $USER != ffuugoo && $USER != root ]]
 then
@@ -100,7 +110,7 @@ ps[prompt]='%(?:%F{blue}:%F{red})%B%#%f%b '
 ps[status]='%(?::%F{red}%B(%?%)%f%b )'
 ps[pwd]='%50<...<%~%<<'
 
-declare PS1=${ps[user-host]}${ps[prompt]}
+declare PS1=${ps[iterm2]}${ps[user-host]}${ps[prompt]}
 declare RPS1=${ps[status]}${ps[pwd]}
 
 
@@ -115,10 +125,10 @@ key  Up          kcuu1
 key  Down        kcud1
 key  Left        kcub1
 key  Right       kcuf1
-key  Ctrl-Up     kUP5
-key  Ctrl-Down   kDN5
-key  Ctrl-Left   kLFT5
-key  Ctrl-Right  kRIT5
+key  Alt-Up      kUP3
+key  Alt-Down    kDN3
+key  Alt-Left    kLFT3
+key  Alt-Right   kRIT3
 key  Home        khome
 key  End         kend
 key  PageUp      kpp
@@ -131,15 +141,17 @@ bind  Up          up-line-or-history
 bind  Down        down-line-or-history
 bind  Left        backward-char
 bind  Right       forward-char
-bind  Ctrl-Up     history-beginning-search-backward
-bind  Ctrl-Down   history-beginning-search-forward
-bind  Ctrl-Left   backward-word
-bind  Ctrl-Right  forward-word
+bind  Alt-Up      history-beginning-search-backward
+bind  Alt-Down    history-beginning-search-forward
+bind  Alt-Left    backward-word
+bind  Alt-Right   forward-word
 bind  Home        beginning-of-line
 bind  End         end-of-line
 bind  PageUp      beginning-of-buffer-or-history
 bind  PageDown    end-of-buffer-or-history
 bind  Shift-Tab   reverse-menu-complete
+
+bindkey  '\E[<=>?~'  backward-delete-word
 
 if [[ -v terminfo[smkx] && -v terminfo[rmkx] ]]
 then
@@ -148,5 +160,6 @@ then
 fi
 
 
+alias clear="clear && printf '\e[3J'"
 alias less="less -F --mouse --wheel-lines=3"
 alias ls="ls --color=auto"

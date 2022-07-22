@@ -8,8 +8,11 @@ declare repo=${self:h}
 
 
 declare ignore=(
+	.DS_Store
+
 	/.git
 	/firefox.txt
+	/macOS.txt
 )
 
 declare recurse=(
@@ -18,7 +21,9 @@ declare recurse=(
 )
 
 declare -A override=(
-	# none
+	[.config/sublime-text]='Library/Application Support/Sublime Text'
+	[.config/sublime-merge]='Library/Application Support/Sublime Merge'
+	[.config/clangd]='Library/Preferences/clangd'
 )
 
 
