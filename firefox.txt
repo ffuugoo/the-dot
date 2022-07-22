@@ -1,0 +1,10 @@
+Extensions:
+- ArkenFox
+- 1Password
+- uBlock Origin
+- LanguageTool
+- Refined GitHub
+- Rust Search Extension
+- SponsorBlock
+- Web Scrobbler
+- Select like a Boss

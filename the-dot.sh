@@ -9,6 +9,7 @@ declare repo=${self:h}
 
 declare ignore=(
 	/.git
+	/firefox.txt
 )
 
 declare recurse=(
