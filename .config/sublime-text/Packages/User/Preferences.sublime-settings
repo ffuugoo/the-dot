@@ -1,0 +1,107 @@
+{
+	"theme": "Adaptive.sublime-theme",
+	"light_theme": "Default.sublime-theme",
+	"dark_theme": "Default Dark.sublime-theme",
+
+	"color_scheme": "Breakers.sublime-color-scheme",
+	"light_color_scheme": "Breakers.sublime-color-scheme",
+	"dark_color_scheme": "Mariana.sublime-color-scheme",
+
+	"font_face": "Monaco",
+	"font_size": 14,
+
+	"font_options": [],
+	"theme_font_options": [],
+
+	"line_padding_top": 0,
+	"line_padding_bottom": 0,
+
+	"caret_style": "smooth",
+
+	"caret_extra_top": 1,
+	"caret_extra_bottom": 1,
+	"caret_extra_width": 1,
+
+	"rulers": [100],
+
+	"translate_tabs_to_spaces": true,
+
+	"trim_automatic_white_space": true,
+
+	"draw_white_space": ["leading_mixed", "trailing", "isolated", "selection"],
+
+	"draw_unicode_white_space": "all",
+	"draw_unicode_bidi": true,
+	"control_character_style": "names",
+
+	"trim_trailing_white_space_on_save": "not_on_caret",
+	"trim_only_modified_white_space": true,
+	"ensure_newline_at_eof_on_save": true,
+
+ 	"match_brackets": true,
+	"match_brackets_content": true,
+	"match_brackets_square": true,
+	"match_brackets_braces": true,
+	"match_brackets_angle": true,
+	"match_tags": true,
+	"match_selection": true,
+
+	"scroll_past_end": true,
+	"scroll_context_lines": 1,
+
+	"tab_completion": true,
+
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": false,
+	"auto_complete_with_fields": false,
+	"auto_complete_cycle": true,
+	"auto_complete_use_history": false,
+	"auto_complete_preserve_order": "strict",
+	"auto_complete_trailing_symbols": false,
+	"auto_complete_trailing_spaces": true,
+	"auto_complete_include_snippets": true,
+	"auto_complete_include_snippets_when_typing": true,
+
+	"shift_tab_unindent": true,
+
+	"find_selected_text": true,
+	"auto_find_in_selection": true,
+
+	"spell_check": false,
+	"dictionary": "Packages/Language - English/en_US.dic",
+
+	"drag_text": false,
+
+	"highlight_modified_tabs": true,
+	"bold_folder_labels": true,
+	"adaptive_dividers": true,
+
+	"hide_tab_scrolling_buttons": true,
+	"hide_new_tab_button": true,
+
+	"show_full_path": true,
+	"show_rel_path": true,
+	"show_project_first": true,
+
+	"native_tabs": "disabled",
+	"overlay_scroll_bars": "enabled",
+
+	"hardware_acceleration": "opengl",
+
+	"always_prompt_for_file_reload": true,
+	"close_windows_when_empty": false,
+	"focus_on_file_drop": true,
+	"remember_workspace": false,
+
+	"ignored_packages": [
+		"Vintage",
+
+		"Rust",
+
+		"Debugger",
+		"Sourcetrail",
+		"Zeal",
+
+		"ApplySyntax",
+	]
+}

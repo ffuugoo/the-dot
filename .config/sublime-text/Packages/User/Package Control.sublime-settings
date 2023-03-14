@@ -1,0 +1,38 @@
+{
+	"bootstrapped": true,
+
+	"in_process_packages": [],
+
+	"installed_packages": [
+		"Package Control",
+
+		"PackageDev",
+		"PackageResourceViewer",
+		"OverrideAudit",
+
+		"A File Icon",
+		"Alignment",
+		"MoveTab",
+
+		"Rust Enhanced",
+		"TOML",
+		"Autotools",
+		"CMake",
+		"Protobuf Syntax Hightlighting",
+		"AsciiDoc",
+		"MarkdownEditing",
+
+		"LSP",
+		"LSP-ltex-ls",
+		"LSP-rust-analyzer",
+		"LSP-file-watcher-chokidar",
+
+		"Terminus",
+		// "Debugger",
+		// "Sourcetrail",
+		// "Zeal",
+
+		"EditorConfig",
+		// "ApplySyntax",
+	]
+}

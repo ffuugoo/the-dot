@@ -1,0 +1,36 @@
+CompileFlags:
+  CompilationDatabase: Ancestors
+  Compiler:
+  Add: []
+  Remove: []
+
+Index:
+  Background: Build
+  # External:
+  #   File: /path/to/index.idx
+  #   Server: url.of.server.com:50051
+  #   MountPoint: /path/to/sources
+
+Style:
+  FullyQualifiedNamespaces: []
+
+Diagnostics:
+  Suppress: '*'
+
+  ClangTidy:
+    Add: []
+    Remove: []
+    CheckOptions: {}
+
+  UnusedIncludes: None
+
+Completion:
+  AllScopes: No
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Hover:
+  ShowAKA: Yes

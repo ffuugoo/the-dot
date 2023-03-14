@@ -1,0 +1,18 @@
+[user]
+	name = Roman Titov
+	email = ffuugoo@users.noreply.github.com
+
+[core]
+	excludesFile = ~/.gitignore
+	editor = subl -w
+	pager = less -FR -+X
+
+[init]
+	defaultBranch = main
+
+[merge]
+	tool = smerge
+
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true

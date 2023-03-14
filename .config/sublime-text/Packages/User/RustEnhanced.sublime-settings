@@ -1,0 +1,34 @@
+{
+	"extensions": ["rs"],
+
+	"auto_complete_triggers": [
+		{
+			"selector": "source.rust",
+			"characters": ".:",
+		}
+	],
+
+
+	"rust_syntax_checking": false,
+
+	"rust_syntax_checking_method": "check",
+	"rust_syntax_checking_include_tests": false,
+	"rust_syntax_hide_warnings": false,
+
+
+	"rust_phantom_style": "popup",
+	"rust_region_style": "squiggly_underline",
+	"rust_gutter_style": "circle ",
+
+	"rust_message_theme": "clear",
+
+
+	"rust_message_status_bar": false,
+
+	"rust_message_status_bar_msg": "cargo check",
+	"rust_message_status_bar_chars": [".", "..", "...", ".."],
+	"rust_message_status_bar_update_delay": 200,
+
+
+	"rust_include_shell_env": true,
+}
