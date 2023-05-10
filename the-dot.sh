@@ -19,12 +19,14 @@ declare ignore=(
 
 declare recurse=(
 	.config
+	.config/iterm2
 	.ssh
 )
 
 declare -A override=(
 	[.config/sublime-text]='Library/Application Support/Sublime Text'
 	[.config/sublime-merge]='Library/Application Support/Sublime Merge'
+	[.config/iterm2/com.googlecode.iterm2.plist]='Library/Preferences/com.googlecode.iterm2.plist'
 	[.config/clangd]='Library/Preferences/clangd'
 )
 
