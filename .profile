@@ -14,4 +14,3 @@ then
 fi
 
 export DISPLAY=SHITFUCK
-

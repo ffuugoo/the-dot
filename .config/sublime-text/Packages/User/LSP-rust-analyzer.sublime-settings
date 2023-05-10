@@ -20,17 +20,17 @@
 		"rust-analyzer.experimental.procAttrMacros": true,
 
 
-		"rust-analyzer.checkOnSave.enable": false,
+		"rust-analyzer.check.enable": false,
 
-		"rust-analyzer.checkOnSave.command": "check",
-		"rust-analyzer.checkOnSave.extraArgs": [],
+		"rust-analyzer.check.command": "check",
+		"rust-analyzer.check.extraArgs": [],
 
-		"rust-analyzer.checkOnSave.allTargets": true,
-		"rust-analyzer.checkOnSave.target": null,
+		"rust-analyzer.check.allTargets": false,
+		"rust-analyzer.check.target": null,
 
-		"rust-analyzer.checkOnSave.noDefaultFeatures": null,
-		"rust-analyzer.checkOnSave.allFeatures": null,
-		"rust-analyzer.checkOnSave.features": null,
+		"rust-analyzer.check.noDefaultFeatures": null,
+		"rust-analyzer.check.allFeatures": null,
+		"rust-analyzer.check.features": null,
 
 
 		"rust-analyzer.diagnostics.enable": true,

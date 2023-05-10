@@ -9,7 +9,12 @@ declare repo=${self:h}
 
 declare ignore=(
 	.DS_Store
+
 	/.git
+
+	brew.sh
+	casks.txt
+	formulas.txt
 )
 
 declare recurse=(
