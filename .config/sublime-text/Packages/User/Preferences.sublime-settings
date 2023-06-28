@@ -38,13 +38,14 @@
 	"trim_only_modified_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
 
- 	"match_brackets": true,
-	"match_brackets_content": true,
-	"match_brackets_square": true,
-	"match_brackets_braces": true,
-	"match_brackets_angle": true,
-	"match_tags": true,
 	"match_selection": true,
+
+	"match_brackets": false,
+	"match_brackets_braces": false,
+	"match_brackets_square": false,
+	"match_brackets_angle": false,
+	"match_brackets_content": false,
+	"match_tags": false,
 
 	"scroll_past_end": true,
 	"scroll_context_lines": 1,
