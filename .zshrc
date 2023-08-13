@@ -53,6 +53,7 @@ zstyle ':completion:*' cache-path ~/.zcompcache
 
 declare -A plugins=(
 	[brew]=/opt/homebrew/share/zsh/site-functions
+	[gitstatus]=/opt/homebrew/opt/gitstatus/gitstatus.plugin.zsh
 	[iterm]=/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh
 )
 
@@ -61,7 +62,12 @@ then
 	fpath=( $plugins[brew] $fpath )
 fi
 
-if [[ ${TERM_PROGRAM:-} == iTerm.app && -f $plugins[iterm] ]]
+if [[ -f $plugins[gitstatus] ]]
+then
+	source $plugins[gitstatus]
+fi
+
+if [[ $TERM_PROGRAM == iTerm.app && -f $plugins[iterm] ]]
 then
 	source $plugins[iterm]
 fi
@@ -79,8 +85,6 @@ then
 
 		zcomet load zdharma-continuum/fast-syntax-highlighting
 		zcomet load hlissner/zsh-autopair
-
-		# zcomet load romkatv/gitstatus
 
 		zstyle ':zcomet:compinit' dump-file ~/.zcompdump
 
@@ -112,7 +116,7 @@ then
 fi
 
 ps[at]=${ps[user]:+${ps[host]:+@}}
-ps[user-host-sep]=${ps[user]:+${ps[host]:+ }}
+ps[user-host-sep]=${${ps[user]:+ }:-${ps[host]:+ }}
 
 ps[user-host]=${ps[user]}${ps[at]}${ps[host]}${ps[user-host-sep]}
 
@@ -120,8 +124,68 @@ ps[prompt]='%(?:%F{blue}:%F{red})%B%#%f%b '
 ps[status]='%(?::%F{red}%B(%?%)%f%b )'
 ps[pwd]='%50<...<%~%<<'
 
+if functions gitstatus_query &>/dev/null
+then
+	declare -A psid
+
+	function psid { [[ $# -eq 1 && -n $1 ]] && psvar+=( '' ) && psid[$1]=${#psvar} }
+
+	psid git-branch
+	psid git-mods
+
+	ps[git-branch]="%25>...>%${psid[git-branch]}v%>>"
+	ps[git-mods]="%(${psid[git-mods]}V.%${psid[git-mods]}v.)"
+
+	ps[git-status]="%(${psid[git-branch]}V. %F{black}${ps[git-branch]}${ps[git-mods]}%f.)"
+
+	autoload -Uz add-zsh-hook && add-zsh-hook precmd gitstatus-precmd
+
+	declare GITSTATUS_ASYNC=0
+	declare GITSTATUS_PWD=''
+
+	function gitstatus-precmd {
+		(( $GITSTATUS_ASYNC )) && return 0
+		gitstatus-query || return $?
+		gitstatus-result
+	}
+
+	function gitstatus-query {
+		psvar[${psid[git-branch]}]=''
+		psvar[${psid[git-mods]}]=''
+		GITSTATUS_ASYNC=0
+		GITSTATUS_PWD=''
+
+		gitstatus_check GITSTATUS || gitstatus_start -t 1.0 GITSTATUS || return $?
+		gitstatus_query -t 0.1 -c gitstatus-async GITSTATUS || return $?
+	}
+
+	function gitstatus-result {
+		case $VCS_STATUS_RESULT in
+			ok-*)
+				psvar[${psid[git-branch]}]=$VCS_STATUS_LOCAL_BRANCH
+
+				if (( VCS_STATUS_HAS_UNSTAGED ))
+				then
+					psvar[${psid[git-mods]}]=*
+				fi
+			;;
+
+			tout)
+				GITSTATUS_ASYNC=1
+				GITSTATUS_PWD=$PWD
+			;;
+		esac
+	}
+
+	function gitstatus-async {
+		[[ $GITSTATUS_PWD == $PWD ]] || gitstatus-query || return $?
+		gitstatus-result
+		[[ $VCS_STATUS_RESULT != tout ]] && zle && zle reset-prompt
+	}
+fi
+
 declare PS1=${ps[iterm2]}${ps[user-host]}${ps[prompt]}
-declare RPS1=${ps[status]}${ps[pwd]}
+declare RPS1=${ps[status]}${ps[pwd]}${ps[git-status]}
 
 
 declare -A key
@@ -135,10 +199,10 @@ key  Up          kcuu1
 key  Down        kcud1
 key  Left        kcub1
 key  Right       kcuf1
-key  Alt-Up      kUP3
-key  Alt-Down    kDN3
-key  Alt-Left    kLFT3
-key  Alt-Right   kRIT3
+# key  Alt-Up      kUP3
+# key  Alt-Down    kDN3
+# key  Alt-Left    kLFT3
+# key  Alt-Right   kRIT3
 key  Home        khome
 key  End         kend
 key  PageUp      kpp
@@ -151,15 +215,20 @@ bind  Up          up-line-or-history
 bind  Down        down-line-or-history
 bind  Left        backward-char
 bind  Right       forward-char
-bind  Alt-Up      history-beginning-search-backward
-bind  Alt-Down    history-beginning-search-forward
-bind  Alt-Left    backward-word
-bind  Alt-Right   forward-word
+# bind  Alt-Up      history-beginning-search-backward
+# bind  Alt-Down    history-beginning-search-forward
+# bind  Alt-Left    backward-word
+# bind  Alt-Right   forward-word
 bind  Home        beginning-of-line
 bind  End         end-of-line
 bind  PageUp      beginning-of-buffer-or-history
 bind  PageDown    end-of-buffer-or-history
 bind  Shift-Tab   reverse-menu-complete
+
+bindkey -- $'\e[1;3A' history-beginning-search-backward
+bindkey -- $'\e[1;3B' history-beginning-search-forward
+bindkey -- $'\e[1;3D' backward-word
+bindkey -- $'\e[1;3C' forward-word
 
 if [[ -v terminfo[smkx] && -v terminfo[rmkx] ]]
 then

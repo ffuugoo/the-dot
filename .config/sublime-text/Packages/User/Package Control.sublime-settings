@@ -26,13 +26,14 @@
 		"MarkdownEditing",
 
 		"LSP",
+		"LSP-bash",
 		"LSP-copilot",
 		"LSP-ltex-ls",
 		"LSP-rust-analyzer",
 		"LSP-file-watcher-chokidar",
 
 		"Terminus",
-		// "Debugger",
+		"Debugger",
 		// "Sourcetrail",
 		// "Zeal",
 
