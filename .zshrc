@@ -140,8 +140,8 @@ then
 
 	autoload -Uz add-zsh-hook && add-zsh-hook precmd gitstatus-precmd
 
+	declare GITSTATUS_PWD=$PWD
 	declare GITSTATUS_ASYNC=0
-	declare GITSTATUS_PWD=''
 
 	function gitstatus-precmd {
 		(( $GITSTATUS_ASYNC )) && return 0
@@ -152,35 +152,31 @@ then
 	function gitstatus-query {
 		psvar[${psid[git-branch]}]=''
 		psvar[${psid[git-mods]}]=''
-		GITSTATUS_ASYNC=0
-		GITSTATUS_PWD=''
+		GITSTATUS_PWD=$PWD
 
 		gitstatus_check GITSTATUS || gitstatus_start -t 1.0 GITSTATUS || return $?
 		gitstatus_query -t 0.1 -c gitstatus-async GITSTATUS || return $?
+	}
+
+	function gitstatus-async {
+		GITSTATUS_ASYNC=0
+
+		[[ $GITSTATUS_PWD == $PWD ]] || gitstatus-query || return $?
+		gitstatus-result
+		[[ $VCS_STATUS_RESULT != tout ]] && zle && zle reset-prompt
 	}
 
 	function gitstatus-result {
 		case $VCS_STATUS_RESULT in
 			ok-*)
 				psvar[${psid[git-branch]}]=$VCS_STATUS_LOCAL_BRANCH
-
-				if (( VCS_STATUS_HAS_UNSTAGED ))
-				then
-					psvar[${psid[git-mods]}]=*
-				fi
+				(( VCS_STATUS_HAS_UNSTAGED )) && psvar[${psid[git-mods]}]=*
 			;;
 
 			tout)
 				GITSTATUS_ASYNC=1
-				GITSTATUS_PWD=$PWD
 			;;
 		esac
-	}
-
-	function gitstatus-async {
-		[[ $GITSTATUS_PWD == $PWD ]] || gitstatus-query || return $?
-		gitstatus-result
-		[[ $VCS_STATUS_RESULT != tout ]] && zle && zle reset-prompt
 	}
 fi
 
