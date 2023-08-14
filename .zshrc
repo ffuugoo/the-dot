@@ -189,6 +189,18 @@ declare -A key
 function key { [[ $# -eq 2 && -n $1 && -n $2 && -v terminfo[$2] ]] && key[$1]=$terminfo[$2] }
 function bind { [[ $# -eq 2 && -n $1 && -n $2 && -v key[$1] ]] && bindkey -- $key[$1] $2 }
 
+# macOS Ventura 13.5 (22G74) breaks ZSH `terminfo` module 🤦‍♀️😵🔫
+#
+# For some reason `$terminfo[kDN]` returns `\E[3;7~` instead of `\E[1;2B`
+# and all caps after `kDN` in the `xterm+pcc2` are "shifted" by one.
+#
+# E.g., `kDN3` is `\E[1;2B`, `kDN4` is `\E[1;3B`, etc.
+
+bindkey -- $'\e[1;3A' history-beginning-search-backward
+bindkey -- $'\e[1;3B' history-beginning-search-forward
+bindkey -- $'\e[1;3D' backward-word
+bindkey -- $'\e[1;3C' forward-word
+
 key  Backspace   kbs
 key  Delete      kdch1
 key  Up          kcuu1
@@ -220,11 +232,6 @@ bind  End         end-of-line
 bind  PageUp      beginning-of-buffer-or-history
 bind  PageDown    end-of-buffer-or-history
 bind  Shift-Tab   reverse-menu-complete
-
-bindkey -- $'\e[1;3A' history-beginning-search-backward
-bindkey -- $'\e[1;3B' history-beginning-search-forward
-bindkey -- $'\e[1;3D' backward-word
-bindkey -- $'\e[1;3C' forward-word
 
 if [[ -v terminfo[smkx] && -v terminfo[rmkx] ]]
 then
