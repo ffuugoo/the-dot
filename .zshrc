@@ -189,28 +189,16 @@ declare -A key
 function key { [[ $# -eq 2 && -n $1 && -n $2 && -v terminfo[$2] ]] && key[$1]=$terminfo[$2] }
 function bind { [[ $# -eq 2 && -n $1 && -n $2 && -v key[$1] ]] && bindkey -- $key[$1] $2 }
 
-# macOS Ventura 13.5 (22G74) breaks ZSH `terminfo` module 🤦‍♀️😵🔫
-#
-# For some reason `$terminfo[kDN]` returns `\E[3;7~` instead of `\E[1;2B`
-# and all caps after `kDN` in the `xterm+pcc2` are "shifted" by one.
-#
-# E.g., `kDN3` is `\E[1;2B`, `kDN4` is `\E[1;3B`, etc.
-
-bindkey -- $'\e[1;3A' history-beginning-search-backward
-bindkey -- $'\e[1;3B' history-beginning-search-forward
-bindkey -- $'\e[1;3D' backward-word
-bindkey -- $'\e[1;3C' forward-word
-
 key  Backspace   kbs
 key  Delete      kdch1
 key  Up          kcuu1
 key  Down        kcud1
 key  Left        kcub1
 key  Right       kcuf1
-# key  Alt-Up      kUP3
-# key  Alt-Down    kDN3
-# key  Alt-Left    kLFT3
-# key  Alt-Right   kRIT3
+key  Alt-Up      kUP3
+key  Alt-Down    kDN3
+key  Alt-Left    kLFT3
+key  Alt-Right   kRIT3
 key  Home        khome
 key  End         kend
 key  PageUp      kpp
@@ -223,10 +211,10 @@ bind  Up          up-line-or-history
 bind  Down        down-line-or-history
 bind  Left        backward-char
 bind  Right       forward-char
-# bind  Alt-Up      history-beginning-search-backward
-# bind  Alt-Down    history-beginning-search-forward
-# bind  Alt-Left    backward-word
-# bind  Alt-Right   forward-word
+bind  Alt-Up      history-beginning-search-backward
+bind  Alt-Down    history-beginning-search-forward
+bind  Alt-Left    backward-word
+bind  Alt-Right   forward-word
 bind  Home        beginning-of-line
 bind  End         end-of-line
 bind  PageUp      beginning-of-buffer-or-history
