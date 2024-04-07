@@ -1,0 +1,278 @@
+{
+    // VS Code
+
+    // Color Scheme & Font
+    "window.autoDetectColorScheme": false,
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+
+    "window.autoDetectHighContrast": true,
+    "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
+    "workbench.preferredHighContrastColorTheme": "Default High Contrast",
+
+    "workbench.productIconTheme": "Default",
+
+    "editor.fontWeight": "normal",
+    "editor.fontVariations": false,
+    "editor.fontLigatures": false,
+
+    // Editor
+    "editor.cursorSurroundingLinesStyle": "default", // 🤔
+
+    "editor.multiCursorLimit": 10000,
+
+    "editor.pasteAs.enabled": true,
+    "editor.pasteAs.showPasteSelector": "afterPaste",
+
+    "editor.dropIntoEditor.enabled": true,
+    "editor.dropIntoEditor.showDropSelector": "afterDrop",
+
+    "editor.largeFileOptimizations": true,
+
+    "editor.maxTokenizationLineLength": 20000,
+
+    "editor.experimentalWhitespaceRendering": "svg",
+
+    // Save
+    "files.autoSaveDelay": 1000,
+
+    // Misc
+    "window.zoomLevel": 0,
+
+    "window.dialogStyle": "native",
+    "files.simpleDialog.enable": false,
+
+    "workbench.editor.languageDetection": true,
+
+    "workbench.editor.languageDetectionHints": {
+        "untitledEditors": true,
+        "notebookEditors": true
+    },
+
+    "workbench.editor.historyBasedLanguageDetection": true,
+    "workbench.editor.preferHistoryBasedLanguageDetection": false,
+
+    "workbench.editor.defaultBinaryEditor": "",
+
+    "workbench.editorLargeFileConfirmation": 1024,
+
+    "workbench.trustedDomains.promptInTrustedWorkspace": false,
+
+    // UI: VSCode
+    "window.titleBarStyle": "custom",
+
+    "window.nativeFullScreen": true,
+    "window.nativeTabs": false,
+
+    "window.density.editorTabHeight": "default",
+
+    "workbench.editor.tabSizingFixedMinWidth": 50,
+    "workbench.editor.tabSizingFixedMaxWidth": 160,
+
+    "editor.padding.top": 0,
+    "editor.padding.bottom": 0,
+
+    "editor.lineHeight": 0,
+    "editor.letterSpacing": 0,
+
+    "breadcrumbs.showArrays": true,
+    "breadcrumbs.showBooleans": true,
+    "breadcrumbs.showClasses": true,
+    "breadcrumbs.showConstants": true,
+    "breadcrumbs.showConstructors": true,
+    "breadcrumbs.showEnumMembers": true,
+    "breadcrumbs.showEnums": true,
+    "breadcrumbs.showEvents": true,
+    "breadcrumbs.showFields": true,
+    "breadcrumbs.showFiles": true,
+    "breadcrumbs.showFunctions": true,
+    "breadcrumbs.showInterfaces": true,
+    "breadcrumbs.showKeys": true,
+    "breadcrumbs.showMethods": true,
+    "breadcrumbs.showModules": true,
+    "breadcrumbs.showNamespaces": true,
+    "breadcrumbs.showNull": true,
+    "breadcrumbs.showNumbers": true,
+    "breadcrumbs.showObjects": true,
+    "breadcrumbs.showOperators": true,
+    "breadcrumbs.showPackages": true,
+    "breadcrumbs.showProperties": true,
+    "breadcrumbs.showStrings": true,
+    "breadcrumbs.showStructs": true,
+    "breadcrumbs.showTypeParameters": true,
+    "breadcrumbs.showVariables": true,
+
+    "editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": false, // 🤔
+
+    "workbench.commandPalette.experimental.askChatLocation": "chatView", // 🤔
+
+    "editor.fastScrollSensitivity": 5,
+    "editor.scrollbar.scrollByPage": false,
+
+    "workbench.list.fastScrollSensitivity": 5,
+    "workbench.list.scrollByPage": false,
+
+    // UI: Editor
+    "editor.semanticTokenColorCustomizations": {},
+
+    "editor.language.brackets": null, // 🤔
+    "editor.language.colorizedBracketPairs": null, // 🤔
+
+    // UI: Code
+    "editor.hover.delay": 300,
+    "editor.hover.hidingDelay": 300,
+
+    "editor.inlayHints.fontFamily": "",
+    "editor.inlayHints.fontSize": 0,
+
+    "editor.colorDecoratorsLimit": 500,
+
+    // UI: Misc
+    "workbench.settings.applyToAllProfiles": [],
+
+    "workbench.list.openMode": "singleClick",
+    "workbench.list.typeNavigationMode": "automatic",
+    "workbench.list.defaultFindMode": "filter",
+    "workbench.list.defaultFindMatchType": "fuzzy",
+    "workbench.list.multiSelectModifier": "ctrlCmd",
+    "workbench.list.horizontalScrolling": false,
+
+    "workbench.tree.expandMode": "singleClick",
+    "workbench.tree.indent": 8,
+    "workbench.tree.renderIndentGuides": "onHover",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.stickyScrollMaxItemCount": 5,
+
+    "workbench.hover.delay": 1500,
+
+    "workbench.sash.size": 4,
+    "workbench.sash.hoverDelay": 300,
+
+    // Code
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.autoClosingQuotes": "languageDefined",
+    "editor.autoClosingComments": "languageDefined",
+    "editor.autoSurround": "languageDefined",
+
+    "editor.autoClosingDelete": "auto",
+    "editor.autoClosingOvertype": "auto",
+
+    // Completion
+    "editor.quickSuggestionsDelay": 10,
+
+    "editor.suggest.showClasses": true,
+    "editor.suggest.showColors": true,
+    "editor.suggest.showConstants": true,
+    "editor.suggest.showConstructors": true,
+    "editor.suggest.showCustomcolors": true,
+    "editor.suggest.showDeprecated": true,
+    "editor.suggest.showEnumMembers": true,
+    "editor.suggest.showEnums": true,
+    "editor.suggest.showEvents": true,
+    "editor.suggest.showFields": true,
+    "editor.suggest.showFiles": true,
+    "editor.suggest.showFolders": true,
+    "editor.suggest.showFunctions": true,
+    "editor.suggest.showIcons": true,
+    "editor.suggest.showInlineDetails": true,
+    "editor.suggest.showInterfaces": true,
+    "editor.suggest.showIssues": true,
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.showModules": true,
+    "editor.suggest.showOperators": true,
+    "editor.suggest.showProperties": true,
+    "editor.suggest.showReferences": true,
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.showStructs": true,
+    "editor.suggest.showTypeParameters": true,
+    "editor.suggest.showUnits": true,
+    "editor.suggest.showUsers": true,
+    "editor.suggest.showValues": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.showWords": true,
+
+    "editor.suggestFontSize": 0,
+    "editor.suggestLineHeight": 0,
+
+    // Go To
+    "editor.gotoLocation.multipleDeclarations": "peek",
+    "editor.gotoLocation.multipleDefinitions": "peek",
+    "editor.gotoLocation.multipleTypeDefinitions": "peek",
+    "editor.gotoLocation.multipleImplementations": "peek",
+    "editor.gotoLocation.multipleReferences": "peek",
+
+    "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.goToReferences",
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+    "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToReferences",
+    "editor.gotoLocation.alternativeImplementationCommand": "",
+    "editor.gotoLocation.alternativeReferenceCommand": "",
+
+    // Folding
+    "editor.foldingMaximumRegions": 5000,
+
+    // Screencast Mode
+    "screencastMode.mouseIndicatorSize": 20,
+    "screencastMode.mouseIndicatorColor": "#FF0000",
+
+    "screencastMode.keyboardOptions": {
+        "showKeys": true,
+        "showKeybindings": true,
+        "showCommands": true,
+        "showCommandGroups": false,
+        "showSingleEditorCursorMoves": true,
+    },
+
+    "screencastMode.keyboardOverlayTimeout": 800,
+
+    "screencastMode.verticalOffset": 20,
+
+    // Search
+    "search.searchOnTypeDebouncePeriod": 300,
+    "search.maxResults": 20000,
+
+    "search.experimental.closedNotebookRichContentResults": false,
+
+    "editor.find.globalFindClipboard": false, // 🤔
+    "search.globalFindClipboard": false, // 🤔
+
+    // SCM
+    "scm.countBadge": "all",
+    "scm.providerCountBadge": "hidden",
+
+    "scm.repositories.visible": 10,
+    "scm.repositories.sortOrder": "discovery time",
+
+    "scm.inputMaxLines": 10,
+
+    // Diff Editor
+    "diffEditor.wordWrap": "inherit",
+
+    "diffEditor.hideUnchangedRegions.revealLineCount": 20,
+    "diffEditor.hideUnchangedRegions.minimumLineCount": 3,
+    "diffEditor.hideUnchangedRegions.contextLineCount": 3,
+
+    "diffEditor.renderSideBySideInlineBreakpoint": 900,
+
+    "diffEditor.maxFileSize": 50,
+    "diffEditor.maxComputationTime": 5000,
+
+    // Accessibility
+    "accessibility.hideAccessibleView": false,
+
+
+    // RUST ANALYZER
+
+    "rust-analyzer.cargo.buildScripts.invocationLocation": "workspace",
+    "rust-analyzer.cargo.buildScripts.invocationStrategy": "per_workspace",
+    "rust-analyzer.cargo.buildScripts.overrideCommand": null,
+
+    "rust-analyzer.check.invocationLocation": "workspace",
+    "rust-analyzer.check.invocationStrategy": "per_workspace",
+    "rust-analyzer.check.overrideCommand": null,
+
+
+    // BOOKMARKS
+    "bookmarks.gutterIconBorderColor": "#157EFB",
+    "bookmarks.gutterIconFillColor": "#157EFB",
+}

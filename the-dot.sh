@@ -9,24 +9,26 @@ declare repo=${self:h}
 
 declare ignore=(
 	.DS_Store
-
 	/.git
 
+	/.config/iterm2
+
+	/macOS
+
 	brew.sh
-	casks.txt
-	formulas.txt
+	firefox.txt
 )
 
 declare recurse=(
 	.config
-	.config/iterm2
+	.config/vscode
 	.ssh
 )
 
 declare -A override=(
+	[.config/vscode]='Library/Application Support/Code'
 	[.config/sublime-text]='Library/Application Support/Sublime Text'
 	[.config/sublime-merge]='Library/Application Support/Sublime Merge'
-	[.config/iterm2/com.googlecode.iterm2.plist]='Library/Preferences/com.googlecode.iterm2.plist'
 	[.config/clangd]='Library/Preferences/clangd'
 )
 

@@ -1,0 +1,42 @@
+{
+    "editor.accessibilitySupport": "auto",
+    "editor.accessibilityPageSize": 10,
+
+    "editor.screenReaderAnnounceInlineSuggestion": true,
+    "editor.inlineCompletionsAccessibilityVerbose": false,
+
+    "editor.defaultFoldingRangeProvider": null,
+    "editor.defaultFormatter": null,
+
+    "editor.experimental.dropIntoEditor.defaultProvider": {},
+
+    "editor.unicodeHighlight.allowedCharacters": {},
+    "editor.unicodeHighlight.allowedLocales": {
+        "_os": true,
+        "_vscode": true
+    },
+
+
+    "workbench.editorAssociations": {},
+
+    "workbench.editor.autoLockGroups": {
+        "default": false,
+        "workbench.editor.chatSession": false,
+        "workbench.editorinputs.searchEditorInput": false,
+        "jupyter-notebook": false,
+        "imagePreview.previewEditor": false,
+        "vscode.audioPreview": false,
+        "vscode.videoPreview": false,
+        "jsProfileVisualizer.cpuprofile.table": false,
+        "jsProfileVisualizer.heapprofile.table": false,
+        "jsProfileVisualizer.heapsnapshot.table": false,
+        "workbench.editors.gettingStartedInput": false,
+        "terminalEditor": true,
+        "workbench.input.interactive": false,
+        "mainThreadWebview-markdown.preview": false
+    },
+
+    "workbench.colorCustomizations": {},
+
+    "workbench.externalUriOpeners": {},
+}

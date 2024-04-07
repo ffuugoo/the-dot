@@ -133,5 +133,6 @@
 
 		"rust-analyzer.terminusAutoClose": false,
 		"rust-analyzer.terminusUsePanel": false,
-	}
+	},
+	"enabled": true,
 }

@@ -1,5 +1,5 @@
 declare CARGO=$HOME/.cargo
-declare PYTHON=$HOME/Library/Python/3.11/bin:/opt/homebrew/opt/python@3.11/libexec/bin
+declare PYTHON=$HOME/Library/Python/3.12/bin:/opt/homebrew/opt/python@3.12/libexec/bin
 declare BREW=/opt/homebrew/bin:/opt/homebrew/sbin
 
 export PATH=$CARGO/bin:$PYTHON:$BREW:$PATH

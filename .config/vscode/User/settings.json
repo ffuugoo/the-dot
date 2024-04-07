@@ -1,0 +1,1085 @@
+{
+    // VS Code
+
+    // Color Scheme & Font
+    "workbench.colorTheme": "Default Light Modern",
+
+    "editor.fontFamily": "Monaco",
+    "editor.fontSize": 14,
+
+    "editor.letterSpacing": -0.1, // 🤔
+    "editor.lineHeight": 20, // 🤔
+
+    "workbench.fontAliasing": "auto",
+
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.activeIconPack": "none",
+
+    "editor.tokenColorCustomizations": {
+        "keywords": "#c695c6",
+
+        "functions": "#6699cc",
+        "types": "#c695c6",
+
+        "variables": "#333333",
+
+        "numbers": "#f9ae58",
+        "strings": "#80b979",
+
+        "comments": "#999999",
+
+        "textMateRules": [
+            {
+                "name": "Keyword",
+                "scope": ["keyword", "keyword.control", "keyword.other"],
+                "settings": {
+                    "foreground": "#c695c6",
+                }
+            },
+            {
+                "name": "Type Declaration Keyword",
+                "scope": ["storage", "storage.type", "storage.modifier"],
+                "settings": {
+                    "foreground": "#c695c6",
+                }
+            },
+            {
+                "name": "Type Declaration Name",
+                "scope": ["entity.name.type.struct", "entity.name.type.enum"],
+                "settings": {
+                    "foreground": "#f9ae58",
+                }
+            },
+            {
+                "name": "Enum Variant Name",
+                "scope": "variable.other.enummember", // semantic
+                "settings": {
+                    "foreground": "#c695c6",
+                }
+            },
+            {
+                "name": "Lifetime",
+                "scope": [
+                    "storage.modifier.lifetime", // semantic
+                    "punctuation.definition.lifetime",
+                    "entity.name.type.lifetime",
+                ],
+                "settings": {
+                    "foreground": "#ec5f66",
+                }
+            },
+            {
+                "name": "Function Declaration",
+                "scope": "meta.function.definition entity.name.function",
+                "settings": {
+                    "foreground": "#5fb4b4",
+                }
+            },
+            {
+                "name": "Function Parameters",
+                "scope": "meta.function.definition variable.other",
+                "settings": {
+                    "foreground": "#f9ae58",
+                }
+            },
+            {
+                "name": "Constant Declaration",
+                "scope": [
+                    "variable.other.constant", // semantic
+                    "constant.other.caps",
+                ],
+                "settings": {
+                    "foreground": "#f9ae58",
+                }
+            },
+            {
+                "name": "Macro Call",
+                "scope": "entity.name.function.preprocessor", // semantic
+                "settings": {
+                    "foreground": "#6699cc",
+                }
+            },
+            {
+                "name": "Module Declaration",
+                "scope": "entity.name.module",
+                "settings": {
+                    "foreground": "#f9ae58",
+                }
+            },
+            {
+                "name": "Namespace",
+                "scope": "entity.name.namespace",
+                "settings": {
+                    "foreground": "#333333",
+                }
+            },
+            {
+                "name": "Attribute",
+                "scope": "meta.attribute entity.name.function",
+                "settings": {
+                    "foreground": "#6699cc",
+                }
+            },
+            {
+                "name": "Derive Macro",
+                "scope": "meta.attribute entity.name.type",
+                "settings": {
+                    "foreground": "#333333",
+                }
+            },
+
+            {
+                "name": "JSON Property Name",
+                "scope": "support.type.property-name.json",
+                "settings": {
+                    "foreground": "#c695c6",
+                }
+            },
+
+            {
+                "name": "Language Constant",
+                "scope": "constant.language",
+                "settings": {
+                    "foreground": "#ec5f66",
+                }
+            },
+        ],
+    },
+
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "derive": "#333333",
+
+            "struct.declaration": "#f9ae58",
+            "enum.declaration": "#f9ae58",
+
+            "function.declaration": "#5fb4b4",
+            "parameter.declaration": "#f9ae58",
+
+            "struct": "#c695c6",
+            "enum": "#c695c6",
+        }
+    },
+
+    // Basic
+    "workbench.startupEditor": "newUntitledFile",
+    "files.hotExit": "onExit", // 🤔
+
+    "editor.autoIndent": "full",
+
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4,
+
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+
+    "editor.useTabStops": true,
+    "editor.stickyTabStops": true,
+
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 100,
+
+    "editor.wrappingIndent": "same",
+    "editor.wrappingStrategy": "simple",
+
+    // Files
+    "files.associations": {},
+
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true,
+
+    "files.eol": "auto",
+
+    "files.readonlyFromPermissions": true,
+    "files.restoreUndoStack": true, // 🤔
+
+    "files.enableTrash": true,
+
+    "files.exclude": {
+        "**/target": true, // 🤔
+    },
+
+    "files.watcherExclude": {
+        "**/target/**": true, // 🤔
+    },
+
+    // Save
+    "files.autoSave": "off",
+
+    "files.refactoring.autoSave": true, // 🤔🤔🤔
+
+    "files.saveConflictResolution": "askUser",
+
+    "workbench.editor.closeOnFileDelete": false, // 🤔🤔🤔
+
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "modifications",
+
+    "editor.formatOnPaste": false,
+
+    "editor.formatOnType": false,
+
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    "files.trimTrailingWhitespace": true,
+
+    "editor.trimAutoWhitespace": true,
+
+    // "editor.codeActionsOnSave": {}
+
+    // Editor
+    "editor.emptySelectionClipboard": true,
+
+    "editor.smartSelect.selectSubwords": true,
+    "editor.smartSelect.selectLeadingAndTrailingWhitespace": true,
+
+    "editor.cursorSurroundingLines": 1,
+
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.multiCursorMergeOverlapping": true,
+    "editor.multiCursorPaste": "spread",
+
+    "editor.scrollBeyondLastLine": true,
+    "editor.scrollBeyondLastColumn": 4,
+    "editor.scrollPredominantAxis": true,
+
+    "editor.dragAndDrop": false,
+    "editor.mouseWheelZoom": false,
+    "editor.copyWithSyntaxHighlighting": false,
+
+    "editor.tabFocusMode": false,
+    "editor.columnSelection": false,
+
+    "editor.experimental.asyncTokenization": true,
+
+    // Misc
+    "window.openWithoutArgumentsInNewWindow": "off",
+
+    "window.openFilesInNewWindow": "off",
+    "window.openFoldersInNewWindow": "default",
+
+    "window.restoreWindows": "all",
+    "window.restoreFullscreen": false,
+
+    "window.newWindowDimensions": "inherit",
+
+    "window.doubleClickIconToClose": false,
+    "window.closeWhenEmpty": false,
+    "window.confirmBeforeClose": "never",
+
+    "window.clickThroughInactive": true,
+
+    "workbench.editor.dragToOpenWindow": true,
+
+    "workbench.editor.openPositioning": "right",
+    "workbench.editor.openSideBySideDirection": "right",
+    "workbench.editor.focusRecentEditorAfterClose": true,
+
+    "workbench.editor.splitSizing": "auto",
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.editor.splitOnDragAndDrop": true,
+
+    "workbench.editor.revealIfOpen": false,
+
+    "workbench.editor.restoreViewState": true,
+    "workbench.editor.sharedViewState": false,
+
+    "workbench.editor.navigationScope": "default",
+    "workbench.editor.mouseBackForwardToNavigate": true,
+
+    "workbench.localHistory.enabled": true,
+    "workbench.localHistory.maxFileEntries": 50,
+    "workbench.localHistory.maxFileSize": 256,
+    "workbench.localHistory.mergeWindow": 10,
+
+    // UI: VSCode
+    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+    "window.titleSeparator": " — ",
+
+    "window.commandCenter": false,
+    "workbench.experimental.share.enabled": false,
+
+    "workbench.accounts.experimental.showEntitlements": true, // 🤔
+
+    "workbench.layoutControl.enabled": true, // 🤔
+    "workbench.layoutControl.type": "both", // 🤔
+
+    "workbench.editor.editorActionsLocation": "default", // 🤔
+
+    "workbench.editor.showTabs": "multiple",
+    "workbench.editor.tabSizing": "shrink",
+
+    "workbench.editor.pinnedTabSizing": "normal",
+    "workbench.editor.pinnedTabsOnSeparateRow": false,
+    "workbench.editor.preventPinnedEditorClose": "keyboardAndMouse",
+
+    "workbench.editor.showIcons": true,
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.untitled.labelFormat": "content",
+
+    "workbench.editor.tabActionLocation": "right",
+    "workbench.editor.tabActionCloseVisibility": true,
+    "workbench.editor.tabActionUnpinVisibility": true,
+
+    "workbench.editor.wrapTabs": false,
+    "workbench.editor.titleScrollbarSizing": "default",
+
+    "workbench.editor.highlightModifiedTabs": false,
+
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.decorations.colors": false,
+
+    "workbench.editor.scrollToSwitchTabs": false,
+    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "maximize",
+
+    "workbench.activityBar.location": "default",
+    "workbench.activityBar.iconClickBehavior": "toggle",
+
+    "workbench.sideBar.location": "left",
+
+    "workbench.view.alwaysShowHeaderActions": false,
+
+    "workbench.panel.defaultLocation": "bottom",
+    "workbench.panel.opensMaximized": "preserve",
+
+    "workbench.statusBar.visible": true,
+
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.icons": true,
+    "breadcrumbs.filePath": "last",
+    "breadcrumbs.symbolPath": "on",
+    "breadcrumbs.symbolSortOrder": "position",
+
+    "workbench.editor.limit.enabled": false,
+    "workbench.editor.limit.value": 10,
+    "workbench.editor.limit.perEditorGroup": false,
+    "workbench.editor.limit.excludeDirty": false,
+
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": false, // 🤔
+    "workbench.editor.enablePreviewFromQuickOpen": false, // 🤔
+
+    "workbench.editor.empty.hint": "hidden",
+
+    "workbench.editor.centeredLayoutFixedWidth": false,
+    "workbench.editor.centeredLayoutAutoResize": true,
+
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 0,
+    "editor.cursorBlinking": "blink",
+    "editor.cursorSmoothCaretAnimation": "off",
+
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.defaultModel": "outlineModel",
+    "editor.stickyScroll.maxLineCount": 5,
+    "editor.stickyScroll.scrollWithEditor": true,
+
+    "editor.minimap.enabled": true,
+    "editor.minimap.autohide": true,
+    "editor.minimap.side": "right",
+    "editor.minimap.size": "proportional",
+    "editor.minimap.scale": 1,
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.showSlider": "mouseover",
+
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.verticalScrollbarSize": 12,
+
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.horizontalScrollbarSize": 12,
+
+    "editor.smoothScrolling": true,
+    "editor.mouseWheelScrollSensitivity": 0.75,
+
+    "workbench.list.smoothScrolling": true,
+    "workbench.list.mouseWheelScrollSensitivity": 0.75,
+
+    "accessibility.dimUnfocused.enabled": true,
+    "accessibility.dimUnfocused.opacity": 0.75,
+
+    "workbench.reduceMotion": "on",
+
+    // UI: Quick Open / Command Palette
+    "workbench.quickOpen.closeOnFocusLost": true,
+    "workbench.quickOpen.preserveInput": false,
+
+    "search.quickOpen.includeHistory": false, // 🤔
+    "search.quickOpen.history.filterSortOrder": "default",
+
+    "search.quickOpen.includeSymbols": false, // 🤔
+
+    "workbench.commandPalette.preserveInput": true,
+    "workbench.commandPalette.history": 0,
+
+    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+    "workbench.commandPalette.experimental.suggestCommands": false,
+
+    "search.experimental.quickAccess.preserveInput": true,
+
+    // UI: Editor
+    "editor.lineNumbers": "on",
+
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+
+    "editor.glyphMargin": true,
+
+    "editor.rulers": [100],
+
+    "editor.semanticHighlighting.enabled": true,
+
+    "editor.matchBrackets": "always",
+
+    "editor.bracketPairColorization.enabled": false,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.bracketPairsHorizontal": false,
+
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.highlightActiveBracketPair": false,
+
+    "editor.roundedSelection": true, // 🤔🤔🤔
+
+    "editor.occurrencesHighlight": "singleFile",
+    "editor.selectionHighlight": true,
+
+    "editor.renderWhitespace": "selection",
+    "editor.renderFinalNewline": "on",
+
+    "editor.links": true,
+
+    "editor.renderControlCharacters": true,
+
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+
+    "editor.unicodeHighlight.includeStrings": true,
+    "editor.unicodeHighlight.includeComments": true,
+
+    "editor.unusualLineTerminators": "prompt",
+
+    // UI: Code
+    "editor.codeLens": true,
+    "editor.codeLensFontFamily": "Monaco",
+    "editor.codeLensFontSize": 12,
+
+    "editor.hover.enabled": true,
+    "editor.hover.above": false,
+    "editor.hover.sticky": true,
+    "editor.lightbulb.experimental.showAiIcon": "off",
+
+    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.padding": false,
+
+    "editor.showDeprecated": true,
+    "editor.showUnused": true,
+
+    "editor.colorDecorators": true,
+    "editor.colorDecoratorsActivatedOn": "click",
+
+    "editor.defaultColorDecorators": false, // 🤔
+
+    // UI: Misc
+    "workbench.tips.enabled": false,
+
+    "workbench.welcomePage.extraAnnouncements": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+
+    "update.showReleaseNotes": false,
+
+    "workbench.settings.editor": "ui", // 🤔
+    "workbench.settings.useSplitJSON": true, // 🤔
+    "workbench.settings.openDefaultSettings": false, // 🤔
+    "workbench.settings.openDefaultKeybindings": false, // 🤔
+
+    "workbench.settings.settingsSearchTocBehavior": "filter",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+
+    // Find
+    "editor.find.cursorMoveOnType": true,
+    "editor.find.loop": true,
+
+    "editor.find.seedSearchStringFromSelection": "always",
+    "editor.find.autoFindInSelection": "multiline",
+
+    "editor.find.addExtraSpaceOnTop": false,
+
+    // Code
+    "editor.snippets.codeActions.enabled": false,
+
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
+    "editor.codeActionWidget.showHeaders": true,
+
+    "editor.rename.enablePreview": true,
+
+    "editor.linkedEditing": true,
+
+    "editor.comments.insertSpace": true,
+    "editor.comments.ignoreEmptyLines": true,
+
+    // Completion
+    "editor.quickSuggestions": {
+        "other": "on",
+        "strings": "off",
+        "comments": "off",
+    },
+
+    "editor.suggestOnTriggerCharacters": true,
+
+    "editor.suggestSelection": "first",
+
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.tabCompletion": "off",
+
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.snippetSuggestions": "none",
+
+    "editor.suggest.preview": false,
+    "editor.suggest.showStatusBar": false,
+
+    "editor.suggest.selectionMode": "always",
+    "editor.suggest.insertMode": "insert",
+
+    "editor.suggest.matchOnWordStartOnly": true,
+    "editor.suggest.filterGraceful": true,
+    "editor.suggest.localityBonus": false,
+
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggest.shareSuggestSelections": false, // 🤔
+
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.showToolbar": "never",
+    "editor.inlineSuggest.suppressSuggestions": true, // 🤔
+
+    "editor.parameterHints.enabled": true,
+    "editor.parameterHints.cycle": true,
+
+    // Folding
+    "editor.folding": true,
+    "editor.foldingHighlight": false,
+    "editor.foldingImportsByDefault": false,
+    "editor.foldingStrategy": "auto",
+
+    "editor.showFoldingControls": "mouseover",
+    "editor.unfoldOnClickAfterEndOfLine": false,
+
+    // Zen Mode
+    "zenMode.fullScreen": false,
+
+    "zenMode.showTabs": "multiple",
+
+    "zenMode.centerLayout": true,
+    "zenMode.hideLineNumbers": true,
+
+    "zenMode.hideActivityBar": true,
+    "zenMode.hideStatusBar": true,
+
+    "zenMode.silentNotifications": true,
+
+    "zenMode.restore": true,
+
+    // Screencast Mode
+    "screencastMode.fontSize": 56,
+
+    // Explorer
+    "explorer.openEditors.sortOrder": "editorOrder",
+    "explorer.openEditors.visible": 10,
+    "explorer.openEditors.minVisible": 0,
+
+    "explorer.sortOrder": "default",
+    "explorer.sortOrderLexicographicOptions": "default",
+
+    "explorer.compactFolders": true,
+
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
+    // "explorer.fileNesting.patterns": {},
+
+    "explorer.decorations.badges": false,
+    "explorer.decorations.colors": false,
+
+    "explorer.autoReveal": false,
+
+    "explorer.autoRevealExclude": {
+        "**/target": true,
+    },
+
+    "explorer.confirmPasteNative": true,
+    "explorer.confirmDelete": true,
+
+    "explorer.enableDragAndDrop": true,
+    "explorer.confirmDragAndDrop": true,
+
+    "explorer.enableUndo": true,
+    "explorer.confirmUndo": "default",
+
+    "explorer.excludeGitIgnore": true, // 🤔
+    "explorer.expandSingleFolderWorkspaces": true,
+    "explorer.incrementalNaming": "simple",
+
+    "explorer.copyRelativePathSeparator": "auto",
+
+    // Search
+    "search.searchOnType": true,
+    "search.smartCase": true,
+    "search.sortOrder": "default",
+
+    "search.seedWithNearestWord": true,
+    "search.seedOnFocus": true,
+
+    "search.followSymlinks": true,
+
+    "search.mode": "view",
+    "search.defaultViewMode": "list",
+    "search.collapseResults": "auto",
+    "search.actionsPosition": "right",
+    "search.decorations.badges": false,
+    "search.decorations.colors": false,
+    "search.showLineNumbers": false,
+
+    "search.searchEditor.reusePriorSearchConfiguration": true,
+    "search.searchEditor.defaultNumberOfContextLines": 1,
+    "search.searchEditor.doubleClickBehaviour": "goToLocation",
+
+    "search.useReplacePreview": true,
+
+    "search.useIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+    "search.useGlobalIgnoreFiles": true,
+
+    "search.exclude": {
+        "**/target": true, // 🤔
+    },
+
+    // SCM
+    "scm.defaultViewMode": "list",
+    "scm.defaultViewSortKey": "path",
+
+    "scm.showActionButton": true,
+    "scm.showInputActionButton": true,
+
+    "scm.alwaysShowActions": false,
+    "scm.alwaysShowRepositories": false,
+
+    "scm.showIncomingChanges": "auto",
+    "scm.showOutgoingChanges": "auto",
+
+    "scm.inputFontFamily": "default",
+    "scm.inputFontSize": 14,
+
+    "scm.diffDecorations": "gutter",
+    "scm.diffDecorationsGutterVisibility": "always",
+    "scm.diffDecorationsGutterWidth": 2,
+
+    "scm.diffDecorationsGutterPattern": {
+        "added": false,
+        "modified": false,
+    },
+
+    "scm.diffDecorationsGutterAction": "diff",
+
+    "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+
+    // Diff Editor
+    "diffEditor.diffAlgorithm": "advanced",
+
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": true,
+
+    "diffEditor.renderIndicators": true,
+    "diffEditor.renderMarginRevertIcon": true,
+
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "diffEditor.codeLens": false,
+
+    "diffEditor.experimental.showEmptyDecorations": false,
+    "diffEditor.experimental.showMoves": false,
+
+    // Inline Chat
+    "inlineChat.mode": "livePreview",
+
+    "inlineChat.acceptedOrDiscardBeforeSave": true,
+    "inlineChat.finishOnType": false,
+
+    "inlineChat.holdToSpeech": false,
+
+    // Privacy
+    "telemetry.telemetryLevel": "off",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    "workbench.enableExperiments": false,
+
+    "workbench.cloudChanges.autoResume": "off",
+    "workbench.cloudChanges.continueOn": "off",
+    "workbench.experimental.cloudChanges.autoStore": "off",
+    "workbench.experimental.cloudChanges.partialMatches.enabled": false,
+
+    // Security
+    "security.workspace.trust.enabled": true,
+    "security.workspace.trust.emptyWindow": true,
+    "security.workspace.trust.startupPrompt": "once",
+    "security.workspace.trust.untrustedFiles": "prompt",
+    "security.workspace.trust.banner": "untilDismissed",
+
+    "security.promptForLocalFileProtocolHandling": true,
+    "security.promptForRemoteFileProtocolHandling": true,
+
+
+    // RUST ANALYZER
+
+    "rust-analyzer.cargo.autoreload": true,
+
+    "rust-analyzer.cargo.features": [],
+    "rust-analyzer.cargo.noDefaultFeatures": false,
+
+    // "rust-analyzer.cargo.cfgs": {},
+
+    // "rust-analyzer.cargo.extraArgs": [],
+    // "rust-analyzer.cargo.extraEnv": {},
+
+    // "rust-analyzer.cargo.target": null,
+
+    // "rust-analyzer.cargo.buildScripts.enable": true,
+    // "rust-analyzer.cargo.buildScripts.useRustcWrapper": true,
+
+    // "rust-analyzer.cargo.unsetTest": ["core"],
+
+    // "rust-analyzer.cargo.sysroot": "discover",
+    // "rust-analyzer.cargo.sysrootSrc": null,
+
+
+    "rust-analyzer.checkOnSave": true,
+
+    "rust-analyzer.check.command": "check",
+
+    "rust-analyzer.check.allTargets": false,
+
+    "rust-analyzer.check.features": [],
+    "rust-analyzer.check.noDefaultFeatures": false,
+
+    // "rust-analyzer.check.ignore": [],
+
+    // "rust-analyzer.check.extraArgs": [],
+    // "rust-analyzer.check.extraEnv": {},
+
+    // "rust-analyzer.check.targets": null,
+
+
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.diagnostics.experimental.enable": true,
+
+    // "rust-analyzer.diagnostics.warningsAsInfo": [],
+    // "rust-analyzer.diagnostics.warningsAsHint": [],
+    // "rust-analyzer.diagnostics.disabled": [],
+
+    // "rust-analyzer.diagnostics.useRustcErrorCode": false,
+    // "rust-analyzer.diagnostics.previewRustcOutput": false,
+
+    // "rust-analyzer.diagnostics.remapPrefix": {}, // 🤔
+
+
+    "rust-analyzer.signatureInfo.detail": "parameters",
+    "rust-analyzer.signatureInfo.documentation.enable": false,
+
+    "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+    // "rust-analyzer.workspace.symbol.search.scope": "workspace",
+    // "rust-analyzer.workspace.symbol.search.limit": 128,
+
+    "rust-analyzer.references.excludeImports": true,
+
+    "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+    // "rust-analyzer.typing.continueCommentsOnNewline": true,
+
+    // "rust-analyzer.assist.expressionFillDefault": "todo",
+    // "rust-analyzer.assist.emitMustUse": false,
+
+
+    "rust-analyzer.completion.callable.snippets": "fill_arguments",
+    "rust-analyzer.completion.fullFunctionSignatures.enable": false,
+
+    "rust-analyzer.completion.autoimport.enable": true,
+    "rust-analyzer.completion.postfix.enable": true,
+
+    "rust-analyzer.completion.autoself.enable": false,
+    "rust-analyzer.completion.privateEditable.enable": false,
+
+
+    "rust-analyzer.imports.granularity.group": "crate",
+    "rust-analyzer.imports.granularity.enforce": false,
+
+    "rust-analyzer.imports.group.enable": true,
+    "rust-analyzer.imports.merge.glob": true,
+    "rust-analyzer.imports.prefix": "self",
+
+    "rust-analyzer.imports.preferPrelude": false,
+    "rust-analyzer.imports.preferNoStd": false,
+
+
+    "rust-analyzer.semanticHighlighting.operator.enable": true,
+    "rust-analyzer.semanticHighlighting.operator.specialization.enable": false,
+
+    "rust-analyzer.semanticHighlighting.punctuation.enable": false,
+    "rust-analyzer.semanticHighlighting.punctuation.specialization.enable": false,
+    "rust-analyzer.semanticHighlighting.punctuation.separate.macro.bang": false,
+
+    "rust-analyzer.semanticHighlighting.strings.enable": true,
+    "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": true,
+
+    "rust-analyzer.semanticHighlighting.nonStandardTokens": true,
+
+
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
+    "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
+
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+
+    "rust-analyzer.inlayHints.chainingHints.enable": true,
+
+    "rust-analyzer.inlayHints.closureCaptureHints.enable": false,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
+
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+
+    "rust-analyzer.inlayHints.discriminantHints.enable": "never",
+    "rust-analyzer.inlayHints.implicitDrops.enable": false,
+
+    "rust-analyzer.inlayHints.reborrowHints.enable": "never", // 🤔
+
+    "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "never", // 🤔
+    "rust-analyzer.inlayHints.expressionAdjustmentHints.mode": "prefix",
+    "rust-analyzer.inlayHints.expressionAdjustmentHints.hideOutsideUnsafe": false,
+
+    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
+
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.minLines": 25,
+
+    "rust-analyzer.inlayHints.maxLength": 25,
+    "rust-analyzer.inlayHints.renderColons": true,
+    "rust-analyzer.inlayHints.closureStyle": "rust_analyzer",
+
+
+    "rust-analyzer.highlightRelated.references.enable": true,
+
+    "rust-analyzer.highlightRelated.breakPoints.enable": true,
+    "rust-analyzer.highlightRelated.exitPoints.enable": true,
+    "rust-analyzer.highlightRelated.yieldPoints.enable": true,
+
+    "rust-analyzer.highlightRelated.closureCaptures.enable": true,
+
+
+    "rust-analyzer.lens.enable": true,
+
+    "rust-analyzer.lens.location": "above_name",
+
+    "rust-analyzer.lens.run.enable": true,
+    "rust-analyzer.lens.debug.enable": true,
+
+    "rust-analyzer.lens.implementations.enable": false,
+
+    "rust-analyzer.lens.references.adt.enable": false,
+    "rust-analyzer.lens.references.enumVariant.enable": false,
+    "rust-analyzer.lens.references.method.enable": false,
+    "rust-analyzer.lens.references.trait.enable": false,
+
+    // "rust-analyzer.lens.forceCustomCommands": true,
+
+
+    "rust-analyzer.hover.documentation.enable": true,
+    "rust-analyzer.hover.documentation.keywords.enable": true,
+
+    "rust-analyzer.hover.links.enable": true,
+
+    "rust-analyzer.hover.memoryLayout.enable": false,
+    "rust-analyzer.hover.memoryLayout.size": "decimal",
+    "rust-analyzer.hover.memoryLayout.alignment": "decimal",
+    "rust-analyzer.hover.memoryLayout.offset": "decimal",
+    "rust-analyzer.hover.memoryLayout.niches": false,
+
+    "rust-analyzer.hover.actions.enable": false,
+
+    "rust-analyzer.hover.actions.run.enable": false,
+    "rust-analyzer.hover.actions.debug.enable": false,
+
+    "rust-analyzer.hover.actions.gotoTypeDef.enable": false,
+    "rust-analyzer.hover.actions.implementations.enable": false,
+    "rust-analyzer.hover.actions.references.enable": false,
+
+
+    "rust-analyzer.debug.openDebugPane": true, // 🤔
+
+    // "rust-analyzer.debug.engine": "auto",
+    // "rust-analyzer.debug.engineSettings": {},
+
+    // "rust-analyzer.debug.sourceFileMap": "auto",
+
+
+    // "rust-analyzer.interpret.tests": false, // 🤔
+
+
+    "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+    "rust-analyzer.rustfmt.extraArgs": ["+nightly"],
+
+
+    // "rust-analyzer.joinLines.joinAssignments": true,
+    // "rust-analyzer.joinLines.joinElseIf": true,
+    // "rust-analyzer.joinLines.unwrapTrivialBlock": true,
+    // "rust-analyzer.joinLines.removeTrailingComma": true,
+
+
+    "rust-analyzer.restartServerOnConfigChange": true,
+
+    "rust-analyzer.showDependenciesExplorer": false,
+
+    // "rust-analyzer.cachePriming.enable": true,
+    // "rust-analyzer.cachePriming.numThreads": 0,
+
+    // "rust-analyzer.files.watcher": "client",
+    // "rust-analyzer.files.excludeDirs": [],
+
+    // "rust-analyzer.notifications.cargoTomlNotFound": true,
+    // "rust-analyzer.showUnlinkedFileNotification": true,
+    // "rust-analyzer.showRequestFailedErrorNotification": true,
+
+    // "rust-analyzer.procMacro.enable": true,
+    // "rust-analyzer.procMacro.attributes.enable": true,
+    // "rust-analyzer.procMacro.ignored": {},
+
+    // "rust-analyzer.runnables.extraArgs": [],
+    // "rust-analyzer.runnables.extraEnv": null,
+    // "rust-analyzer.runnables.problemMatcher": ["$rustc"], // 🤔
+
+    // "rust-analyzer.rust.analyzerTargetDir": null,
+
+    // "rust-analyzer.server.path": null,
+    // "rust-analyzer.server.extraEnv": {},
+
+    // "rust-analyzer.statusBar.clickAction": "openLogs",
+
+
+    // EVEN BETTER TOML
+
+    // "evenBetterToml.completion.maxKeys": 5,
+
+    "evenBetterToml.syntax.semanticTokens": true,
+    "evenBetterToml.semanticTokens": true,
+
+    "evenBetterToml.formatter.allowedBlankLines": 2,
+    "evenBetterToml.formatter.columnWidth": 100,
+
+    "evenBetterToml.formatter.indentTables": false,
+    "evenBetterToml.formatter.indentEntries": false,
+
+    "evenBetterToml.formatter.alignComments": true,
+    "evenBetterToml.formatter.alignEntries": false,
+
+    "evenBetterToml.formatter.compactArrays": true,
+    "evenBetterToml.formatter.compactEntries": false,
+    "evenBetterToml.formatter.compactInlineTables": false,
+
+    "evenBetterToml.formatter.arrayAutoCollapse": true,
+    "evenBetterToml.formatter.arrayAutoExpand": true,
+    "evenBetterToml.formatter.arrayTrailingComma": true,
+
+    "evenBetterToml.formatter.inlineTableExpand": false,
+
+    "evenBetterToml.formatter.reorderArrays": false,
+    "evenBetterToml.formatter.reorderKeys": false,
+
+    "evenBetterToml.formatter.trailingNewline": true,
+    "evenBetterToml.formatter.crlf": false,
+
+    // "evenBetterToml.rules": [],
+
+    // "evenBetterToml.schema.enabled": true,
+    // "evenBetterToml.schema.associations": {},
+    // "evenBetterToml.schema.catalogs": [],
+    // "evenBetterToml.schema.links": false,
+
+    // "evenBetterToml.taplo.bundled": true,
+    // "evenBetterToml.taplo.path": null,
+    // "evenBetterToml.taplo.extraArgs": [],
+    // "evenBetterToml.taplo.environment": {},
+
+    // "evenBetterToml.taplo.configFile.enabled": true,
+    // "evenBetterToml.taplo.configFile.path": null,
+
+
+    // CRATES
+
+    "crates.compatibleDecorator": "🟢",
+    "crates.incompatibleDecorator": "🔴 ${version}",
+    "crates.errorDecorator": "❌",
+
+    // "crates.indexServerURL": "https://index.crates.io",
+    // "crates.listPreReleases": false,
+
+
+    // LTEX
+
+    "ltex.enabled": false,
+
+    "ltex.language": "en-US",
+
+    "ltex.checkFrequency": "edit",
+    "ltex.diagnosticSeverity": "hint",
+    "ltex.clearDiagnosticsWhenClosingFile": true,
+
+    // "ltex.enabledRules": {},
+    // "ltex.disabledRules": {},
+    // "ltex.hiddenFalsePositives": {},
+
+    // "ltex.dictionary": {},
+
+    "ltex.additionalRules.enablePickyRules": false,
+    "ltex.additionalRules.motherTongue": "ru-RU",
+
+    "ltex.completionEnabled": false,
+
+    // "ltex.languageToolHttpServerUri": "",
+
+    // "ltex.ltex-ls.path": null,
+
+    // "ltex.java.path": null,
+    // "ltex.java.initialHeapSize": 64,
+    // "ltex.java.maximumHeapSize": 512,
+
+    // "ltex.ltex-ls.logLevel": "fine",
+    // "ltex.trace.server": "off",
+
+
+    // BOOKMARKS
+
+    "bookmarks.navigateThroughAllFiles": true,
+    "bookmarks.wrapNavigation": true,
+
+    "bookmarks.label.suggestion": "useWhenSelected",
+    "bookmarks.multicursor.toggleMode": "eachLineIndependently",
+
+    "bookmarks.keepBookmarksOnLineDelete": false,
+    "bookmarks.useWorkaroundForFormatters": false,
+    "bookmarks.experimental.enableNewStickyEngine": true,
+
+    "bookmarks.showCommandsInContextMenu": true,
+    "bookmarks.showNoMoreBookmarksWarning": false,
+
+    "bookmarks.saveBookmarksInProject": true,
+
+    "bookmarks.sideBar.countBadge": "off",
+    "bookmarks.sideBar.expanded": false,
+}

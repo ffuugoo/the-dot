@@ -1,0 +1,15 @@
+{
+    "debug.console.closeOnEnd": true, // default
+    "debug.autoExpandLazyVariables": false, // default
+    "debug.console.collapseIdenticalLines": true, // default
+    "debug.hideLauncherWhileDebugging": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "debug.toolBarLocation": "docked",
+
+
+    "testing.alwaysRevealTestOnStateChange": false, // default
+    "testing.automaticallyOpenPeekView": "failureInVisibleDocument", // default
+
+    // "testing.followRunningTest": true,
+    // "testing.alwaysRevealTestOnStateChange": false,
+}
