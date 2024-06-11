@@ -1,0 +1,39 @@
+{
+    // "variables": {
+    //  "font_size_lg": 16,
+    //  "font_size": 14,
+    //  "font_size_sm": 12,
+    // },
+
+    // "rules": [
+    //  {
+    //      "class": "tab_label",
+    //      "font.size": "var(font_size_lg)",
+    //  },
+    //
+    //  {
+    //      "class": "sidebar_heading",
+    //      "font.size": "var(font_size)",
+    //  },
+    //
+    //  {
+    //      "class": "sidebar_label",
+    //      "font.size": "var(font_size)",
+    //  },
+    //
+    //  {
+    //      "class": "quick_panel_label",
+    //      "font.size": "var(font_size)",
+    //  },
+    //
+    //  {
+    //      "class": "label_control",
+    //      "font.size": "var(font_size_sm)",
+    //  },
+    //
+    //  {
+    //      "class": "tool_tip_label_control",
+    //      "font.size": "var(font_size_sm)",
+    //  },
+    // ],
+}

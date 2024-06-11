@@ -1,0 +1,10 @@
+{
+    "font_size": 12,
+
+    "open_at_startup": false,
+    "always_keep_visible": false,
+
+    "integrated_output_panels": {},
+
+    "development": true,
+}

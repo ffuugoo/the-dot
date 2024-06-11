@@ -1,0 +1,32 @@
+{
+    "settings": {
+        "basedpyright.analysis.typeCheckingMode": "basic",
+
+        "basedpyright.analysis.diagnosticMode": "openFilesOnly",
+        "basedpyright.analysis.diagnosticSeverityOverrides": {},
+
+        "basedpyright.analysis.autoImportCompletions": true,
+
+        "basedpyright.analysis.autoSearchPaths": true,
+        "basedpyright.analysis.extraPaths": [],
+
+        "basedpyright.analysis.stubPath": "./typings",
+        "basedpyright.analysis.typeshedPaths": [],
+        "basedpyright.analysis.useLibraryCodeForTypes": true,
+
+        "basedpyright.analysis.logLevel": "Error",
+
+        "basedpyright.disableLanguageServices": false,
+        "basedpyright.disableOrganizeImports": false,
+
+        "basedpyright.dev_environment": "sublime_text",
+
+        "python.pythonPath": "",
+        "python.venvPath": "",
+    },
+
+    "disabled_capabilities": {
+        "semanticTokensProvider": false,
+        "inlayHintProvider": false,
+    }
+}

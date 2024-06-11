@@ -1,0 +1,7 @@
+[submodule ".config/sublime-text/Packages/Rust Enhanced"]
+	path = .config/sublime-text/Packages/Rust Enhanced
+	url = git@github.com:ffuugoo/rust-enhanced.git
+
+[submodule ".config/sublime-text/Packages/Debugger"]
+	path = .config/sublime-text/Packages/Debugger
+	url = git@github.com:ffuugoo/SublimeDebugger.git

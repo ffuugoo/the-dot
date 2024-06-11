@@ -1,0 +1,10 @@
+{
+    "verbose": true,
+
+    "open_console_on_failure": true,
+
+    "open_console": false,
+    "close_console_on_success": false,
+
+    "reload_on_save": false,
+}

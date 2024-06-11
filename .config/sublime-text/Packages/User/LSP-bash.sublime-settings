@@ -1,5 +1,11 @@
 {
-	"settings": {
-		"bashIde.logLevel": "info",
-	}
+    "settings": {
+        "bashIde.highlightParsingErrors": false,
+        "bashIde.includeAllWorkspaceSymbols": false,
+
+        "bashIde.shellcheckPath": "shellcheck",
+        "bashIde.shellcheckArguments": [],
+
+        "bashIde.logLevel": "error",
+    }
 }

@@ -1,43 +1,54 @@
 {
-	"bootstrapped": true,
+    "bootstrapped": true,
+    "in_process_packages": [],
 
-	"in_process_packages": [],
+    "installed_packages": [
+        "Package Control",
 
-	"installed_packages": [
-		"Package Control",
+        "OverrideAudit",
+        "PackageResourceViewer",
+        "PackageDev",
+        "AutomaticPackageReloader",
 
-		"PackageDev",
-		"PackageResourceViewer",
-		"OverrideAudit",
+        "A File Icon",
+        "MoveTab",
+        "View Bookmarks",
+        "EditorConfig",
 
-		"A File Icon",
-		"Alignment",
-		"BracketHighlighter",
-		"MoveTab",
-		"View Bookmarks",
+        "BracketHighlighter",
+        "Alignment",
 
-		"Rust Enhanced",
-		"TOML",
-		"Autotools",
-		"CMake",
-		"Dockerfile Syntax Highlighting",
-		"Protobuf Syntax Hightlighting",
-		"AsciiDoc",
-		"MarkdownEditing",
+        // "Rust Enhanced",
 
-		"LSP",
-		"LSP-bash",
-		"LSP-copilot",
-		"LSP-ltex-ls",
-		"LSP-rust-analyzer",
-		"LSP-file-watcher-chokidar",
+        "MarkdownEditing",
 
-		"Terminus",
-		// "Debugger",
-		// "Sourcetrail",
-		// "Zeal",
+        "Autotools",
+        "CMake",
 
-		"EditorConfig",
-		// "ApplySyntax",
-	]
+        "Dockerfile Syntax Highlighting",
+        "Protobuf Syntax Hightlighting",
+        "TOML",
+
+        "LSP",
+
+        "LSP-rust-analyzer",
+
+        "LSP-basedpyright",
+        "LSP-ruff",
+
+        "LSP-bash",
+        "LSP-dockerfile",
+        "LSP-json",
+        "LSP-yaml",
+
+        "LSP-copilot",
+        "LSP-ltex-ls",
+
+        "LSP-file-watcher-chokidar",
+
+        // "Debugger",
+
+        "Diffable",
+        "Terminus",
+    ]
 }

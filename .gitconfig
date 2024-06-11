@@ -4,7 +4,7 @@
 
 [core]
 	excludesFile = ~/.gitignore
-	editor = codium --wait
+	editor = code --wait
 	pager = less -FR -+X
 
 [init]

@@ -1,74 +1,25 @@
 {
-	"show_view_status": true,
+    "show_view_status": true,
 
-	"semantic_highlighting": false,
+    "show_diagnostics_severity_level": 1,
+    "show_diagnostics_annotations_severity_level": 0,
 
-	"inhibit_snippet_completions": true,
-	"inhibit_word_completions": true,
+    "show_diagnostics_panel_on_save": 0,
+    "diagnostics_panel_include_severity_level": 2,
 
-	"lsp_format_on_save": false,
-	"lsp_code_actions_on_save": {},
-	"on_save_task_timeout_ms": 2000,
+    "show_diagnostics_count_in_view_status": false,
+    "show_diagnostics_in_view_status": false,
 
-	"show_diagnostics_panel_on_save": 0,
+    "inhibit_snippet_completions": true,
+    "inhibit_word_completions": true,
 
-	"show_diagnostics_in_view_status": true,
-	"show_diagnostics_count_in_view_status": false,
+    "semantic_highlighting": true,
 
-	"show_diagnostics_severity_level": 4,
-	"diagnostics_panel_include_severity_level": 4,
+    "lsp_format_on_save": false,
+    "lsp_code_actions_on_save": {},
 
-	"log_server": true,
-	"log_debug": false,
+    "clients": {},
 
-	"clients": {},
-
-	"default_clients": {
-		"clangd": {
-			"command": ["clangd"],
-			"selector": "source.c | source.c++ | source.objc | source.objc++",
-			"enabled": false,
-
-			"auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
-		},
-
-		"ccls": {
-			"command": ["ccls"],
-			"selector": "source.c | source.c++ | source.objc | source.objc++",
-			"enabled": false,
-
-			"auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
-
-			"initializationOptions": {
-				"compilationDatabaseDirectory": "",
-
-				"cache.directory": ".cache/ccls",
-				"cache.hierarchicalPath": true,
-				"cache.format": "binary",
-				"cache.retainInMemory": 1,
-
-				"clang.resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6",
-				"clang.extraArgs": [],
-				"clang.excludeArgs": [],
-				"clang.pathMappings": [],
-
-				"index.threads": 0,
-				"index.onChange": false,
-				"index.trackDependency": 2,
-				"index.comments": 2,
-				"index.multiVersion": 0,
-				"index.multiVersionBlacklist": [],
-				"index.initialBlacklist": [],
-
-				"diagnostics.onOpen": 0,
-				"diagnostics.onChange": 1000,
-				"diagnostics.onSave": 0,
-
-				"client.snippetSupport": true,
-				"completion.placeholder": true,
-				"completion.detailedLabel": false,
-				"completion.filterAndSort": false,
-			}
-		}
-	}
+    "log_server": true,
+    "log_debug": false,
 }

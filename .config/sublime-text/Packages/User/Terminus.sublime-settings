@@ -1,70 +1,70 @@
 {
-	"theme": "adaptive",
+    "theme": "adaptive",
 
-	"view_settings": {},
-
-
-	"256color": true,
-	"brighten_bold_text": true,
-
-	"unix_term": "xterm-256color",
-	"unix_lang": "en_US.UTF-8",
-
-	"min_columns": 24,
-	"max_columns": 512,
-
-	"scrollback_history_size": 10000,
+    "view_settings": {},
 
 
-	"natural_keyboard": true,
+    "256color": true,
+    "brighten_bold_text": true,
 
-	"preserve_keys" : [
-		// "ctrl+k",
-		// "ctrl+p",
-	],
+    "unix_term": "xterm-256color",
+    "unix_lang": "en_US.UTF-8",
+
+    "min_columns": 24,
+    "max_columns": 512,
+
+    "scrollback_history_size": 10000,
 
 
-	"default_config": {
-		"linux": null,
-		"osx": null,
-		"windows": "cmd.exe",
-	},
+    "natural_keyboard": true,
 
-	"shell_configs": [
-		{
-			"name": "bash",
-			"cmd": ["bash", "-i", "-l"],
-			"env": {},
-			"enable": true,
-			"platforms": ["linux", "osx"],
-		},
-		{
-			"name": "zsh",
-			"cmd": ["zsh", "-i", "-l"],
-			"env": {},
-			"enable": true,
-			"platforms": ["linux", "osx"],
-		},
-		{
-			"name": "cmd.exe",
-			"cmd": "cmd.exe",
-			"env": {},
-			"enable": true,
-			"platforms": ["windows"],
-		},
-		{
-			"name": "PowerShell",
-			"cmd": "powershell.exe",
-			"env": {},
-			"enable": true,
-			"platforms": ["windows"],
-		},
-		{
-			"name": "WSL",
-			"cmd": "wsl.exe",
-			"env": {},
-			"enable": true,
-			"platforms": ["windows"],
-		}
-	]
+    "preserve_keys" : [
+        // "ctrl+k",
+        // "ctrl+p",
+    ],
+
+
+    "default_config": {
+        "linux": null,
+        "osx": null,
+        "windows": "cmd.exe",
+    },
+
+    "shell_configs": [
+        {
+            "name": "bash",
+            "cmd": ["bash", "-i", "-l"],
+            "env": {},
+            "enable": true,
+            "platforms": ["linux", "osx"],
+        },
+        {
+            "name": "zsh",
+            "cmd": ["zsh", "-i", "-l"],
+            "env": {},
+            "enable": true,
+            "platforms": ["linux", "osx"],
+        },
+        {
+            "name": "cmd.exe",
+            "cmd": "cmd.exe",
+            "env": {},
+            "enable": true,
+            "platforms": ["windows"],
+        },
+        {
+            "name": "PowerShell",
+            "cmd": "powershell.exe",
+            "env": {},
+            "enable": true,
+            "platforms": ["windows"],
+        },
+        {
+            "name": "WSL",
+            "cmd": "wsl.exe",
+            "env": {},
+            "enable": true,
+            "platforms": ["windows"],
+        }
+    ]
 }

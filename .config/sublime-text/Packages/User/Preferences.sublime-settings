@@ -1,101 +1,105 @@
 {
-	"theme": "Adaptive.sublime-theme",
-	"light_theme": "Default.sublime-theme",
-	"dark_theme": "Default Dark.sublime-theme",
+    "theme": "Adaptive.sublime-theme",
+    "light_theme": "Default.sublime-theme",
+    "dark_theme": "Default Dark.sublime-theme",
 
-	"color_scheme": "Breakers.sublime-color-scheme",
-	"light_color_scheme": "Breakers.sublime-color-scheme",
-	"dark_color_scheme": "Mariana.sublime-color-scheme",
+    "color_scheme": "Breakers.sublime-color-scheme",
+    "light_color_scheme": "Breakers.sublime-color-scheme",
+    "dark_color_scheme": "Mariana.sublime-color-scheme",
 
-	"font_face": "Monaco",
-	"font_size": 14,
+    "ui_scale": 1.15,
 
-	"font_options": [],
-	"theme_font_options": [],
+    "font_face": "Monaco",
+    "font_size": 14,
 
-	"line_padding_top": 0,
-	"line_padding_bottom": 0,
+    "font_options": ["gray_antialias", "no_round"],
+    "theme_font_options": ["gray_antialias"],
 
-	"caret_style": "smooth",
+    "line_padding_top": 0,
+    "line_padding_bottom": 0,
 
-	"caret_extra_top": 1,
-	"caret_extra_bottom": 1,
-	"caret_extra_width": 1,
+    "caret_style": "smooth",
 
-	"rulers": [100],
+    "caret_extra_top": 1,
+    "caret_extra_bottom": 1,
+    "caret_extra_width": 1,
 
-	"translate_tabs_to_spaces": true,
+    "rulers": [100],
 
-	"trim_automatic_white_space": true,
+    "translate_tabs_to_spaces": true,
 
-	"draw_white_space": ["leading_mixed", "trailing", "isolated", "selection"],
+    "trim_automatic_white_space": true,
 
-	"draw_unicode_white_space": "all",
-	"draw_unicode_bidi": true,
-	"control_character_style": "names",
+    "draw_white_space": ["leading_mixed", "trailing", "isolated", "selection"],
 
-	"trim_trailing_white_space_on_save": "not_on_caret",
-	"trim_only_modified_white_space": true,
-	"ensure_newline_at_eof_on_save": true,
+    "draw_unicode_white_space": "all",
+    "draw_unicode_bidi": true,
+    "control_character_style": "names",
 
-	"match_selection": true,
+    "trim_trailing_white_space_on_save": "not_on_caret",
+    "trim_only_modified_white_space": true,
+    "ensure_newline_at_eof_on_save": true,
 
-	"match_brackets": false,
-	"match_brackets_braces": false,
-	"match_brackets_square": false,
-	"match_brackets_angle": false,
-	"match_brackets_content": false,
-	"match_tags": false,
+    "match_selection": true,
 
-	"scroll_past_end": true,
-	"scroll_context_lines": 1,
+    "match_brackets": false,
+    "match_brackets_braces": false,
+    "match_brackets_square": false,
+    "match_brackets_angle": false,
+    "match_brackets_content": false,
+    "match_tags": false,
 
-	"tab_completion": true,
+    "scroll_past_end": true,
+    "scroll_context_lines": 1,
 
-	"auto_complete": true,
-	"auto_complete_commit_on_tab": false,
-	"auto_complete_with_fields": false,
-	"auto_complete_cycle": true,
-	"auto_complete_use_history": false,
-	"auto_complete_preserve_order": "strict",
-	"auto_complete_trailing_symbols": false,
-	"auto_complete_trailing_spaces": true,
-	"auto_complete_include_snippets": true,
-	"auto_complete_include_snippets_when_typing": true,
+    "index_files": true,
 
-	"shift_tab_unindent": true,
+    "tab_completion": true,
 
-	"find_selected_text": true,
-	"auto_find_in_selection": true,
+    "auto_complete": true,
+    "auto_complete_commit_on_tab": false,
+    "auto_complete_with_fields": false,
+    "auto_complete_cycle": true,
+    "auto_complete_use_history": false,
+    "auto_complete_preserve_order": "strict",
+    "auto_complete_trailing_symbols": false,
+    "auto_complete_trailing_spaces": true,
+    "auto_complete_include_snippets": true,
+    "auto_complete_include_snippets_when_typing": true,
 
-	"spell_check": false,
-	"dictionary": "Packages/Language - English/en_US.dic",
+    "shift_tab_unindent": true,
 
-	"drag_text": false,
+    "find_selected_text": true,
+    "auto_find_in_selection": true,
 
-	"highlight_modified_tabs": true,
-	"bold_folder_labels": true,
-	"adaptive_dividers": true,
+    "spell_check": false,
+    "dictionary": "Packages/Language - English/en_US.dic",
 
-	"hide_tab_scrolling_buttons": true,
-	"hide_new_tab_button": true,
+    "drag_text": false,
 
-	"show_full_path": true,
-	"show_rel_path": true,
-	"show_project_first": true,
+    "highlight_modified_tabs": true,
+    "bold_folder_labels": true,
+    "adaptive_dividers": true,
 
-	"native_tabs": "disabled",
-	"overlay_scroll_bars": "enabled",
+    "hide_tab_scrolling_buttons": true,
+    "hide_new_tab_button": true,
 
-	"hardware_acceleration": "opengl",
+    "show_full_path": true,
+    "show_rel_path": true,
+    "show_project_first": true,
 
-	"always_prompt_for_file_reload": true,
-	"close_windows_when_empty": false,
-	"focus_on_file_drop": true,
-	"remember_workspace": false,
+    "native_tabs": "disabled",
+    "overlay_scroll_bars": "enabled",
 
-	"ignored_packages": [
-		"Rust",
-		"Vintage",
-	],
+    "hardware_acceleration": "opengl",
+
+    "always_prompt_for_file_reload": true,
+    "close_windows_when_empty": false,
+    "focus_on_file_drop": true,
+    "remember_workspace": false,
+
+    "ignored_packages": [
+        "Rust",
+        "Vintage",
+    ]
 }

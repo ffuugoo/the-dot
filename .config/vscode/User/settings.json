@@ -420,8 +420,6 @@
     "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
     "workbench.commandPalette.experimental.suggestCommands": false,
 
-    "search.experimental.quickAccess.preserveInput": true,
-
     // UI: Editor
     "editor.lineNumbers": "on",
 
@@ -693,7 +691,7 @@
     // Diff Editor
     "diffEditor.diffAlgorithm": "advanced",
 
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.renderSideBySide": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": true,
 
     "diffEditor.renderIndicators": true,
@@ -946,6 +944,8 @@
 
     "rust-analyzer.showDependenciesExplorer": false,
 
+    "rust-analyzer.statusBar.clickAction": "stopServer",
+
     // "rust-analyzer.cachePriming.enable": true,
     // "rust-analyzer.cachePriming.numThreads": 0,
 
@@ -968,8 +968,6 @@
 
     // "rust-analyzer.server.path": null,
     // "rust-analyzer.server.extraEnv": {},
-
-    // "rust-analyzer.statusBar.clickAction": "openLogs",
 
 
     // EVEN BETTER TOML
@@ -1063,6 +1061,14 @@
     // "ltex.trace.server": "off",
 
 
+    // COPILOT
+
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": false,
+
+    "github.copilot.chat.welcomeMessage": "never",
+
+
     // BOOKMARKS
 
     "bookmarks.navigateThroughAllFiles": true,
@@ -1082,4 +1088,9 @@
 
     "bookmarks.sideBar.countBadge": "off",
     "bookmarks.sideBar.expanded": false,
+    "githubPullRequests.pullBranch": "never",
+    "search.quickAccess.preserveInput": true,
+    "lldb.suppressMissingSourceFiles": false,
+    "extensions.ignoreRecommendations": true,
+    "githubPullRequests.fileListLayout": "flat",
 }

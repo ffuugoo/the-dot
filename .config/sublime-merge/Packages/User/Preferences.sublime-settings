@@ -1,10 +1,18 @@
 {
-	"font_face": "Monaco",
-	"font_size": 12,
+    "ui_scale": 1.10,
 
-	"translate_tabs_to_spaces": true,
+    "font_face": "Monaco",
+    "font_size": 14,
 
-	"git_binary": "system",
-	"editor_argument_format": "--goto ${file}:${line}:${col}",
-	"editor_path": "/opt/homebrew/bin/code",
+    "font_options": ["gray_antialias"],
+    "theme_font_options": ["gray_antialias"],
+
+    "side_bar_layout": "tabs",
+
+    "translate_tabs_to_spaces": true,
+
+    // "editor_path": "/opt/homebrew/bin/code",
+    // "editor_argument_format": "--goto ${file}:${line}:${col}",
+
+    "git_binary": "system",
 }

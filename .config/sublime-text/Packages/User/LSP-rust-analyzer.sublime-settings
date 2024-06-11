@@ -1,138 +1,213 @@
 {
-	"selector": "source.rust",
+    "settings": {
+        "rust-analyzer.cargo.autoreload": true,
 
-	"settings": {
-		"rust-analyzer.cargo.autoreload": true,
+        "rust-analyzer.cargo.allTargets": true,
+        "rust-analyzer.cargo.features": [],
+        "rust-analyzer.cargo.noDefaultFeatures": false,
+        "rust-analyzer.cargo.cfgs": {},
 
-		"rust-analyzer.cargo.noDefaultFeatures": false,
-		"rust-analyzer.cargo.allFeatures": false,
-		"rust-analyzer.cargo.features": [],
+        "rust-analyzer.cargo.target": null,
 
-		"rust-analyzer.cargo.runBuildScripts": true,
-		"rust-analyzer.cargo.useRustcWrapperForBuildScripts": true,
+        "rust-analyzer.cargo.extraArgs": [],
+        "rust-analyzer.cargo.extraEnv": {},
 
-		"rust-analyzer.cargo.unsetTest": ["core"],
-
-		"rust-analyzer.cargo.noSysroot": false,
-
-
-		"rust-analyzer.procMacro.enable": true,
-		"rust-analyzer.experimental.procAttrMacros": true,
+        "rust-analyzer.cargo.targetDir": null,
 
 
-		"rust-analyzer.check.enable": false,
+        "rust-analyzer.check.command": "check",
+        "rust-analyzer.checkOnSave": true,
 
-		"rust-analyzer.check.command": "check",
-		"rust-analyzer.check.extraArgs": [],
+        "rust-analyzer.check.workspace": true,
+        "rust-analyzer.check.allTargets": true,
+        "rust-analyzer.check.features": null,
+        "rust-analyzer.check.noDefaultFeatures": null,
 
-		"rust-analyzer.check.allTargets": false,
-		"rust-analyzer.check.target": null,
+        "rust-analyzer.check.targets": null,
 
-		"rust-analyzer.check.noDefaultFeatures": null,
-		"rust-analyzer.check.allFeatures": null,
-		"rust-analyzer.check.features": null,
+        "rust-analyzer.check.extraArgs": [],
+        "rust-analyzer.check.extraEnv": {},
 
-
-		"rust-analyzer.diagnostics.enable": true,
-
-		"rust-analyzer.diagnostics.enableExperimental": true,
-		"rust-analyzer.diagnostics.disabled": [],
+        "rust-analyzer.check.ignore": [],
 
 
-		"rust-analyzer.callInfo.full": true,
+        "rust-analyzer.diagnostics.enable": true,
+        "rust-analyzer.diagnostics.experimental.enable": false,
+
+        "rust-analyzer.diagnostics.styleLints.enable": true,
+
+        "rust-analyzer.diagnostics.disabled": [],
+        "rust-analyzer.diagnostics.warningsAsHint": [],
+        "rust-analyzer.diagnostics.warningsAsInfo": [],
+
+        "rust-analyzer.diagnostics.useRustcErrorCode": false,
 
 
-		"rust-analyzer.completion.addCallParenthesis": true,
-		"rust-analyzer.completion.addCallArgumentSnippets": true,
+        "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+        "rust-analyzer.typing.continueCommentsOnNewline": true,
 
-		"rust-analyzer.completion.autoimport.enable": true,
-		"rust-analyzer.completion.autoself.enable": false,
+        "rust-analyzer.signatureInfo.detail": "parameters",
+        "rust-analyzer.signatureInfo.documentation.enable": false,
 
-		"rust-analyzer.completion.postfix.enable": false,
-		"rust-analyzer.completion.snippets": {},
+        "rust-analyzer.references.excludeImports": true,
+        "rust-analyzer.references.excludeTests": true,
 
+        "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+        "rust-analyzer.workspace.symbol.search.scope": "workspace",
+        "rust-analyzer.workspace.symbol.search.limit": 128,
 
-		"rust-analyzer.inlayHints.enable": true,
+        "rust-analyzer.assist.expressionFillDefault": "todo",
+        "rust-analyzer.assist.emitMustUse": false,
 
-		"rust-analyzer.inlayHints.typeHints": true,
-		"rust-analyzer.inlayHints.parameterHints": true,
-		"rust-analyzer.inlayHints.chainingHints": true,
-
-		"rust-analyzer.inlayHints.hideNamedConstructorHints": false,
-
-		"rust-analyzer.inlayHints.maxLength": 25,
-		"rust-analyzer.inlayHints.smallerHints": true,
+        "rust-analyzer.terminusUsePanel": true,
+        "rust-analyzer.terminusAutoClose": false,
 
 
-		"rust-analyzer.highlighting.strings": true,
+        "rust-analyzer.completion.fullFunctionSignatures.enable": false,
+        "rust-analyzer.completion.callable.snippets": "fill_arguments",
+
+        "rust-analyzer.completion.autoimport.enable": true,
+        "rust-analyzer.completion.privateEditable.enable": true,
+        "rust-analyzer.completion.postfix.enable": true,
+
+        "rust-analyzer.completion.autoself.enable": false,
+        "rust-analyzer.completion.termSearch.enable": false,
 
 
-		"rust-analyzer.highlightRelated.exitPoints": true,
-		"rust-analyzer.highlightRelated.breakPoints": true,
-		"rust-analyzer.highlightRelated.yieldPoints": true,
-		"rust-analyzer.highlightRelated.references": true,
+        "rust-analyzer.imports.granularity.group": "crate",
+        "rust-analyzer.imports.granularity.enforce": false,
+
+        "rust-analyzer.imports.group.enable": true,
+        "rust-analyzer.imports.merge.glob": true,
+        "rust-analyzer.imports.prefix": "self",
+
+        "rust-analyzer.imports.preferPrelude": false,
+        "rust-analyzer.imports.preferNoStd": false,
 
 
-		"rust-analyzer.hover.documentation": true,
+        "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": true,
+        "rust-analyzer.semanticHighlighting.strings.enable": true,
 
-		"rust-analyzer.hover.linksInHover": true,
+        "rust-analyzer.semanticHighlighting.operator.enable": true,
+        "rust-analyzer.semanticHighlighting.operator.specialization.enable": false,
 
+        "rust-analyzer.semanticHighlighting.punctuation.enable": false,
+        "rust-analyzer.semanticHighlighting.punctuation.specialization.enable": false,
+        "rust-analyzer.semanticHighlighting.punctuation.separate.macro.bang": false,
 
-		"rust-analyzer.hoverActions.enable": true,
-
-		"rust-analyzer.hoverActions.gotoTypeDef": true,
-		"rust-analyzer.hoverActions.implementations": true,
-		"rust-analyzer.hoverActions.references": true,
-
-		"rust-analyzer.hoverActions.run": true,
-		"rust-analyzer.hoverActions.debug": false,
-
-		"rust-analyzer.hoverActions.linksInHover": true,
+        "rust-analyzer.semanticHighlighting.nonStandardTokens": true,
 
 
-		"rust-analyzer.lens.enable": true,
+        "rust-analyzer.inlayHints.maxLength": 25,
 
-		"rust-analyzer.lens.implementations": true,
-		"rust-analyzer.lens.references": false,
-		"rust-analyzer.lens.methodReferences": false,
-		"rust-analyzer.lens.enumVariantReferences": false,
+        "rust-analyzer.inlayHints.renderColons": true,
+        "rust-analyzer.inlayHints.closureStyle": "rust_analyzer",
 
-		"rust-analyzer.lens.run": true,
-		"rust-analyzer.lens.debug": false,
+        "rust-analyzer.inlayHints.typeHints.enable": true,
+        "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
+        "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
 
-		"rust-analyzer.lens.forceCustomCommands": true,
+        "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
+        "rust-analyzer.inlayHints.closureCaptureHints.enable": false,
 
+        "rust-analyzer.inlayHints.parameterHints.enable": true,
+        "rust-analyzer.inlayHints.chainingHints.enable": true,
 
-		"rust-analyzer.assist.importGroup": true,
-		"rust-analyzer.assist.importPrefix": "plain",
-		"rust-analyzer.assist.importGranularity": "crate",
-		"rust-analyzer.assist.importEnforceGranularity": true,
-		"rust-analyzer.assist.allowMergingIntoGlobImports": true,
+        "rust-analyzer.inlayHints.bindingModeHints.enable": false,
 
-		"rust-analyzer.assist.exprFillDefault": "todo",
+        "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+        "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
 
+        "rust-analyzer.inlayHints.reborrowHints.enable": "never",
+        "rust-analyzer.inlayHints.implicitDrops.enable": false,
 
-		"rust-analyzer.joinLines.joinAssignments": true,
-		"rust-analyzer.joinLines.joinElseIf": true,
-		"rust-analyzer.joinLines.removeTrailingComma": true,
-		"rust-analyzer.joinLines.unwrapTrivialBlock": true,
+        "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "never",
+        "rust-analyzer.inlayHints.expressionAdjustmentHints.hideOutsideUnsafe": true,
+        "rust-analyzer.inlayHints.expressionAdjustmentHints.mode": "prefix",
 
+        "rust-analyzer.inlayHints.discriminantHints.enable": "never",
+        "rust-analyzer.inlayHints.rangeExclusiveHints.enable": false,
 
-		"rust-analyzer.workspace.symbol.search.scope": "workspace",
-		"rust-analyzer.workspace.symbol.search.kind": "only_types",
-
-
-		"rust-analyzer.rustfmt.enableRangeFormatting": true,
-		"rust-analyzer.rustfmt.extraArgs": [],
+        "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+        "rust-analyzer.inlayHints.closingBraceHints.minLines": 25,
 
 
-		"rust-analyzer.cache.warmup": true,
-		"rust-analyzer.files.watcher": "client",
-		"rust-analyzer.notifications.cargoTomlNotFound": true,
+        "rust-analyzer.highlightRelated.references.enable": true,
+
+        "rust-analyzer.highlightRelated.closureCaptures.enable": true,
+
+        "rust-analyzer.highlightRelated.exitPoints.enable": true,
+        "rust-analyzer.highlightRelated.yieldPoints.enable": true,
+        "rust-analyzer.highlightRelated.breakPoints.enable": true,
 
 
-		"rust-analyzer.terminusAutoClose": false,
-		"rust-analyzer.terminusUsePanel": false,
-	},
-	"enabled": true,
+        "rust-analyzer.lens.enable": true,
+
+        "rust-analyzer.lens.location": "above_name",
+
+        "rust-analyzer.lens.run.enable": true,
+        "rust-analyzer.lens.debug.enable": false,
+
+        "rust-analyzer.lens.references.adt.enable": false,
+        "rust-analyzer.lens.references.enumVariant.enable": false,
+        "rust-analyzer.lens.references.method.enable": false,
+        "rust-analyzer.lens.references.trait.enable": false,
+
+        "rust-analyzer.lens.implementations.enable": false,
+
+
+        "rust-analyzer.hover.documentation.enable": true,
+        "rust-analyzer.hover.documentation.keywords.enable": true,
+
+        "rust-analyzer.hover.links.enable": true,
+
+        "rust-analyzer.hover.show.fields": 5,
+        "rust-analyzer.hover.show.enumVariants": 5,
+        "rust-analyzer.hover.show.traitAssocItems": null,
+
+        "rust-analyzer.hover.memoryLayout.enable": false,
+        "rust-analyzer.hover.memoryLayout.size": "decimal",
+        "rust-analyzer.hover.memoryLayout.alignment": "decimal",
+        "rust-analyzer.hover.memoryLayout.offset": "decimal",
+        "rust-analyzer.hover.memoryLayout.niches": false,
+
+        "rust-analyzer.hover.actions.enable": false,
+
+        "rust-analyzer.hover.actions.run.enable": false,
+        "rust-analyzer.hover.actions.debug.enable": false,
+
+        "rust-analyzer.hover.actions.gotoTypeDef.enable": false,
+        "rust-analyzer.hover.actions.references.enable": false,
+
+        "rust-analyzer.hover.actions.implementations.enable": false,
+
+
+        "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+        "rust-analyzer.rustfmt.extraArgs": ["+nightly"],
+
+        "rust-analyzer.joinLines.joinAssignments": true,
+        "rust-analyzer.joinLines.joinElseIf": true,
+        "rust-analyzer.joinLines.unwrapTrivialBlock": true,
+        "rust-analyzer.joinLines.removeTrailingComma": true,
+
+
+        "rust-analyzer.testExplorer": false,
+        "rust-analyzer.interpret.tests": false,
+
+
+        "rust-analyzer.restartServerOnConfigChange": true,
+
+        "rust-analyzer.cachePriming.enable": true,
+        "rust-analyzer.cachePriming.numThreads": 0,
+
+        "rust-analyzer.files.watcher": "client",
+        "rust-analyzer.files.excludeDirs": [],
+
+        "rust-analyzer.notifications.cargoTomlNotFound": true,
+        "rust-analyzer.notifications.unindexedProject": false,
+
+        "rust-analyzer.procMacro.enable": true,
+        "rust-analyzer.procMacro.attributes.enable": true,
+        "rust-analyzer.procMacro.ignored": {},
+    }
 }
