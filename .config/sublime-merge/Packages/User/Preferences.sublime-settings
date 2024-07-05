@@ -1,13 +1,11 @@
 {
-    "ui_scale": 1.10,
-
     "font_face": "Monaco",
     "font_size": 14,
 
     "font_options": ["gray_antialias"],
     "theme_font_options": ["gray_antialias"],
 
-    "side_bar_layout": "tabs",
+    "side_bar_layout": "locations_as_column",
 
     "translate_tabs_to_spaces": true,
 

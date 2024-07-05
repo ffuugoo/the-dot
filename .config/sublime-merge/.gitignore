@@ -1,8 +1,7 @@
 /*
 
+!/Packages/
 !.gitignore
 
-!/Packages/
 /Packages/*
-
 !/Packages/User/

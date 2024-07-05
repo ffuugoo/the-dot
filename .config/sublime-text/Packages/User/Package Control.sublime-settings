@@ -2,34 +2,43 @@
     "bootstrapped": true,
     "in_process_packages": [],
 
+    "auto_upgrade": false,
+
     "installed_packages": [
         "Package Control",
 
         "OverrideAudit",
-        "PackageResourceViewer",
-        "PackageDev",
-        "AutomaticPackageReloader",
+
+        // "PackageResourceViewer",
+        // "PackageDev",
+        // "AutomaticPackageReloader",
+
 
         "A File Icon",
-        "MoveTab",
-        "View Bookmarks",
-        "EditorConfig",
-
-        "BracketHighlighter",
         "Alignment",
+        "BracketHighlighter",
+        "EditorConfig",
+        "MoveTab",
+
+        // "Compare Side-By-Side",
+        // "HexViewer",
+        // "View Bookmarks",
+
 
         // "Rust Enhanced",
 
         "MarkdownEditing",
 
-        "Autotools",
-        "CMake",
-
         "Dockerfile Syntax Highlighting",
         "Protobuf Syntax Hightlighting",
         "TOML",
 
+        "Autotools",
+        "CMake",
+
+
         "LSP",
+        "LSP-file-watcher-chokidar",
 
         "LSP-rust-analyzer",
 
@@ -37,18 +46,16 @@
         "LSP-ruff",
 
         "LSP-bash",
+
         "LSP-dockerfile",
         "LSP-json",
         "LSP-yaml",
 
-        "LSP-copilot",
-        "LSP-ltex-ls",
+        // "LSP-copilot",
+        // "LSP-ltex-ls",
 
-        "LSP-file-watcher-chokidar",
 
         // "Debugger",
-
-        "Diffable",
         "Terminus",
     ]
 }

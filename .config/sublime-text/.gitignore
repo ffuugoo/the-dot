@@ -1,17 +1,23 @@
 /*
 
-*.user-ca-bundle
-*.hidden-color-scheme
+!/Installed Packages/
+!/Lib/
+!/Packages/
 
 !.gitignore
 
-!/Packages/
+
 /Packages/*
 
 !/Packages/User/
-/Packages/User/OverrideAudit.status
 
-!/Packages/Rust/
+!/Packages/Debugger/
 !/Packages/Rust Enhanced/
 
 !/Packages/Old School Cool/
+
+
+OverrideAudit.status
+
+*.hidden-color-scheme
+*.user-ca-bundle

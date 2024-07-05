@@ -7,12 +7,10 @@
     "light_color_scheme": "Breakers.sublime-color-scheme",
     "dark_color_scheme": "Mariana.sublime-color-scheme",
 
-    "ui_scale": 1.15,
-
     "font_face": "Monaco",
     "font_size": 14,
 
-    "font_options": ["gray_antialias", "no_round"],
+    "font_options": ["gray_antialias"],
     "theme_font_options": ["gray_antialias"],
 
     "line_padding_top": 0,

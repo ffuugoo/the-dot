@@ -1,3 +1,5 @@
 {
+    "mde.list_indent_auto_switch_bullet": true,
+
     "mde.logging.level": "CRITICAL",
 }
