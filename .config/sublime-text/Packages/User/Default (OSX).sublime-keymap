@@ -117,5 +117,20 @@
             "operator": "equal",
             "operand": "codeActionProvider.codeActionKinds",
         }]
+    },
+
+    {
+        "keys": ["alt+tab"],
+        "command": "copilot_ask_completions",
+        "context": [{
+            "key": "copilot.is_authorized",
+        }]
+    },
+    {
+        "keys": ["alt+enter"],
+        "command": "copilot_accept_completion",
+        "context": [{
+            "key": "copilot.is_on_completion"
+        }]
     }
 ]

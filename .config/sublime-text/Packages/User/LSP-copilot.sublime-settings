@@ -1,11 +1,13 @@
 {
     "enabled": true,
 
-    "completion_style": "popup",
+    "settings": {
+        "completion_style": "popup",
 
-    "auto_ask_completions": false,
-    "commit_completion_on_tab": false,
-    "hook_to_auto_complete_command": false,
+        "auto_ask_completions": false,
+        "commit_completion_on_tab": false,
+        "hook_to_auto_complete_command": false,
 
-    "local_checks": false,
+        "local_checks": false,
+    }
 }
