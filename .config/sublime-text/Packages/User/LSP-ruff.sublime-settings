@@ -2,8 +2,6 @@
     "initializationOptions": {
         "settings": {
             "lint.enable": true,
-            "lint.run": "onType",
-            "lint.args": [],
 
             "fixAll": true,
             "organizeImports": true,
@@ -11,15 +9,9 @@
             "codeAction.fixViolation.enable": true,
             "codeAction.disableRuleComment.enable": true,
 
-            "format.args": [],
-
-            "ignoreStandardLibrary": true,
             "showNotification": "off",
 
             "logLevel": "error",
-
-            "interpreter": [],
-            "path": [],
         }
     }
 }
