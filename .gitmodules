@@ -1,3 +1,7 @@
+[submodule ".config/sublime-text/Packages/LSP"]
+	path = .config/sublime-text/Packages/LSP
+	url = git@github.com:ffuugoo/Sublime-LSP.git
+
 [submodule ".config/sublime-text/Packages/Rust Enhanced"]
 	path = .config/sublime-text/Packages/Rust Enhanced
 	url = git@github.com:ffuugoo/rust-enhanced.git
