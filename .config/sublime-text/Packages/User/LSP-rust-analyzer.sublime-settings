@@ -19,7 +19,7 @@
         "rust-analyzer.checkOnSave": true,
 
         "rust-analyzer.check.workspace": true,
-        "rust-analyzer.check.allTargets": true,
+        "rust-analyzer.check.allTargets": false,
         "rust-analyzer.check.features": null,
         "rust-analyzer.check.noDefaultFeatures": null,
 
