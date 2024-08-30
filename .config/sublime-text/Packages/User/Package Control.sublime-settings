@@ -18,6 +18,7 @@
         "Alignment",
         "BracketHighlighter",
         "EditorConfig",
+        "GitHubTools",
         "MoveTab",
 
         // "View Bookmarks",
