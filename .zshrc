@@ -55,6 +55,7 @@ declare -A plugins=(
 	[brew]=/opt/homebrew/share/zsh/site-functions
 	[gitstatus]=/opt/homebrew/opt/gitstatus/gitstatus.plugin.zsh
 	[iterm]=/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh
+	[orbstack]=/Applications/OrbStack.app/Contents/Resources/completions/zsh
 )
 
 if [[ -d $plugins[brew] ]]; then
@@ -67,6 +68,10 @@ fi
 
 if [[ $TERM_PROGRAM == iTerm.app && -f $plugins[iterm] ]]; then
 	source $plugins[iterm]
+fi
+
+if [[ -d $plugins[orbstack] ]]; then
+	fpath=( $plugins[orbstack] $fpath )
 fi
 
 if [[ ! -e ~/.zcomet || -d ~/.zcomet ]]; then
