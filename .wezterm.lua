@@ -15,9 +15,6 @@ config.window_frame = {
 }
 
 config.hide_tab_bar_if_only_one_tab = false
--- config.show_close_tab_button_in_tabs = false
-
--- config.enable_scroll_bar = true
 
 
 config.font = wezterm.font 'Monaco'
