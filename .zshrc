@@ -57,30 +57,24 @@ declare -A plugins=(
 	[iterm]=/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh
 )
 
-if [[ -d $plugins[brew] ]]
-then
+if [[ -d $plugins[brew] ]]; then
 	fpath=( $plugins[brew] $fpath )
 fi
 
-if [[ -f $plugins[gitstatus] ]]
-then
+if [[ -f $plugins[gitstatus] ]]; then
 	source $plugins[gitstatus]
 fi
 
-if [[ $TERM_PROGRAM == iTerm.app && -f $plugins[iterm] ]]
-then
+if [[ $TERM_PROGRAM == iTerm.app && -f $plugins[iterm] ]]; then
 	source $plugins[iterm]
 fi
 
-if [[ ! -e ~/.zcomet || -d ~/.zcomet ]]
-then
-	if [[ ! -e ~/.zcomet ]]
-	then
+if [[ ! -e ~/.zcomet || -d ~/.zcomet ]]; then
+	if [[ ! -e ~/.zcomet ]]; then
 		git clone https://github.com/agkozak/zcomet.git ~/.zcomet/bin
 	fi
 
-	if [[ -e ~/.zcomet/bin/zcomet.zsh ]] && source ~/.zcomet/bin/zcomet.zsh
-	then
+	if [[ -e ~/.zcomet/bin/zcomet.zsh ]] && source ~/.zcomet/bin/zcomet.zsh; then
 		zcomet fpath zsh-users/zsh-completions src
 
 		zcomet load zdharma-continuum/fast-syntax-highlighting
@@ -92,26 +86,22 @@ then
 	fi
 fi
 
-if ! functions zcomet &>/dev/null
-then
+if ! functions zcomet &>/dev/null; then
 	autoload -U compinit && compinit
 fi
 
 
 declare -A ps
 
-if functions iterm2_prompt_mark &>/dev/null
-then
+if functions iterm2_prompt_mark &>/dev/null; then
 	ps[iterm2]="%{$(iterm2_prompt_mark)%}"
 fi
 
-if [[ $USER != ffuugoo && $USER != root ]]
-then
+if [[ $USER != ffuugoo && $USER != root ]]; then
 	ps[user]=%n
 fi
 
-if [[ -v SSH_CLIENT ]]
-then
+if [[ -v SSH_CLIENT ]]; then
 	ps[host]=%m
 fi
 
@@ -124,8 +114,7 @@ ps[prompt]='%(?:%F{blue}:%F{red})%B%#%f%b '
 ps[status]='%(?::%F{red}%B(%?%)%f%b )'
 ps[pwd]='%50<...<%~%<<'
 
-if functions gitstatus_query &>/dev/null
-then
+if functions gitstatus_query &>/dev/null; then
 	declare -A psid
 
 	function psid { [[ $# -eq 1 && -n $1 ]] && psvar+=( '' ) && psid[$1]=${#psvar} }
@@ -221,8 +210,7 @@ bind  PageUp      beginning-of-buffer-or-history
 bind  PageDown    end-of-buffer-or-history
 bind  Shift-Tab   reverse-menu-complete
 
-if [[ -v terminfo[smkx] && -v terminfo[rmkx] ]]
-then
+if [[ -v terminfo[smkx] && -v terminfo[rmkx] ]]; then
 	function zle-line-init { echoti smkx } && zle -N zle-line-init
 	function zle-line-finish { echoti rmkx } && zle -N zle-line-finish
 fi
