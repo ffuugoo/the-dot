@@ -119,13 +119,13 @@ if functions gitstatus_query &>/dev/null; then
 
 	function psid { [[ $# -eq 1 && -n $1 ]] && psvar+=( '' ) && psid[$1]=${#psvar} }
 
-	psid git-branch
+	psid git-ref
 	psid git-mods
 
-	ps[git-branch]="%25>...>%${psid[git-branch]}v%>>"
+	ps[git-ref]="%25>...>%${psid[git-ref]}v%>>"
 	ps[git-mods]="%(${psid[git-mods]}V.%${psid[git-mods]}v.)"
 
-	ps[git-status]="%(${psid[git-branch]}V. %F{black}${ps[git-branch]}${ps[git-mods]}%f.)"
+	ps[git-status]="%(${psid[git-ref]}V. %F{black}${ps[git-ref]}${ps[git-mods]}%f.)"
 
 	autoload -Uz add-zsh-hook && add-zsh-hook precmd gitstatus-precmd
 
@@ -139,7 +139,7 @@ if functions gitstatus_query &>/dev/null; then
 	}
 
 	function gitstatus-query {
-		psvar[${psid[git-branch]}]=''
+		psvar[${psid[git-ref]}]=''
 		psvar[${psid[git-mods]}]=''
 		GITSTATUS_PWD=$PWD
 
@@ -158,7 +158,7 @@ if functions gitstatus_query &>/dev/null; then
 	function gitstatus-result {
 		case $VCS_STATUS_RESULT in
 			ok-*)
-				psvar[${psid[git-branch]}]=$VCS_STATUS_LOCAL_BRANCH
+				psvar[${psid[git-ref]}]=${VCS_STATUS_LOCAL_BRANCH:-${VCS_STATUS_TAG:-${VCS_STATUS_COMMIT[1,7]}}}
 				(( VCS_STATUS_HAS_UNSTAGED )) && psvar[${psid[git-mods]}]=*
 			;;
 
