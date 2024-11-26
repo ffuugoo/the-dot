@@ -2,7 +2,7 @@
     "settings": {
         "rust-analyzer.cargo.autoreload": true,
 
-        "rust-analyzer.cargo.allTargets": true,
+        "rust-analyzer.cargo.allTargets": false,
         "rust-analyzer.cargo.features": [],
         "rust-analyzer.cargo.noDefaultFeatures": false,
         "rust-analyzer.cargo.cfgs": {},
