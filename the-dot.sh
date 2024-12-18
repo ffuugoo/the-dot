@@ -9,7 +9,9 @@ declare repo=${self:h}
 
 declare ignore=(
 	.DS_Store
+
 	/.git
+	.gitmodules
 
 	/.config/iterm2
 
@@ -21,6 +23,7 @@ declare ignore=(
 
 declare recurse=(
 	.config
+	.config/lgogdownloader
 	.config/vscode
 	.ssh
 )
