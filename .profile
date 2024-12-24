@@ -1,5 +1,5 @@
 declare CARGO=$HOME/.cargo/bin
-declare PYTHON=$HOME/Library/Python/3.12/bin:/opt/homebrew/opt/python@3.12/libexec/bin
+declare PYTHON=$HOME/Library/Python/3.13/bin:/opt/homebrew/opt/python@3.13/libexec/bin
 declare BREW=/opt/homebrew/bin:/opt/homebrew/sbin
 declare ORBSTACK=$HOME/.orbstack/bin
 
