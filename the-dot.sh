@@ -1,145 +1,188 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
-set -euo pipefail -o nullglob -o globdots
+set -euo pipefail -o nullglob -o globdots -o re_match_pcre
 
+function main {
+    declare self=${self:A}
+    declare repo=${self:h}
 
-declare self=${0:A}
-declare repo=${self:h}
+    declare DRY_RUN=${DRY_RUN:-}
+    declare action=link-dotfiles
 
+    for arg in $@; do
+        case $arg in
+            --dry-run) DRY_RUN=1 ;;
+            --link-dotfiles|--link) action=link-dotfiles ;;
+            --print-config|--print|--test) action=print-config ;;
 
-declare ignore=(
-	.DS_Store
+            *)
+                echo "Invalid argument $arg" >&2
+                return 1
+            ;;
+        esac
+    done
 
-	/.git
-	.gitmodules
+    declare dotfiles=()
+    declare -A links=()
 
-	/.config/iterm2
-
-	/macOS
-
-	brew.sh
-	firefox.txt
-)
-
-declare recurse=(
-	.config
-	.config/lgogdownloader
-	.config/vscode
-	.ssh
-)
-
-declare -A override=(
-	[.config/vscode]='Library/Application Support/Code'
-	[.config/sublime-text]='Library/Application Support/Sublime Text'
-	[.config/sublime-merge]='Library/Application Support/Sublime Merge'
-	[.config/clangd]='Library/Preferences/clangd'
-)
-
-
-function symlink-all {
-	declare dir=${1:-$repo}
-
-	if [[ $self != ${self:a} ]]
-	then
-		echo "'$self' is not an absolute path!" >&2
-		return 1
-	fi
-
-	if [[ $repo != ${repo:a} ]]
-	then
-		echo "'$repo' is not an absolute path!" >&2
-		return 2
-	fi
-
-	if [[ ! -d $repo ]]
-	then
-		echo "'$repo' is not a directory!" >&2
-		return 3
-	fi
-
-	if [[ $dir != $repo && $dir != $repo/* ]]
-	then
-		echo "'$dir' is not a sub-directory of '$repo'!" >&2
-		return 4
-	fi
-
-	if [[ ! -d $dir ]]
-	then
-		echo "'$dir' is not a directory!" >&2
-		return 5
-	fi
-
-	for abs in $dir/*
-	do
-		if [[ $abs == $self ]]
-		then
-			continue
-		fi
-
-		declare rel=${abs#$repo/}
-
-		if (( $ignore[(ie)/$rel] <= ${#ignore} || $ignore[(ie)${rel:t}] <= ${#ignore} ))
-		then
-			continue
-		fi
-
-		if [[ -d $abs ]] && (( $recurse[(ie)$rel] <= ${#recurse} ))
-		then
-			symlink-all $abs
-		else
-			declare src=$abs
-			declare dst=~/"$(override-path $rel)"
-
-			if [[ ! -e ${dst:h} ]]
-			then
-				mkdir -p ${dst:h}
-			fi
-
-			if [[ ! -d ${dst:h} ]]
-			then
-				echo "'${dst:h}' is not a directory!" >&2
-				return 6
-			fi
-
-			if [[ -L $dst ]]
-			then
-				rm $dst
-			fi
-
-			if [[ -e $dst ]]
-			then
-				echo "'$dst' already exists (and is not a symlink)!" >&2
-				return 7
-			fi
-
-			ln -s $src $dst
-		fi
-	done
+    parse-config
+    $action
 }
 
-function override-path {
-	declare file_or_dir=$1
+function parse-config {
+    cd $repo
+    trap 'cd -' EXIT
 
-	if [[ $file_or_dir == /* || $file_or_dir == ~/* || $file_or_dir == ./* || $file_or_dir == ../* ]]
-	then
-		echo "'$file_or_dir' is not a non-prefixed relative path!" >&2
-		return 8
-	fi
+    if [[ ! -f the-dot.conf ]]; then
+        echo "Config file ${repo/$HOME/~}/the-dot.conf does not exist" >&2
+        return 1
+    fi
 
-	declare prefix=$file_or_dir
+    declare tags=()
 
-	while [[ $prefix != '.' && ! -v override[$prefix] ]]
-	do
-		prefix=${prefix:h}
-	done
+    case $(uname) in
+        Darwin) tags+=( macos ) ;;
+        Linux) tags+=( linux ) ;;
+    esac
 
-	if [[ $prefix != '.' ]]
-	then
-		echo ${file_or_dir/$prefix/$override[$prefix]}
-	else
-		echo $file_or_dir
-	fi
+    declare line=0
+
+    for directive in "${(@f)$(< the-dot.conf)}"
+    do
+        (( line += 1 ))
+
+        if [[ $directive =~ ^\s*$ ]]; then
+            continue
+        fi
+
+        if [[ ! $directive =~ '^\s*(?:\[(.+?)\]\s*)?(!)?\s*(.+?)(?:\s*=>\s*(.+))?\s*$' ]]; then
+            echo "Invalid config directive on line $line" >&2
+            echo $directive >&2
+            return 2
+        fi
+
+        declare tag=${match[1]:-}
+        declare exclude=${match[2]:-}
+        declare pattern=${match[3]:-}
+        declare link=${match[4]:-}
+
+        case ${tag:l} in
+            ''|macos|linux) : ;;
+
+            *)
+                echo "Invalid config directive on line $line: invalid tag $tag" >&2
+                return 3
+            ;;
+        esac
+
+        if [[ $exclude && $link ]]; then
+            echo "Invalid config directive on line $line: exclude pattern can't specify link-path" >&2
+            echo $directive >&2
+            return 4
+        fi
+
+        if [[ $pattern == /* ]]; then
+            echo "Invalid config directive on line $line: pattern can't be absolute" >&2
+            echo $directive >&2
+            return 5
+        fi
+
+        if [[ ${pattern:A} != $repo/* ]]; then
+            echo "Invalid config directive on line $line: pattern does not point within repo" >&2
+            echo $directive >&2
+            return 6
+        fi
+
+        if [[ $tag && ! ${tags[(r)${tag:l}]:-} ]]; then
+            continue
+        fi
+
+        declare matched=( ${~pattern} )
+
+        if (( ${#matched} == 0 )); then
+            echo "Invalid config directive on line $line: pattern did not match any files" >&2
+            echo $directive >&2
+            return 7
+        fi
+
+        for dotfile in $matched; do
+            if [[ $exclude ]]; then
+                dotfiles=( ${dotfiles:#$dotfile} )
+                unset links\[$dotfile\]
+                continue
+            fi
+
+            case ${dotfile:t} in
+                .DS_Store|.git|.gitmodules) continue ;;
+            esac
+
+            if [[ ${dotfile:t} == .gitignore && ${dotfile:h} != '' ]]; then
+                continue
+            fi
+
+            if [[ ! ${dotfiles[(r)$dotfile]:-} ]]; then
+                dotfiles+=( $dotfile )
+            fi
+
+            if [[ $link ]]; then
+                if [[ $pattern == *'*'* || $link == */ ]]; then
+                    links[$dotfile]=${link%%/}/${dotfile:t}
+                else
+                    links[$dotfile]=$link
+                fi
+            else
+                unset links\[$dotfile\]
+            fi
+        done
+
+        for dotfile in $dotfiles; do
+            if [[ ${dotfiles[(r)$dotfile/*]:-} ]]; then
+                dotfiles=( ${dotfiles:#$dotfile} )
+                unset links\[$dotfile\]
+            fi
+        done
+    done
 }
 
+function link-dotfiles {
+    for dotfile in $dotfiles; do
+        declare link=${links[$dotfile]:-$dotfile}
 
-symlink-all
+        if [[ $link != /* ]]; then
+            link=~/$link
+        fi
+
+        if [[ -L $link && ${link:A} == $repo/$dotfile ]]; then
+            continue
+        fi
+
+        if [[ ! -e ${link:h} ]]; then
+            - mkdir -p ${link:h}
+        elif [[ ! -d ${link:h} ]]; then
+            echo "${link:h} already exists and is not a directory!" >&2
+            return 8
+        fi
+
+        if [[ -L $link ]]; then
+            - rm $link
+        elif [[ -e $link ]]; then
+            echo "$link already exists and is not a symlink!" >&2
+            return 9
+        fi
+
+        - ln -s $repo/$dotfile $link
+    done
+}
+
+function print-config {
+    for dotfile in $dotfiles
+    do
+        echo $dotfile ${links[$dotfile]:+'=>'} ${links[$dotfile]:-}
+    done
+}
+
+function - {
+    ${DRY_RUN:+echo} $@
+}
+
+self=$0 main $@

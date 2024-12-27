@@ -1,4 +1,4 @@
 if [[ -f ~/.profile ]]
 then
-	source ~/.profile
+    source ~/.profile
 fi

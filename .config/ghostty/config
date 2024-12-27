@@ -1,0 +1,20 @@
+theme = ayu_light
+
+font-family = Monaco
+font-size = 14
+
+font-style-bold = false
+
+cursor-style = block
+cursor-color = 5c6773
+
+window-width = 120
+window-height = 48
+
+window-padding-balance = true
+
+shell-integration-features = no-cursor
+
+mouse-hide-while-typing = true
+
+auto-update = download

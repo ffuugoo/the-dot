@@ -2,13 +2,13 @@
 	name = Roman Titov
 	email = ffuugoo@users.noreply.github.com
 
+[init]
+	defaultBranch = main
+
 [core]
 	excludesFile = ~/.gitignore
 	editor = subl --wait
 	pager = less -FR -+X
-
-[init]
-	defaultBranch = main
 
 [merge]
 	tool = smerge

@@ -10,7 +10,7 @@ export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 if [[ -d /Library/Developer/CommandLineTools/usr ]]
 then
-	export DYLD_FALLBACK_LIBRARY_PATH=/Library/Developer/CommandLineTools/usr/lib
+    export DYLD_FALLBACK_LIBRARY_PATH=/Library/Developer/CommandLineTools/usr/lib
 fi
 
 export DISPLAY=SHITFUCK
