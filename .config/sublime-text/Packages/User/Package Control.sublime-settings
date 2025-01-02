@@ -54,6 +54,9 @@
         // "LSP-ltex-ls",
 
 
+        "OpenAI completion",
+
+
         // "Debugger",
         "Terminus",
     ]
