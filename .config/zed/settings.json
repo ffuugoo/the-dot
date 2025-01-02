@@ -55,7 +55,7 @@
   "show_inline_completions": false,
 
   "features": {
-    "inline_completion_provider": "copilot"
+    "inline_completion_provider": "none"
   },
 
   "inlay_hints": {
