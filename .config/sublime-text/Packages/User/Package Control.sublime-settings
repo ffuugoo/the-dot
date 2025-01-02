@@ -37,9 +37,9 @@
 
 
         // "LSP",
-        "LSP-file-watcher-chokidar",
 
         "LSP-rust-analyzer",
+        "LSP-file-watcher-chokidar",
 
         "LSP-basedpyright",
         "LSP-ruff",

@@ -22,23 +22,14 @@
     "caret_extra_bottom": 1,
     "caret_extra_width": 1,
 
-    "rulers": [100],
 
     "translate_tabs_to_spaces": true,
-
-    "trim_automatic_white_space": true,
 
     "draw_white_space": ["leading_mixed", "trailing", "isolated", "selection"],
 
     "draw_unicode_white_space": "all",
     "draw_unicode_bidi": true,
     "control_character_style": "names",
-
-    "trim_trailing_white_space_on_save": "not_on_caret",
-    "trim_only_modified_white_space": true,
-    "ensure_newline_at_eof_on_save": true,
-
-    "match_selection": true,
 
     "match_brackets": false,
     "match_brackets_braces": false,
@@ -47,8 +38,28 @@
     "match_brackets_content": false,
     "match_tags": false,
 
-    "scroll_past_end": true,
+    "rulers": [100],
+
+    "word_wrap": "auto",
+    "wrap_width_style": "min",
+    "wrap_width": 0,
+
+
+    "close_windows_when_empty": false,
+
+    "trim_trailing_white_space_on_save": "not_on_caret",
+    "trim_only_modified_white_space": true,
+    "ensure_newline_at_eof_on_save": true,
+
+    "find_selected_text": true,
+    "auto_find_in_selection": true,
+
+    "shift_tab_unindent": true,
+
+    "drag_text": false,
+
     "scroll_context_lines": 1,
+
 
     "index_files": true,
 
@@ -65,15 +76,6 @@
     "auto_complete_include_snippets": true,
     "auto_complete_include_snippets_when_typing": true,
 
-    "shift_tab_unindent": true,
-
-    "find_selected_text": true,
-    "auto_find_in_selection": true,
-
-    "spell_check": false,
-    "dictionary": "Packages/Language - English/en_US.dic",
-
-    "drag_text": false,
 
     "highlight_modified_tabs": true,
     "bold_folder_labels": true,
@@ -91,10 +93,6 @@
 
     "hardware_acceleration": "opengl",
 
-    "always_prompt_for_file_reload": true,
-    "close_windows_when_empty": false,
-    "focus_on_file_drop": true,
-    "remember_workspace": false,
 
     "ignored_packages": [
         "Rust",

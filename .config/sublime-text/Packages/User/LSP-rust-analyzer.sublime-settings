@@ -15,8 +15,9 @@
         "rust-analyzer.cargo.targetDir": null,
 
 
-        "rust-analyzer.check.command": "check",
         "rust-analyzer.checkOnSave": true,
+
+        "rust-analyzer.check.command": "check",
 
         "rust-analyzer.check.workspace": true,
         "rust-analyzer.check.allTargets": false,
@@ -36,31 +37,22 @@
 
         "rust-analyzer.diagnostics.styleLints.enable": true,
 
-        "rust-analyzer.diagnostics.disabled": [],
-        "rust-analyzer.diagnostics.warningsAsHint": [],
         "rust-analyzer.diagnostics.warningsAsInfo": [],
+        "rust-analyzer.diagnostics.warningsAsHint": [],
+        "rust-analyzer.diagnostics.disabled": [],
 
         "rust-analyzer.diagnostics.useRustcErrorCode": false,
 
-
-        "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
-        "rust-analyzer.typing.continueCommentsOnNewline": true,
-
-        "rust-analyzer.signatureInfo.detail": "parameters",
-        "rust-analyzer.signatureInfo.documentation.enable": false,
-
-        "rust-analyzer.references.excludeImports": true,
-        "rust-analyzer.references.excludeTests": true,
 
         "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
         "rust-analyzer.workspace.symbol.search.scope": "workspace",
         "rust-analyzer.workspace.symbol.search.limit": 128,
 
-        "rust-analyzer.assist.expressionFillDefault": "todo",
-        "rust-analyzer.assist.emitMustUse": false,
+        "rust-analyzer.references.excludeImports": true,
+        "rust-analyzer.references.excludeTests": true,
 
-        "rust-analyzer.terminusUsePanel": true,
-        "rust-analyzer.terminusAutoClose": false,
+        "rust-analyzer.signatureInfo.detail": "parameters",
+        "rust-analyzer.signatureInfo.documentation.enable": false,
 
 
         "rust-analyzer.completion.fullFunctionSignatures.enable": false,
@@ -74,18 +66,23 @@
         "rust-analyzer.completion.termSearch.enable": false,
 
 
+        "rust-analyzer.imports.group.enable": true,
+
         "rust-analyzer.imports.granularity.group": "crate",
         "rust-analyzer.imports.granularity.enforce": false,
 
-        "rust-analyzer.imports.group.enable": true,
         "rust-analyzer.imports.merge.glob": true,
+
         "rust-analyzer.imports.prefix": "self",
 
         "rust-analyzer.imports.preferPrelude": false,
         "rust-analyzer.imports.preferNoStd": false,
 
 
-        "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": true,
+        "rust-analyzer.assist.expressionFillDefault": "todo",
+        "rust-analyzer.assist.emitMustUse": false,
+
+
         "rust-analyzer.semanticHighlighting.strings.enable": true,
 
         "rust-analyzer.semanticHighlighting.operator.enable": true,
@@ -94,6 +91,8 @@
         "rust-analyzer.semanticHighlighting.punctuation.enable": false,
         "rust-analyzer.semanticHighlighting.punctuation.specialization.enable": false,
         "rust-analyzer.semanticHighlighting.punctuation.separate.macro.bang": false,
+
+        "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": true,
 
         "rust-analyzer.semanticHighlighting.nonStandardTokens": true,
 
@@ -191,23 +190,29 @@
         "rust-analyzer.joinLines.removeTrailingComma": true,
 
 
+        "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+        "rust-analyzer.typing.continueCommentsOnNewline": true,
+
+        "rust-analyzer.terminusUsePanel": true,
+        "rust-analyzer.terminusAutoClose": false,
+
         "rust-analyzer.testExplorer": false,
-        "rust-analyzer.interpret.tests": false,
 
 
         "rust-analyzer.restartServerOnConfigChange": true,
 
-        "rust-analyzer.cachePriming.enable": true,
-        "rust-analyzer.cachePriming.numThreads": 0,
+        "rust-analyzer.procMacro.enable": true,
+        "rust-analyzer.procMacro.attributes.enable": true,
+        "rust-analyzer.procMacro.ignored": {},
+
+        "rust-analyzer.interpret.tests": false,
+
+        "rust-analyzer.notifications.cargoTomlNotFound": true,
 
         "rust-analyzer.files.watcher": "client",
         "rust-analyzer.files.excludeDirs": [],
 
-        "rust-analyzer.notifications.cargoTomlNotFound": true,
-        "rust-analyzer.notifications.unindexedProject": false,
-
-        "rust-analyzer.procMacro.enable": true,
-        "rust-analyzer.procMacro.attributes.enable": true,
-        "rust-analyzer.procMacro.ignored": {},
+        "rust-analyzer.cachePriming.enable": true,
+        "rust-analyzer.cachePriming.numThreads": 0,
     }
 }
