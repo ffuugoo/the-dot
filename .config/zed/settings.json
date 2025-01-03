@@ -378,6 +378,11 @@
   },
 
 
+  "file_types": {
+    "JSONC": ["sublime-settings", "sublime-keymap", "sublime-mousemap"]
+  },
+
+
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false
