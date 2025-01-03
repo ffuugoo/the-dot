@@ -34,6 +34,7 @@ function min {
 function zed {
     - rm -rf \
         ~/Library/Application\ Support/Zed/{db,languages,node,prettier} \
+        ~/Library/Application\ Support/Zed/extensions/work \
         ~/Library/Caches/Zed \
         ~/.cache/zed
 }
