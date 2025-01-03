@@ -1,0 +1,26 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-space": "editor::ShowCompletions",
+      "alt-shift-space": "editor::ShowSignatureHelp",
+      "cmd-enter": "editor::ToggleCodeActions",
+
+      "cmd-home": "editor::MoveToBeginning",
+      "cmd-end": "editor::MoveToEnd",
+      "cmd-shift-home": "editor::SelectToBeginning",
+      "cmd-shift-end": "editor::SelectToEnd",
+
+      "ctrl-space": null,
+      "cmd-i": null,
+      "cmd-.": null
+    }
+  },
+  {
+    "context": "Editor && (showing_completions || showing_code_actions)",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrev"
+    }
+  }
+]
