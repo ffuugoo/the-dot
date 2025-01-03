@@ -28,13 +28,14 @@
 
   "soft_wrap": "none",
   "preferred_line_length": 120,
-  "show_wrap_guides": false,
 
 
   "when_closing_with_no_tabs": "close_window",
 
   "seed_search_query_from_cursor": "selection",
   "use_smartcase_search": true,
+
+  "double_click_in_multibuffer": "open",
 
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
