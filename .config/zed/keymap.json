@@ -13,7 +13,12 @@
 
       "ctrl-space": null,
       "cmd-i": null,
-      "cmd-.": null
+      "cmd-.": null,
+
+      "ctrl-f": null,
+      "ctrl-b": null,
+      "ctrl-shift-f": null,
+      "ctrl-shift-b": null
     }
   },
   {
