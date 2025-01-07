@@ -12,5 +12,7 @@
     // "editor_path": "/opt/homebrew/bin/code",
     // "editor_argument_format": "--goto ${file}:${line}:${col}",
 
+    "editor_path": "/opt/homebrew/bin/zed",
+
     "git_binary": "system",
 }

@@ -7,7 +7,7 @@
 
 [core]
 	excludesFile = ~/.gitignore
-	editor = subl --wait
+	editor = zed --wait
 	pager = less -FR -+X
 
 [merge]
