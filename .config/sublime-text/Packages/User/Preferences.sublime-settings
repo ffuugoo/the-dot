@@ -56,9 +56,10 @@
 
     "shift_tab_unindent": true,
 
-    "drag_text": false,
-
+    "scroll_past_end": true,
     "scroll_context_lines": 1,
+
+    "drag_text": false,
 
 
     "index_files": true,

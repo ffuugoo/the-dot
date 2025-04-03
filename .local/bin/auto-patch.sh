@@ -5,7 +5,7 @@
 # on run {input, parameters}
 #     try
 #         set command to { "~/.local/bin/auto-patch.sh" }
-
+#
 #         repeat with romOrPatchFile in input
 #             set end of command to quoted form of POSIX path of romOrPatchFile
 #         end repeat
@@ -39,8 +39,7 @@ function main {
 function scan {
     declare ARC=${ARC-}
 
-    for file in $@
-    do
+    for file in $@; do
         case ${file:e} in
             (nes|sfc|z64|gb|gbc|gba|md|32x|iso)(|~))
                 rom+=( $file )
@@ -64,14 +63,12 @@ function scan {
             ;;
         esac
 
-        if [[ $ARC ]]
-        then
+        if [[ $ARC ]]; then
             archives[$file]=$ARC
         fi
     done
 
-    if [[ $ARC ]] && (( ${#${archives[(Re)$ARC]}} == 0 ))
-    then
+    if [[ $ARC ]] && (( ${#${archives[(Re)$ARC]}} == 0 )); then
         echo No ROMs or patches found in $ARC archive >&2
         return 2
     fi
@@ -80,16 +77,14 @@ function scan {
 function validate {
     declare error=0
 
-    if (( ${#rom} == 0 ))
-    then
+    if (( ${#rom} == 0 )); then
         echo No ROMs found >&2
         echo >&2
 
         error=1
     fi
 
-    if (( ${#rom} > 1 ))
-    then
+    if (( ${#rom} > 1 )); then
         echo Found multiple ROMs: >&2
         printf '- %s\n' ${(f)"$(path $rom)"} >&2
         echo >&2
@@ -97,20 +92,17 @@ function validate {
         error=1
     fi
 
-    if (( ${#patches} == 0 ))
-    then
+    if (( ${#patches} == 0 )); then
         echo No patches found >&2
         echo >&2
 
         error=1
     fi
 
-    for arc in ${(iu)archives[@]}
-    do
+    for arc in ${(iu)archives[@]}; do
         declare files=${#${archives[(Re)$arc]}}
 
-        if (( files > 1 ))
-        then
+        if (( files > 1 )); then
             (( error )) && echo >&2
             echo Found multiple ROMs or patches in ${arc:t} archive: >&2
             printf '- %s\n' ${(ki)archives[(Re)$arc]} >&2
@@ -120,15 +112,13 @@ function validate {
         fi
     done
 
-    if (( error ))
-    then
+    if (( error )); then
         return 3
     fi
 }
 
 function apply {
-    if [[ ${archives[$rom]-} ]]
-    then
+if [[ ${archives[$rom]-} ]]; then
         declare root=${archives[$rom]:h}
     else
         declare root=${rom:h}
@@ -145,15 +135,12 @@ function apply {
 
     declare rom=$tmp/${${rom%\~}:t}
 
-    if [[ -f $rom~ ]]
-    then
+    if [[ -f $rom~ ]]; then
         - mv $rom~ $rom
     fi
 
-    for patch in $patches
-    do
-        if [[ ${archives[$patch]-} ]]
-        then
+    for patch in $patches; do
+    if [[ ${archives[$patch]-} ]]; then
             arc-extract ${archives[$patch]} $tmp $patch
 
             patch=$tmp/${patch:t}
@@ -162,15 +149,13 @@ function apply {
         patch $rom $patch
     done
 
-    if [[ ${rom:e} == md ]]
-    then
+    if [[ ${rom:e} == md ]]; then
         mdfx $rom
     fi
 
     declare out=$root/${rom:t}
 
-    if [[ -f $out && ! -e $out~ ]]
-    then
+    if [[ -f $out && ! -e $out~ ]]; then
         - mv $out $out~
     fi
 
@@ -235,10 +220,8 @@ function mdfx {
 }
 
 function path {
-    for file in $@
-    do
-        if [[ ${archives[$file]-} ]]
-        then
+    for file in $@; do
+        if [[ ${archives[$file]-} ]]; then
             echo ${archives[$file]:t}::$file
         else
             echo ${file:t}
