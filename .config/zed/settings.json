@@ -5,6 +5,8 @@
     "dark": "Ayu Dark"
   },
 
+  "icon_theme": "Bearded Icon Theme",
+
   "ui_font_family": "Zed Plex Sans",
   "ui_font_size": 15,
 
@@ -53,12 +55,6 @@
   "show_completions_on_input": true,
   "show_completion_documentation": true,
 
-  "show_inline_completions": false,
-
-  "features": {
-    "inline_completion_provider": "none"
-  },
-
   "inlay_hints": {
     "enabled": true
   },
@@ -77,6 +73,8 @@
           "allTargets": false,
           "features": [],
           "noDefaultFeatures": false,
+
+          "noDeps": false,
 
           "cfgs": {},
           "target": null,
@@ -351,20 +349,43 @@
   "use_on_type_format": false,
 
 
+  "show_edit_predictions": true,
+
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+
+
   "assistant": {
+    "version": "2",
+
     "enabled": true,
 
     "button": true,
     "dock": "right",
 
-    "version": "2",
-
     "default_model": {
-      "provider": "ollama",
-      "model": "codellama:latest"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-thinking-latest"
     },
 
-    "default_open_ai_model": "gpt-4o"
+    "editor_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+
+    "default_profile": "ask",
+
+    "enable_experimental_live_diffs": true
+  },
+
+  "slash_commands": {
+    "cargo_workspace": { "enabled": true },
+    "docs": { "enabled": true }
   },
 
 
@@ -445,7 +466,7 @@
   },
 
   "chat_panel": {
-    "button": false,
+    "button": "when_in_call",
     "dock": "right"
   },
 

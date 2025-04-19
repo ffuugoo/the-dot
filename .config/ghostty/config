@@ -14,7 +14,16 @@ window-height = 48
 window-padding-balance = true
 
 shell-integration-features = no-cursor
-
 mouse-hide-while-typing = true
+
+keybind = cmd+opt+left=previous_tab
+keybind = cmd+opt+right=next_tab
+keybind = shift+cmd+opt+left=move_tab:-1
+keybind = shift+cmd+opt+right=move_tab:1
+
+keybind = ctrl+page_down=previous_tab
+keybind = ctrl+page_up=next_tab
+keybind = shift+ctrl+page_down=move_tab:-1
+keybind = shift+ctrl+page_up=move_tab:1
 
 auto-update = download

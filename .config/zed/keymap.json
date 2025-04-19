@@ -29,9 +29,10 @@
     }
   },
   {
-    "context": "ContextEditor > Editor",
+    "context": "MessageEditor > Editor",
     "bindings": {
-      "cmd-enter": "assistant::Assist"
+      "enter": "editor::Newline",
+      "cmd-enter": "agent::Chat"
     }
   }
 ]
