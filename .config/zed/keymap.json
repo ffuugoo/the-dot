@@ -25,7 +25,13 @@
     "context": "Editor && (showing_completions || showing_code_actions)",
     "bindings": {
       "tab": "editor::ContextMenuNext",
-      "shift-tab": "editor::ContextMenuPrev"
+      "shift-tab": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "cmd-enter": "assistant::Assist"
     }
   }
 ]
