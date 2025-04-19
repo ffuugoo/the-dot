@@ -8,8 +8,7 @@ export PATH=~/.local/bin:$CARGO:$PYTHON:$BREW:$ORBSTACK:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
-if [[ -d /Library/Developer/CommandLineTools/usr ]]
-then
+if [[ -d /Library/Developer/CommandLineTools/usr/lib ]]; then
     export DYLD_FALLBACK_LIBRARY_PATH=/Library/Developer/CommandLineTools/usr/lib
 fi
 
