@@ -2,33 +2,38 @@
 
 set -euo pipefail
 
+function main {
+    for target in ${@:-all}; do
+        $target
+    done
+}
+
 function all {
     better-zip
 }
 
 function better-zip {
-    defaults write com.macitbetter.betterzip TableColumnSorter5.0 -float "$(date +%s)"
-    rm -f ~/Library/Application\ Support/.mibprofile
+    - defaults write com.macitbetter.betterzip TableColumnSorter5.0 -float "$(date +%s)"
+    - rm -f ~/Library/Application\ Support/.mibprofile
 }
 
 function crossover {
-    defaults write com.codeweavers.CrossOver FirstRunDate -date "$(date +%Y-%m-%dT%TZ)"
+    - defaults write com.codeweavers.CrossOver FirstRunDate -date "$(date +%Y-%m-%dT%TZ)"
 
     for bottle in ~/Library/Application\ Support/CrossOver/Bottles/*
     do
-        rm -f $bottle/.update-timestamp
+        - rm -f $bottle/.update-timestamp
 
-        cp $bottle/system.reg{,~}
+        - cp $bottle/system.reg{,~}
 
-        sed -i \
+        - sed -i \
             -E '/^\[Software\\\\CodeWeavers\\\\CrossOver\\\\/,/^\[/ { /^\[Software\\\\CodeWeavers\\\\CrossOver\\\\/ d; /^\[/! d; }' \
             $bottle/system.reg
     done
 }
 
-if (( $# ))
-then
-    $@
-else
-    all
-fi
+function - {
+    ${DRY_RUN:+echo} $@
+}
+
+main $@
