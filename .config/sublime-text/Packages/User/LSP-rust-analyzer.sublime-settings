@@ -5,8 +5,10 @@
         "rust-analyzer.cargo.allTargets": false,
         "rust-analyzer.cargo.features": [],
         "rust-analyzer.cargo.noDefaultFeatures": false,
-        "rust-analyzer.cargo.cfgs": {},
 
+        "rust-analyzer.cargo.noDeps": false,
+
+        "rust-analyzer.cargo.cfgs": [],
         "rust-analyzer.cargo.target": null,
 
         "rust-analyzer.cargo.extraArgs": [],
@@ -33,19 +35,17 @@
 
 
         "rust-analyzer.diagnostics.enable": true,
-        "rust-analyzer.diagnostics.experimental.enable": false,
 
+        "rust-analyzer.diagnostics.experimental.enable": false,
         "rust-analyzer.diagnostics.styleLints.enable": true,
 
         "rust-analyzer.diagnostics.warningsAsInfo": [],
         "rust-analyzer.diagnostics.warningsAsHint": [],
         "rust-analyzer.diagnostics.disabled": [],
 
-        "rust-analyzer.diagnostics.useRustcErrorCode": false,
 
-
-        "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
         "rust-analyzer.workspace.symbol.search.scope": "workspace",
+        "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
         "rust-analyzer.workspace.symbol.search.limit": 128,
 
         "rust-analyzer.references.excludeImports": true,
@@ -190,17 +190,6 @@
         "rust-analyzer.joinLines.removeTrailingComma": true,
 
 
-        "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
-        "rust-analyzer.typing.continueCommentsOnNewline": true,
-
-        "rust-analyzer.terminusUsePanel": true,
-        "rust-analyzer.terminusAutoClose": false,
-
-        "rust-analyzer.testExplorer": false,
-
-
-        "rust-analyzer.restartServerOnConfigChange": true,
-
         "rust-analyzer.procMacro.enable": true,
         "rust-analyzer.procMacro.attributes.enable": true,
         "rust-analyzer.procMacro.ignored": {},
@@ -209,10 +198,21 @@
 
         "rust-analyzer.notifications.cargoTomlNotFound": true,
 
-        "rust-analyzer.files.watcher": "client",
-        "rust-analyzer.files.excludeDirs": [],
-
         "rust-analyzer.cachePriming.enable": true,
         "rust-analyzer.cachePriming.numThreads": 0,
+
+
+        "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+        "rust-analyzer.typing.continueCommentsOnNewline": true,
+
+        "rust-analyzer.terminusUsePanel": true,
+        "rust-analyzer.terminusAutoClose": false,
+
+        "rust-analyzer.testExplorer": false,
+
+        "rust-analyzer.restartServerOnConfigChange": true,
+
+        "rust-analyzer.files.watcher": "client",
+        "rust-analyzer.files.excludeDirs": [],
     }
 }

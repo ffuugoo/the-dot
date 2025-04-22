@@ -76,7 +76,7 @@
 
           "noDeps": false,
 
-          "cfgs": {},
+          "cfgs": [],
           "target": null,
 
           "extraArgs": [],
@@ -331,7 +331,7 @@
         },
 
         "notifications": {
-          "cargoTomlNotFound": true,
+          "cargoTomlNotFound": true
         },
 
         "cachePriming": {
