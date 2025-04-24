@@ -3,8 +3,6 @@
     "light_theme": "Default.sublime-theme",
     "dark_theme": "Default Dark.sublime-theme",
 
-    "ui_scale": 1.1,
-
     "color_scheme": "Breakers.sublime-color-scheme",
     "light_color_scheme": "Breakers.sublime-color-scheme",
     "dark_color_scheme": "Mariana.sublime-color-scheme",
