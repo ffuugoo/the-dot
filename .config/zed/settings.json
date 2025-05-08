@@ -461,12 +461,12 @@
   },
 
   "collaboration_panel": {
-    "button": false,
+    "button": true,
     "dock": "right"
   },
 
   "chat_panel": {
-    "button": "when_in_call",
+    "button": "always",
     "dock": "right"
   },
 
