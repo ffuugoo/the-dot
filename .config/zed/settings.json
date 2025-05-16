@@ -360,7 +360,7 @@
   },
 
 
-  "assistant": {
+  "agent": {
     "version": "2",
 
     "enabled": true,
