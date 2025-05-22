@@ -378,9 +378,7 @@
       "model": "claude-3-7-sonnet-latest"
     },
 
-    "default_profile": "ask",
-
-    "enable_experimental_live_diffs": true
+    "default_profile": "ask"
   },
 
   "slash_commands": {
