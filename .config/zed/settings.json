@@ -433,6 +433,13 @@
     }
   },
 
+  "minimap": {
+    "show": "always",
+    "thumb": "hover",
+    "thumb_border": "none",
+    "current_line_highlight": null
+  },
+
   "project_panel": {
     "button": true,
     "dock": "left",
