@@ -2,6 +2,7 @@
 
 .idea/
 .vscode/
+.ropeproject/
 
 *.sublime-project
 *.sublime-workspace

@@ -64,6 +64,13 @@
   },
 
 
+  "languages": {
+    "Rust": {
+      "enable_language_server": true
+    }
+  },
+
+
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
@@ -349,14 +356,14 @@
   "use_on_type_format": false,
 
 
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
 
   "edit_predictions": {
     "mode": "subtle"
   },
 
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "none"
   },
 
 

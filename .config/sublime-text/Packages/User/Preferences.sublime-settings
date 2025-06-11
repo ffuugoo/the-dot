@@ -92,6 +92,8 @@
     "native_tabs": "disabled",
     "overlay_scroll_bars": "enabled",
 
+    "show_encoding": true,
+
     "hardware_acceleration": "opengl",
 
 
