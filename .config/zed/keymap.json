@@ -27,12 +27,5 @@
       "tab": "editor::ContextMenuNext",
       "shift-tab": "editor::ContextMenuPrevious"
     }
-  },
-  {
-    "context": "MessageEditor > Editor",
-    "bindings": {
-      "enter": "editor::Newline",
-      "cmd-enter": "agent::Chat"
-    }
   }
 ]

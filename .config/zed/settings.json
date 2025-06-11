@@ -64,8 +64,18 @@
   },
 
 
+  "languages": {
+    "Rust": {
+      "enable_language_server": true
+    }
+  },
+
   "lsp": {
     "rust-analyzer": {
+      "binary": {
+        "path": "/Users/ffuugoo/Library/Application Support/Zed/languages/rust-analyzer/rust-analyzer-2025-08-25"
+      },
+
       "initialization_options": {
         "cargo": {
           "autoreload": true,
@@ -74,14 +84,13 @@
           "features": [],
           "noDefaultFeatures": false,
 
-          "noDeps": false,
-
           "cfgs": [],
           "target": null,
 
           "extraArgs": [],
           "extraEnv": {},
 
+          "noDeps": false,
           "targetDir": null
         },
 
@@ -326,6 +335,10 @@
           "ignored": {}
         },
 
+        "rust": {
+          "analyzerTargetDir": false
+        },
+
         "interpret": {
           "tests": false
         },
@@ -343,12 +356,6 @@
   },
 
 
-  "formatter": "auto",
-
-  "format_on_save": "off",
-  "use_on_type_format": false,
-
-
   "show_edit_predictions": true,
 
   "edit_predictions": {
@@ -356,26 +363,28 @@
   },
 
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
 
 
+  "formatter": "auto",
+
+  "format_on_save": "off",
+  "use_on_type_format": false,
+
+
   "agent": {
-    "version": "2",
 
     "enabled": true,
 
     "button": true,
     "dock": "right",
 
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-thinking-latest"
-    },
+    "use_modifier_to_send": true,
 
-    "editor_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3.5-sonnet"
     },
 
     "default_profile": "ask"
@@ -444,6 +453,9 @@
     "button": true,
     "dock": "left",
 
+    "hide_root": true,
+    "sticky_scroll": false,
+    "auto_fold_dirs": false,
     "auto_reveal_entries": false,
 
     "default_width": 300,
