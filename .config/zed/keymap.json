@@ -29,10 +29,16 @@
     }
   },
   {
-    "context": "MessageEditor > Editor",
+    "context": "MessageEditor > Editor && !showing_completions",
     "bindings": {
       "enter": "editor::Newline",
       "cmd-enter": "agent::Chat"
+    }
+  },
+  {
+    "context": "MessageEditor > Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion"
     }
   }
 ]
