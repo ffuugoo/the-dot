@@ -1,8 +1,0 @@
-{
-    "settings.linting": true,
-
-    "settings.auto_complete": false,
-    "settings.tooltip": false,
-
-    "log_level": "CRITICAL",
-}
