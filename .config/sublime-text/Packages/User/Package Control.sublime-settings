@@ -2,31 +2,21 @@
     "bootstrapped": true,
     "in_process_packages": [],
 
-    "auto_upgrade": false,
+    "auto_upgrade": true,
 
     "installed_packages": [
         "Package Control",
 
-        "OverrideAudit",
-
-        // "PackageResourceViewer",
-        // "PackageDev",
-        // "AutomaticPackageReloader",
-
-
         "A File Icon",
         "Alignment",
         "BracketHighlighter",
-        "EditorConfig",
         "GitHubTools",
         "MoveTab",
 
-        // "View Bookmarks",
+        // "OverrideAudit",
 
 
-        // "Rust Enhanced",
-
-        "MarkdownEditing",
+        "Rust Enhanced",
 
         "Dockerfile Syntax Highlighting",
         "Protobuf Syntax Hightlighting",
@@ -38,26 +28,15 @@
 
         // "LSP",
 
-        "LSP-rust-analyzer",
-        "LSP-file-watcher-chokidar",
+        // "LSP-rust-analyzer",
 
-        "LSP-basedpyright",
-        "LSP-ruff",
+        // "LSP-basedpyright",
+        // "LSP-ruff",
 
-        "LSP-bash",
+        // "LSP-bash",
 
-        "LSP-dockerfile",
-        "LSP-json",
-        "LSP-yaml",
-
-        "LSP-copilot",
-        // "LSP-ltex-ls",
-
-
-        "OpenAI completion",
-
-
-        // "Debugger",
-        "Terminus",
+        // "LSP-dockerfile",
+        // "LSP-json",
+        // "LSP-yaml",
     ]
 }

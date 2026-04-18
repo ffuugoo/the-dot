@@ -1,23 +1,8 @@
 /*
 
-!/Installed Packages/
-!/Lib/
-!/Packages/
-
 !.gitignore
-
-
-/Packages/*
-
 !/Packages/User/
-
-!/Packages/Debugger/
-!/Packages/Rust Enhanced/
-
 !/Packages/Old School Cool/
 
-
+Package Control.user-ca-bundle
 OverrideAudit.status
-
-*.hidden-color-scheme
-*.user-ca-bundle
