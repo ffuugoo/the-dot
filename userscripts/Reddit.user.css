@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name        Reddit
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/Reddit.user.css
+
+@match       https://www.reddit.com/*
+==/UserStyle== */
+
+advertise-button,
+award-button,
+faceplate-dropdown-menu[slot="ssr-share-button"],
+shreddit-comment-share-button,
+faceplate-tracker[noun="games_drawer"],
+nav[aria-label="Primary"] > hr:nth-of-type(2),
+nav[aria-label="Primary"] > hr:nth-of-type(4),
+nav[aria-label="Reddit resources"],
+achievements-entrypoint,
+div.legal-links
+{
+    display: none !important;
+}

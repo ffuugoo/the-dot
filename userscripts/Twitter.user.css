@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name        Twitter
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/Twitter.user.css
+
+@match       https://x.com/*
+==/UserStyle== */
+
+nav[aria-label="Primary"] a[aria-label="Grok"],
+nav[aria-label="Primary"] a[aria-label="Jobs"],
+nav[aria-label="Primary"] a[aria-label="Premium"],
+nav[aria-label="Primary"] a[aria-label="Verified Orgs"],
+[data-testid="Dropdown"] a[href="/i/monetization"],
+[data-testid="Dropdown"] a[href^="https://ads.x.com/"],
+[data-testid="Dropdown"] a[href="/i/spaces/start"],
+[data-testid="super-upsell-UpsellButtonRenderProperties"],
+[data-testid="sidebarColumn"],
+div:has(> div > [data-testid="GrokDrawer"]),
+div:has(> div > [data-testid="DMDrawer"]),
+button[aria-label="Enhance your post with Grok"],
+button[aria-label="Grok actions"],
+button[aria-label="Share post"]
+{
+    display: none !important;
+}
+
+div:has(> button[aria-label="Bookmark"]) {
+    margin-right: 0px !important;
+}
