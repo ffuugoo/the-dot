@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "defaultMode": "dontAsk",
+
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable"
+  },
+
+  "sandbox": {
+    "enabled": true,
+
+    "failIfUnavailable": true,
+
+    "autoAllowBashIfSandboxed": false,
+    "allowUnsandboxedCommands": false,
+    "excludedCommands": [],
+
+    "filesystem": {
+      "denyRead": [],
+      "denyWrite": []
+    },
+
+    "enableWeakerNetworkIsolation": false,
+
+    "network": {
+      "allowAllUnixSockets": false,
+      "allowLocalBinding": false,
+
+      "allowedDomains": [],
+      "allowUnixSockets": []
+    }
+  }
+}
