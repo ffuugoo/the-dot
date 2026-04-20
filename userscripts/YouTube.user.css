@@ -1,0 +1,95 @@
+/* ==UserStyle==
+@name        YouTube
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/YouTube.user.css
+
+@match       https://*.youtube.com/*
+==/UserStyle== */
+
+ytm-app:has(ytm-feed-filter-chip-bar-renderer) {
+    padding-top: 0px !important;
+}
+
+ytd-rich-item-renderer[rendered-from-rich-grid] {
+    --ytd-rich-grid-item-margin: 20px !important;
+    --ytd-rich-grid-gutter-margin: 0px !important;
+}
+
+ytm-feed-filter-chip-bar-renderer,
+ytm-rich-section-renderer,
+ytm-item-section-renderer:has(ytm-reel-shelf-renderer),
+ytm-pivot-bar-item-renderer:has(.pivot-shorts),
+ytm-subscribe-button-renderer,
+ytm-video-description-header-renderer div.clickable-metadata,
+ytm-video-description-infocards-section-renderer,
+ytm-item-section-renderer:has(a[href="/feed/podcasts"]),
+ytm-item-section-renderer:has(a[href^="/feed/storefront"]),
+ytm-item-section-renderer:has(a[href="/premium"]),
+ytm-item-section-renderer:has(a[href^="https://support.google.com/youtube/"])
+{
+    display: none !important;
+}
+
+#frosted-glass {
+    height: 56px !important;
+}
+
+ytd-masthead #country-code,
+ytd-masthead #voice-search-button,
+ytd-masthead ytd-button-renderer:has(button[aria-label="Create"])
+{
+    display: none !important;
+}
+
+ytd-topbar-logo-renderer #country-code,
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-guide-entry-renderer:has(a[title="You"]),
+ytd-guide-entry-renderer:has(a[title="Your videos"]),
+ytd-guide-entry-renderer:has(a[title="Your podcasts"]),
+ytd-guide-entry-renderer:has(a[title="All subscriptions"]) > h3:has(> #guide-section-title),
+ytd-guide-section-renderer:nth-child(2) > h3:has(> yt-formatted-string),
+ytd-guide-entry-renderer #newness-dot,
+ytd-guide-entry-renderer:has(a[title="All subscriptions"]),
+ytd-guide-section-renderer:has(a[title="Music"]), /* Explore */
+ytd-guide-section-renderer:has(a[title="Movies"]), /* Explore */
+ytd-guide-section-renderer:has(a[title="YouTube Premium"]), /* More from YouTube */
+ytd-guide-entry-renderer:has(a[title="Report history"]),
+ytd-guide-entry-renderer:has(a[title="Help"]),
+ytd-guide-entry-renderer:has(a[title="Send feedback"]),
+ytd-guide-renderer #footer
+{
+    display: none !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-mini-guide-entry-renderer[aria-label="You"]
+{
+    display: none !important;
+}
+
+#header:has(ytd-feed-filter-chip-bar-renderer),
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+ytd-rich-section-renderer,
+ytd-reel-shelf-renderer,
+ytd-video-meta-block ytd-channel-name ytd-badge-supported-renderer
+{
+    display: none !important;
+}
+
+/* View count */
+ytd-video-meta-block #metadata-line > span:nth-of-type(1),
+ytd-video-meta-block #metadata-line > span:nth-of-type(2)::before
+{
+    
+}
+
+ytd-subscribe-button-renderer,
+yt-button-view-model:has(button[title="Clip"]),
+ytd-watch-info-text yt-formatted-string > a,
+ytd-text-inline-expander div[slot="extra-content"],
+#expandable-metadata ytd-expandable-metadata-renderer,
+yt-related-chip-cloud-renderer
+{
+    display: none !important;
+}

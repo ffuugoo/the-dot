@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name        BBVA
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/BBVA.user.css
+
+@match       https://web.bbva.es/*
+==/UserStyle== */
+
+one-click-bar,
+personal-finance-management-my-everyday-operations-aside > div:has(> haunted-chat-panel-offer),
+div.m-dashboard__section:has(global-position-non-financial-heritage),
+div.m-dashboard__section:has(global-position-solar-panels-banner),
+global-position-experiences
+{
+    display: none !important;
+}

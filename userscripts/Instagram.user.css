@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name        Instagram
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/Instagram.user.css
+
+@match       https://www.instagram.com/*
+==/UserStyle== */
+
+div:has(> span > div > a[href="/reels/"]),
+a[href^="https://www.meta.ai/"],
+a[href^="https://aistudio.instagram.com/"],
+a[href^="https://www.threads.com/"],
+div:has(> div > div > nav > ul > li > a[href="https://about.instagram.com/"])
+{
+    display: none !important;
+}

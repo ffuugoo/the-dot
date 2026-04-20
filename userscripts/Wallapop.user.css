@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name        Wallapop
+
+@version     0.1
+@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/Wallapop.user.css
+
+@match       https://wallapop.com/*
+@match       https://*.wallapop.com/*
+==/UserStyle== */
+
+.Search__topAdWrapper,
+.SearchUnified__topAdWrapper,
+section:has(> div > [data-testid="ad-skeleton"])
+{
+    display: none !important;
+}
