@@ -1,4 +1,4 @@
-theme = ayu_light
+theme = light:Ayu Light, dark:Ayu Mirage
 
 font-family = Monaco
 font-size = 14
