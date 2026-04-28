@@ -113,10 +113,10 @@ function parse-config {
             fi
 
             case ${dotfile:t} in
-                .DS_Store|.git|.gitmodules) continue ;;
+                .DS_Store|.git|.gitmodules|.ropeproject) continue ;;
             esac
 
-            if [[ ${dotfile:t} == .gitignore && ${dotfile:h} != '' ]]; then
+            if [[ ${dotfile:t} == .gitignore && ${dotfile:h} != '.' ]]; then
                 continue
             fi
 
