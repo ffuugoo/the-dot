@@ -1,12 +1,15 @@
-declare CARGO=$HOME/.cargo/bin
-declare PYTHON=$HOME/Library/Python/3.14/bin:/opt/homebrew/opt/python@3.14/libexec/bin
-declare BREW=/opt/homebrew/bin:/opt/homebrew/sbin
-declare ORBSTACK=$HOME/.orbstack/bin
+declare LOCAL=~/.local/bin:~/.cargo/bin:~/Library/Python/3.14/bin
 
-export PATH=~/.local/bin:$CARGO:$PYTHON:$BREW:$ORBSTACK:$PATH
+declare ORBSTACK=~/.orbstack/bin
 
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_INSTALL_CLEANUP=1
+declare BREW=/opt/homebrew
+declare RUST=$BREW/opt/rustup/bin
+declare PYTHON=$BREW/opt/python/libexec/bin
+declare MAKE=$BREW/opt/make/libexec/gnubin
+
+export PATH=$LOCAL:$ORBSTACK:$RUST:$PYTHON:$MAKE:$PATH
+
+export HOMEBREW_NO_ENV_HINTS=1
 
 if [[ -d /Library/Developer/CommandLineTools/usr/lib ]]; then
     export DYLD_FALLBACK_LIBRARY_PATH=/Library/Developer/CommandLineTools/usr/lib
