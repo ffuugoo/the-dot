@@ -41,7 +41,7 @@ function scan {
 
     for file in $@; do
         case ${file:e} in
-            (nes|sfc|z64|gb|gbc|gba|md|32x|cue|bin|iso)(|~))
+            (nes|sfc|z64|gb|gbc|gba|nds|md|32x|cue|bin|iso|rvz)(|~))
                 roms+=( $file )
             ;;
 
