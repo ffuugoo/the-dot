@@ -1,7 +1,8 @@
 .DS_Store
 
-.idea/
-.vscode/
+.zed/
+.claude/
+.ropeproject/
 
 *.sublime-project
 *.sublime-workspace

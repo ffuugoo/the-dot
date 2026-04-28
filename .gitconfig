@@ -10,9 +10,20 @@
 	editor = zed --wait
 	pager = less -FR -+X
 
+[diff]
+	algorithm = histogram
+	submodule = log
+
 [merge]
+	conflictstyle = zdiff3
 	tool = smerge
 
 [mergetool "smerge"]
 	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true
+
+[submodule]
+	recurse = true
+
+[status]
+	submodulesummary = 1
