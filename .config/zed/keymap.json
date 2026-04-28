@@ -18,21 +18,21 @@
       "ctrl-f": null,
       "ctrl-b": null,
       "ctrl-shift-f": null,
-      "ctrl-shift-b": null
+      "ctrl-shift-b": null,
     }
   },
   {
     "context": "Editor && (showing_completions || showing_code_actions)",
     "bindings": {
       "tab": "editor::ContextMenuNext",
-      "shift-tab": "editor::ContextMenuPrevious"
+      "shift-tab": "editor::ContextMenuPrevious",
     }
   },
   {
-    "context": "MessageEditor > Editor",
+    "context": "AcpThread > Editor",
+    "use_key_equivalents": true,
     "bindings": {
-      "enter": "editor::Newline",
-      "cmd-enter": "agent::Chat"
+      "cmd-enter": "agent::Chat",
     }
   }
 ]
