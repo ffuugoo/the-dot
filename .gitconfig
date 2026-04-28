@@ -10,7 +10,11 @@
 	editor = zed --wait
 	pager = less -FR -+X
 
+[diff]
+	algorithm = histogram
+
 [merge]
+	conflictstyle = zdiff3
 	tool = smerge
 
 [mergetool "smerge"]
