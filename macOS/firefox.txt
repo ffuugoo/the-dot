@@ -1,9 +1,0 @@
-ArkenFox
-uBlock Origin
-1Password
-LanguageTool
-Refined GitHub
-Rust Search Extension
-SponsorBlock
-Web Scrobbler
-Select like a Boss
