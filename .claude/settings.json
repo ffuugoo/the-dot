@@ -34,5 +34,18 @@
       "type": "command",
       "command": "zsh /Users/ffuugoo/.claude/statusline.sh"
     }
+  },
+
+  "enabledPlugins": {
+    "caveman@caveman": true
+  },
+
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
   }
 }
