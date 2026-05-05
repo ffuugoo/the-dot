@@ -39,7 +39,8 @@
   "enabledPlugins": {
     "caveman@caveman": true,
     "github@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "qdrant@qdrant": true
   },
 
   "extraKnownMarketplaces": {
@@ -47,6 +48,12 @@
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "qdrant": {
+      "source": {
+        "source": "github",
+        "repo": "qdrant/skills"
       }
     }
   }
