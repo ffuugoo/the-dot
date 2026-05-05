@@ -37,7 +37,8 @@
   },
 
   "enabledPlugins": {
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "github@claude-plugins-official": true
   },
 
   "extraKnownMarketplaces": {
