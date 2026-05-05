@@ -8,14 +8,15 @@ uv
 node
 
 rustup
+
+protobuf
+maturin
+
 cargo-binstall
 cargo-expand
 cargo-nextest
+cargo-spellcheck
 cargo-sweep
-maturin
-rusty-hook
-
-protobuf
 
 messense/macos-cross-toolchains/aarch64-unknown-linux-gnu
 mingw-w64
@@ -30,8 +31,10 @@ ninja
 gh
 romkatv/gitstatus/gitstatus
 httpie
+just
 jq
 
 kepubify
 lgogdownloader
+
 sevenzip

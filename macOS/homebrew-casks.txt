@@ -1,5 +1,6 @@
 alt-tab
-linearmouse
+scroll-reverser
+sanesidebuttons
 
 pearcleaner
 apparency

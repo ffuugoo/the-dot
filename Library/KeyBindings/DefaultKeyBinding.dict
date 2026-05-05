@@ -1,0 +1,15 @@
+// Docs:
+// - https://ss64.com/mac/syntax-keybindings.html
+// - https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html
+
+{
+    "\UF729"   = moveToBeginningOfLine:;                        // Home
+    "\UF72B"   = moveToEndOfLine:;                              // End
+    "$\UF729"  = moveToBeginningOfLineAndModifySelection:;      // Shift+Home
+    "$\UF72B"  = moveToEndOfLineAndModifySelection:;            // Shift+End
+
+    "@\UF729"  = moveToBeginningOfDocument:;                    // Cmd+Home
+    "@\UF72B"  = moveToEndOfDocument:;                          // Cmd+End
+    "@$\UF729" = moveToBeginningOfDocumentAndModifySelection:;  // Cmd+Shift+Home
+    "@$\UF72B" = moveToEndOfDocumentAndModifySelection:;        // Cmd+Shift+End
+}
