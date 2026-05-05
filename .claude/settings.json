@@ -38,7 +38,8 @@
 
   "enabledPlugins": {
     "caveman@caveman": true,
-    "github@claude-plugins-official": true
+    "github@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
 
   "extraKnownMarketplaces": {
