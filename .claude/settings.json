@@ -28,6 +28,11 @@
 
       "allowedDomains": [],
       "allowUnixSockets": []
+    },
+
+    "statusLine": {
+      "type": "command",
+      "command": "zsh /Users/ffuugoo/.claude/statusline.sh"
     }
   }
 }
