@@ -1,11 +1,8 @@
 {
-  "git_panel": {
-    "dock": "left"
-  },
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Mirage"
+    "dark": "Ayu Mirage",
   },
 
   "icon_theme": "Bearded Icons",
@@ -17,7 +14,7 @@
   "buffer_font_size": 14,
 
   "buffer_line_height": {
-    "custom": 1.4
+    "custom": 1.4,
   },
 
 
@@ -59,25 +56,25 @@
   "show_completion_documentation": true,
 
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
   },
 
   "diagnostics": {
-    "include_warnings": true
+    "include_warnings": true,
   },
 
 
   "languages": {
     "Rust": {
-      "enable_language_server": true
+      "enable_language_server": true,
     }
   },
 
   "lsp": {
     "rust-analyzer": {
-      // "binary": {
-      //   "path": "/Users/ffuugoo/Library/Application Support/Zed/languages/rust-analyzer/rust-analyzer",
-      // },
+      "binary": {
+        "path": "/opt/homebrew/opt/rustup/bin/rust-analyzer",
+      },
 
       "initialization_options": {
         "cargo": {
@@ -94,7 +91,7 @@
           "extraEnv": {},
 
           "noDeps": false,
-          "targetDir": null
+          "targetDir": null,
         },
 
         "checkOnSave": true,
@@ -112,7 +109,7 @@
           "extraArgs": [],
           "extraEnv": {},
 
-          "ignore": []
+          "ignore": [],
         },
 
         "diagnostics": {
@@ -123,7 +120,7 @@
 
           "warningsAsInfo": [],
           "warningsAsHint": [],
-          "disabled": []
+          "disabled": [],
         },
 
         "workspace": {
@@ -131,26 +128,26 @@
             "search": {
               "scope": "workspace",
               "kind": "all_symbols",
-              "limit": 128
+              "limit": 128,
             }
           }
         },
 
         "references": {
           "excludeImports": true,
-          "excludeTests": true
+          "excludeTests": true,
         },
 
         "signatureInfo": {
           "detail": "parameters",
-          "documentation": { "enable": false }
+          "documentation": { "enable": false },
         },
 
         "completion": {
           "fullFunctionSignatures": { "enable": false },
 
           "callable": {
-            "snippets": "fill_arguments"
+            "snippets": "fill_arguments",
           },
 
           "autoimport": { "enable": true },
@@ -158,7 +155,7 @@
           "postfix": { "enable": true },
 
           "autoself": { "enable": false },
-          "termSearch": { "enable": false }
+          "termSearch": { "enable": false },
         },
 
         "imports": {
@@ -166,22 +163,22 @@
 
           "granularity": {
             "group": "crate",
-            "enforce": false
+            "enforce": false,
           },
 
           "merge": {
-            "glob": true
+            "glob": true,
           },
 
           "prefix": "self",
 
           "preferPrelude": false,
-          "preferNoStd": false
+          "preferNoStd": false,
         },
 
         "assist": {
           "expressionFillDefault": "todo",
-          "emitMustUse": false
+          "emitMustUse": false,
         },
 
         "semanticHighlighting": {
@@ -189,7 +186,7 @@
 
           "operator": {
             "enable": true,
-            "specialization": { "enable": false }
+            "specialization": { "enable": false },
           },
 
           "punctuation": {
@@ -199,7 +196,7 @@
             "punctuation": {
               "separate": {
                 "macro": {
-                  "bang": false
+                  "bang": false,
                 }
               }
             }
@@ -207,11 +204,11 @@
 
           "doc": {
             "comment": {
-              "inject": { "enable": true }
+              "inject": { "enable": true },
             }
           },
 
-          "nonStandardTokens": true
+          "nonStandardTokens": true,
         },
 
         "inlayHints": {
@@ -223,7 +220,7 @@
           "typeHints": {
             "enable": true,
             "hideNamedConstructor": true,
-            "hideClosureInitialization": true
+            "hideClosureInitialization": true,
           },
 
           "closureReturnTypeHints": { "enable": "with_block" },
@@ -236,7 +233,7 @@
 
           "lifetimeElisionHints": {
             "enable": "skip_trivial",
-            "useParameterNames": true
+            "useParameterNames": true,
           },
 
           "reborrowHints": { "enable": "never" },
@@ -245,7 +242,7 @@
           "expressionAdjustmentHints": {
             "enable": "never",
             "hideOutsideUnsafe": true,
-            "mode": "prefix"
+            "mode": "prefix",
           },
 
           "discriminantHints": { "enable": "never" },
@@ -253,7 +250,7 @@
 
           "closingBraceHints": {
             "enable": false,
-            "minLines": 25
+            "minLines": 25,
           }
         },
 
@@ -296,7 +293,7 @@
           "show": {
             "fields": 5,
             "enumVariants": 5,
-            "traitAssocItems": null
+            "traitAssocItems": null,
           },
 
           "memoryLayout": {
@@ -304,7 +301,7 @@
             "size": "decimal",
             "alignment": "decimal",
             "offset": "decimal",
-            "niches": false
+            "niches": false,
           },
 
           "actions": {
@@ -322,14 +319,14 @@
 
         "rustfmt": {
           "rangeFormatting.enable": true,
-          "extraArgs": ["+nightly"]
+          "extraArgs": ["+nightly"],
         },
 
         "joinLines": {
           "joinAssignments": true,
           "joinElseIf": true,
           "unwrapTrivialBlock": true,
-          "removeTrailingComma": true
+          "removeTrailingComma": true,
         },
 
         "procMacro": {
@@ -339,20 +336,20 @@
         },
 
         "rust": {
-          "analyzerTargetDir": false
+          "analyzerTargetDir": false,
         },
 
         "interpret": {
-          "tests": false
+          "tests": false,
         },
 
         "notifications": {
-          "cargoTomlNotFound": true
+          "cargoTomlNotFound": true,
         },
 
         "cachePriming": {
           "enable": true,
-          "numThreads": 0
+          "numThreads": 0,
         }
       }
     }
@@ -363,7 +360,7 @@
 
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "subtle"
+    "mode": "subtle",
   },
 
 
@@ -383,7 +380,7 @@
     "use_modifier_to_send": true,
     "enable_feedback": false,
 
-    "default_profile": "ask",
+    "default_profile": "minimal",
 
     "tool_permissions": {
       "default": "confirm",
@@ -391,83 +388,75 @@
     },
 
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
-      "enable_thinking": false
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "effort": "medium",
+      "enable_thinking": true,
     },
 
-    "favorite_models": [
-      {
-        "provider": "copilot_chat",
-        "model": "claude-sonnet-4.5",
-        "enable_thinking": false
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-opus-4.5",
-        "enable_thinking": false
-      }
-    ]
+    "favorite_models": [],
   },
 
   "agent_servers": {
     "claude-acp": {
-      "type": "registry"
+      "type": "registry",
+    },
+    "codex-acp": {
+      "type": "registry",
     }
   },
 
 
   "jupyter": {
-    "enabled": false
+    "enabled": false,
   },
 
   "journal": {
     "path": "~",
-    "hour_format": "hour24"
+    "hour_format": "hour24",
   },
 
 
   "file_types": {
-    "JSONC": ["sublime-settings", "sublime-keymap", "sublime-mousemap"]
+    "JSONC": ["sublime-settings", "sublime-keymap", "sublime-mousemap"],
   },
 
 
   "tab_bar": {
     "show": true,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
 
   "preview_tabs": {
     "enabled": true,
     "enable_preview_from_file_finder": true,
-    "enable_keep_preview_on_code_navigation": true
+    "enable_keep_preview_on_code_navigation": true,
   },
 
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": false,
-    "selections_menu": false
+    "selections_menu": false,
   },
 
   "gutter": {
     "line_numbers": true,
     "runnables": false,
     "breakpoints": true,
-    "folds": true
+    "folds": true,
   },
 
   "git": {
     "git_gutter": "tracked_files",
-    "inline_blame": {
-      "enabled": false
-    }
+    "inline_blame": { "enabled": false },
+    "worktree_directory": ".worktrees",
   },
 
   "minimap": {
     "show": "always",
     "thumb": "hover",
     "thumb_border": "none",
-    "current_line_highlight": null
+    "current_line_highlight": "line",
   },
 
   "project_panel": {
@@ -480,7 +469,12 @@
     "auto_reveal_entries": false,
 
     "default_width": 300,
-    "indent_size": 15
+    "indent_size": 15,
+  },
+
+  "git_panel": {
+    "button": true,
+    "dock": "left",
   },
 
   "outline_panel": {
@@ -490,12 +484,12 @@
     "auto_reveal_entries": false,
 
     "default_width": 300,
-    "indent_size": 15
+    "indent_size": 15,
   },
 
   "collaboration_panel": {
     "button": true,
-    "dock": "right"
+    "dock": "right",
   },
 
 
@@ -503,19 +497,23 @@
 
   "calls": {
     "mute_on_join": true,
-    "share_on_join": false
+    "share_on_join": false,
   },
 
 
   "auto_update": true,
 
   "auto_install_extensions": {
-    "html": false
+    "html": false,
+  },
+
+  "node": {
+    "ignore_system_version": true,
   },
 
 
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   }
 }

@@ -1,8 +1,8 @@
 .DS_Store
 
 .zed/
-.claude/
 .ropeproject/
+.worktrees/
 
 *.sublime-project
 *.sublime-workspace
