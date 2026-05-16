@@ -1,0 +1,17 @@
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+
+sandbox_mode = "read-only"
+approval_policy = "untrusted"
+
+[sandbox_workspace_write]
+network_access = false
+
+[tui]
+status_line = ["model", "current-dir", "git-branch"]
+status_line_use_colors = true
+show_tooltips = false
+
+[features]
+workspace_dependencies = false
