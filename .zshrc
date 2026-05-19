@@ -121,7 +121,7 @@ if functions gitstatus_query &>/dev/null; then
     ps[git-ref]="%25>...>%${psid[git-ref]}v%>>"
     ps[git-mods]="%(${psid[git-mods]}V.%${psid[git-mods]}v.)"
 
-    ps[git-status]="%(${psid[git-ref]}V. %F{black}${ps[git-ref]}${ps[git-mods]}%f.)"
+    ps[git-status]="%(${psid[git-ref]}V. %F{blue}${ps[git-ref]}${ps[git-mods]}%f.)"
 
     autoload -Uz add-zsh-hook && add-zsh-hook precmd gitstatus-precmd
 
