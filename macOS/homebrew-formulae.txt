@@ -2,7 +2,7 @@ bash
 shellcheck
 shellharden
 
-python
+python@3.14
 uv
 
 node
@@ -19,22 +19,23 @@ cargo-spellcheck
 cargo-sweep
 
 messense/macos-cross-toolchains/aarch64-unknown-linux-gnu
-mingw-w64
+# mingw-w64
 
 autoconf
 automake
 cmake
-pkgconf
 make
 ninja
+pkgconf
 
 gh
 romkatv/gitstatus/gitstatus
 httpie
-just
 jq
+just
+pandoc
+ripgrep
+sevenzip
 
 kepubify
 lgogdownloader
-
-sevenzip

@@ -1,6 +1,6 @@
 alt-tab
-scroll-reverser
 sanesidebuttons
+scroll-reverser
 
 pearcleaner
 apparency
@@ -29,6 +29,8 @@ macpacker
 rar
 
 chatgpt
+codex-app
+codex
 claude
 claude-code
 
@@ -39,3 +41,5 @@ steam
 autofirma
 
 ankerwork
+
+amneziavpn
