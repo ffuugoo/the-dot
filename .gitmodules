@@ -1,3 +1,0 @@
-[submodule "claude-for-safari"]
-	url = git@github.com:SDLLL/claude-for-safari.git
-	path = .config/claude/skills/claude-for-safari

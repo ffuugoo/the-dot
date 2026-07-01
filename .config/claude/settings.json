@@ -1,4 +1,14 @@
 {
+  "tui": "fullscreen",
+
+  "model": "opus[1m]",
+  "effortLevel": "high",
+
+  "awaySummaryEnabled": false,
+  "spinnerTipsEnabled": false,
+
+  "disableClaudeAiConnectors": true,
+
   "permissions": {
     "defaultMode": "dontAsk",
 
@@ -28,33 +38,11 @@
 
       "allowedDomains": [],
       "allowUnixSockets": []
-    },
-
-    "statusLine": {
-      "type": "command",
-      "command": "zsh /Users/ffuugoo/.claude/statusline.sh"
     }
   },
 
-  "enabledPlugins": {
-    "caveman@caveman": true,
-    "github@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "qdrant@qdrant": true
-  },
-
-  "extraKnownMarketplaces": {
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
-      }
-    },
-    "qdrant": {
-      "source": {
-        "source": "github",
-        "repo": "qdrant/skills"
-      }
-    }
+  "statusLine": {
+    "type": "command",
+    "command": "zsh /Users/ffuugoo/.claude/statusline.sh"
   }
 }
