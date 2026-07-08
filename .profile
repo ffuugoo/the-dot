@@ -10,6 +10,7 @@ declare MAKE=$BREW/opt/make/libexec/gnubin
 export PATH=$LOCAL:$ORBSTACK:$RUST:$PYTHON:$MAKE:$PATH
 
 export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_REQUIRE_TAP_TRUST=1
 
 if [[ -d /Library/Developer/CommandLineTools/usr/lib ]]; then
     export DYLD_FALLBACK_LIBRARY_PATH=/Library/Developer/CommandLineTools/usr/lib
