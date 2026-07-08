@@ -1,11 +1,10 @@
 ---
 name: zsh
 description: >-
-  Use when writing, reviewing, or editing shell scripts, Zsh scripts, dotfiles,
-  shell startup files, completion setup, prompts, zstyle configuration, or shell
-  utilities. Prefer this skill whenever the user asks about Zsh or shell scripts
-  in general, unless they specifically mention another shell such as Bash, Fish,
-  etc.
+  Use when writing, reviewing, or editing shell scripts, Zsh scripts, shell utilities,
+  dotfiles, shell startup files, prompts, completion setup or zstyle configuration.
+  Prefer this skill whenever the user asks about Zsh or shell scripts in general,
+  unless they specifically mention another shell such as Bash, Fish, etc.
 ---
 
 # Zsh 🐚
@@ -16,7 +15,7 @@ Use zsh as zsh, not as portable POSIX shell, unless the user explicitly asks for
 
 - Prefer compact, idiomatic zsh over portable shell ceremony
 - Write scripts for known environments, not public defensive CLIs, unless asked otherwise
-- Prefer readable density: use zsh-specific constructs when they make the code shorter or clearer
+- Prefer readable density: use zsh-specific constructs when they make the code shorter or cleaner
 
 ## Script Shape
 
@@ -126,11 +125,11 @@ Use zsh as zsh, not as portable POSIX shell, unless the user explicitly asks for
 
 - See [`CHEAT.md`] for the condensed working reference
 - When exact behavior matters, render a manpage with `man $manpage | col -bx`
-- Use [`INDEX.md`] to select the relevant zsh manpage; use [`index.sh`] to regenerate [`INDEX.md`]
-- For concrete style examples, inspect [`man.sh`] for a short non-trivial utility and
-  [`index.sh`] for top-to-bottom document-generation structure
+- Use [`INDEX.md`] to select the relevant zsh manpage
+- For concrete style examples, inspect [`man.sh`] for a short non-trivial utility
+  and [`index.sh`] for top-to-bottom document-generation structure
 
 [`CHEAT.md`]: CHEAT.md
 [`INDEX.md`]: INDEX.md
-[`index.sh`]: index.sh
 [`man.sh`]: man.sh
+[`index.sh`]: index.sh

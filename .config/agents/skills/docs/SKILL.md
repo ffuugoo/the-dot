@@ -2,22 +2,19 @@
 name: docs
 description: >-
   Use when looking up reference documentation for installed tools, languages,
-  libraries, or services. Covers manpages, web docs, and GitHub-hosted docs.
+  libraries, or services, including Zed, Sublime Text, Sublime Merge, Ghostty,
+  GitHub, Rust, rust-analyzer, and Acorn. Covers manpages, web-hosted and
+  GitHub-hosted docs.
 ---
 
-# Docs 🦆
+# Docs 👩‍⚕️
 
-How to fetch documentation from common sources, in order of preference.
+How to fetch documentation from different sources.
 
 ## Manpages
 
-Render with `col -bx` so the output stays plain text without backspace overstrike
-
-```zsh
-man <page> | col -bx
-```
-
-For wider output, set `MANWIDTH`:
+Read local manpages with `man`. Set `MANWIDTH` for wider output and pipe through `col -bx`
+to strip backspace overstrike.
 
 ```zsh
 MANWIDTH=100 man <page> | col -bx
@@ -25,51 +22,24 @@ MANWIDTH=100 man <page> | col -bx
 
 ## Web Pages
 
-Prefer `WebFetch` when available; it handles HTML-to-text conversion and follows redirects
-
-Fallback when `WebFetch` is not available:
-
-```zsh
-curl -sL <url>
-```
-
-`-s` silences progress, `-L` follows redirects. Pipe to a converter for readable output
-
-## HTML to Markdown
-
-Convert HTML to GitHub-flavored Markdown with `pandoc`:
+Prefer `WebFetch` tool when available, it handles HTML-to-text conversion and follows redirects.
+Otherwise fallback to `curl`. If needed, convert HTML to GitHub-flavored Markdown with `pandoc`.
 
 ```zsh
 curl -sL <url> | pandoc --from html --to gfm --wrap none
 ```
 
-Prereq: `pandoc` (`brew install pandoc`)
-
-Fallback without `pandoc` (plain text, loses links/structure):
-
-```zsh
-curl -sL <url> | lynx -stdin -dump -nolist
-# or
-curl -sL <url> | w3m -dump -T text/html
-```
-
 ## GitHub-Hosted Docs
 
-Use `gh` to browse files and directories in a repository without cloning
+Use `gh api` to browse files and directories in a remote repository without cloning it locally.
 
-List directory contents:
-
-```zsh
-gh api repos/<owner>/<repo>/contents/<path>
-```
-
-Returns JSON with file metadata. Filter paths with `--jq`:
+List single directory contents:
 
 ```zsh
-gh api repos/<owner>/<repo>/contents/docs --jq '.[].path'
+gh api repos/<owner>/<repo>/contents/<dir> --jq '.[].path'
 ```
 
-Full recursive tree (all files):
+Recursively scan the whole file tree:
 
 ```zsh
 gh api repos/<owner>/<repo>/git/trees/HEAD?recursive=1 \
@@ -79,38 +49,61 @@ gh api repos/<owner>/<repo>/git/trees/HEAD?recursive=1 \
 Read a single file as raw content:
 
 ```zsh
-gh api repos/<owner>/<repo>/contents/<path> \
+gh api repos/<owner>/<repo>/contents/<file> \
   -H 'Accept: application/vnd.github.raw'
 ```
 
-Or fetch raw URL directly:
+Or fetch raw URL directly. Raw URLs avoid base64 decoding and rate-limit weight of API calls.
 
 ```zsh
-curl -sL https://raw.githubusercontent.com/<owner>/<repo>/HEAD/<path>
+curl -sL https://raw.githubusercontent.com/<owner>/<repo>/HEAD/<file>
 ```
 
-Raw URLs avoid base64 decoding and rate-limit weight of API calls
 
-## Zed
+## Reference Links
 
-- https://github.com/zed-industries/zed/tree/main/docs/src
-- https://github.com/zed-industries/zed/blob/main/docs/src/SUMMARY.md
+Where to find documentation for specific tools, languages, and services.
 
-## Sublime Text
+### Zed
 
-- https://www.sublimetext.com/docs/index.html
+- [Docs](https://github.com/zed-industries/zed/tree/main/docs/src)
+- [Index](https://github.com/zed-industries/zed/blob/main/docs/src/SUMMARY.md)
 
-- https://github.com/sublimetext-io/docs.sublimetext.io/tree/master/docs
-- https://github.com/sublimetext-io/docs.sublimetext.io/blob/master/docs/.vitepress/config.ts
+### Sublime Text
 
-## rust-analyzer
+- [Docs](https://www.sublimetext.com/docs/)
 
-- https://github.com/rust-lang/rust-analyzer/tree/master/docs/book/src
-- https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/SUMMARY.md
+- [Community Docs](https://github.com/sublimetext-io/docs.sublimetext.io/tree/master/docs)
+- [Community Docs Index](https://github.com/sublimetext-io/docs.sublimetext.io/blob/master/docs/.vitepress/config.ts)
 
-## Ghostty
+### Sublime Merge
+
+- [Docs](https://www.sublimemerge.com/docs/)
+
+### Ghostty
 
 - `ghostty(1)` and `ghostty(5)` manpages
 
-- https://github.com/ghostty-org/website/tree/main/docs
-- https://github.com/ghostty-org/website/blob/main/docs/nav.json
+- [Docs](https://github.com/ghostty-org/website/tree/main/docs)
+- [Index](https://github.com/ghostty-org/website/blob/main/docs/nav.json)
+
+### GitHub
+
+- [Docs](https://docs.github.com/llms.txt)
+
+### Rust
+
+- [Rust Reference](https://github.com/rust-lang/reference/tree/master/src)
+- [Rust Reference Index](https://github.com/rust-lang/reference/blob/master/src/SUMMARY.md)
+
+- [Rustonomicon](https://github.com/rust-lang/nomicon/tree/master/src)
+- [Rustonomicon Index](https://github.com/rust-lang/nomicon/blob/master/src/SUMMARY.md)
+
+### rust-analyzer
+
+- [Docs](https://github.com/rust-lang/rust-analyzer/tree/master/docs/book/src)
+- [Index](https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/SUMMARY.md)
+
+### Acorn
+
+- [Docs](https://flyingmeat.com/acorn/docs/)
