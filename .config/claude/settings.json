@@ -4,10 +4,12 @@
   "model": "opus[1m]",
   "effortLevel": "high",
 
-  "awaySummaryEnabled": false,
-  "spinnerTipsEnabled": false,
+  "switchModelsOnFlag": false,
 
   "disableClaudeAiConnectors": true,
+
+  "awaySummaryEnabled": false,
+  "spinnerTipsEnabled": false,
 
   "permissions": {
     "defaultMode": "dontAsk",
