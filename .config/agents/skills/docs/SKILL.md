@@ -3,8 +3,8 @@ name: docs
 description: >-
   Use when looking up reference documentation for installed tools, languages,
   libraries, or services, including Zed, Sublime Text, Sublime Merge, Ghostty,
-  GitHub, Rust, rust-analyzer, and Acorn. Covers manpages, web-hosted and
-  GitHub-hosted docs.
+  GitHub, Rust, rust-analyzer, Qdrant, and Acorn. Covers manpages, web-hosted
+  and GitHub-hosted docs.
 ---
 
 # Docs 👩‍⚕️
@@ -103,6 +103,11 @@ Where to find documentation for specific tools, languages, and services.
 
 - [Docs](https://github.com/rust-lang/rust-analyzer/tree/master/docs/book/src)
 - [Index](https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/SUMMARY.md)
+
+### Qdrant
+
+- [Docs](https://qdrant.tech/documentation/index.md)
+- [API Reference](https://api.qdrant.tech/llms.txt)
 
 ### Acorn
 

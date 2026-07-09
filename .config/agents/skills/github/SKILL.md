@@ -1,7 +1,8 @@
 ---
 name: github
 description: >-
-  Use for official GitHub documentation and basic gh CLI operations
+  Use for official GitHub documentation, basic `gh` CLI operations,
+  and installing, updating, or removing agent skills with `gh skill`
 ---
 
 # GitHub 🐙

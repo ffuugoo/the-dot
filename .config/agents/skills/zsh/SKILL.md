@@ -124,7 +124,7 @@ Use zsh as zsh, not as portable POSIX shell, unless the user explicitly asks for
 ## References
 
 - See [`CHEAT.md`] for the condensed working reference
-- When exact behavior matters, render a manpage with `man $manpage | col -bx`
+- When exact behavior matters, render a manpage with `MANWIDTH=100 man $manpage | col -bx`
 - Use [`INDEX.md`] to select the relevant zsh manpage
 - For concrete style examples, inspect [`man.sh`] for a short non-trivial utility
   and [`index.sh`] for top-to-bottom document-generation structure
