@@ -33,8 +33,8 @@ function parse-config {
     cd $repo
     trap 'cd -' EXIT
 
-    if [[ ! -f the-dot.conf ]]; then
-        echo "Config file ${repo/$HOME/~}/the-dot.conf does not exist" >&2
+    if [[ ! -f dots.conf ]]; then
+        echo "Config file ${repo/$HOME/~}/dots.conf does not exist" >&2
         return 1
     fi
 
@@ -47,7 +47,7 @@ function parse-config {
 
     declare line=0
 
-    for directive in "${(@f)$(< the-dot.conf)}"
+    for directive in "${(@f)$(< dots.conf)}"
     do
         (( line += 1 ))
 
