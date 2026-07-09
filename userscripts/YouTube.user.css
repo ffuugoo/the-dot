@@ -2,7 +2,7 @@
 @name        YouTube
 
 @version     0.1
-@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/YouTube.user.css
+@updateURL   https://github.com/ffuugoo/dots/raw/refs/heads/main/userscripts/YouTube.user.css
 
 @match       https://*.youtube.com/*
 ==/UserStyle== */

@@ -2,7 +2,7 @@
 @name        Wallapop
 
 @version     0.1
-@updateURL   https://github.com/ffuugoo/the-dot/raw/refs/heads/main/userscripts/Wallapop.user.css
+@updateURL   https://github.com/ffuugoo/dots/raw/refs/heads/main/userscripts/Wallapop.user.css
 
 @match       https://wallapop.com/*
 @match       https://*.wallapop.com/*
