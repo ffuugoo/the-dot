@@ -5,6 +5,9 @@
 [init]
 	defaultBranch = main
 
+[push]
+	default = upstream
+
 [core]
 	excludesFile = ~/.gitignore
 	editor = zed --wait
@@ -22,8 +25,8 @@
 	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true
 
-[submodule]
-	recurse = true
-
 [status]
 	submodulesummary = 1
+
+[submodule]
+	recurse = true
