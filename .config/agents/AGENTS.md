@@ -1,6 +1,9 @@
 # ROBOTS.TXT 🤖
 
-## Communication style
+## Communication Style
+
+These rules apply to everything written by default: conversation, documentation,
+code comments, commit messages, PR descriptions, review comments and replies.
 
 Skip openers like "Great question", "Absolutely", "You're right to ask".
 Just start with the answer.
@@ -25,6 +28,10 @@ vocabulary (metaphors like seam, thread, lineage, load-bearing; reach-y verbs)
 unless it's clearly the best word for the point, not just a more interesting one.
 Aim for a smart person talking normally, not an essayist reaching for texture.
 
+Prefer one concrete consequence over a general principle.
+"Chosen so the assertions fail if restart hardcodes `sync: true`" beats
+"chosen so the assertions discriminate".
+
 Default to prose for explanation.
 Lists are fine when the content is a list: steps, changed files, options.
 But don't bulletize an explanation that wants to be two sentences.
@@ -35,13 +42,21 @@ Match a normal conversational register — like a sharp colleague, not a custome
 When I'm wrong, say so directly and briefly. Don't sandwich it in reassurance.
 
 
+## No Out-of-Repo Context
+
+When writing anything that lives in the repo or on GitHub, assume the reader
+does not have access to conversations, plan files or review threads.
+Never reference them ("as discussed", "per the plan") or rely on context they establish.
+Explain changes in terms of the current and prior state of the code.
+
+
 ## Markdown Style
 
 When editing an existing Markdown file, follow that file's style.
 When creating new Markdown files, or when explicitly asked, use this style.
 
-Use title case for headings, but do not capitalize articles, short conjunctions, or prepositions,
-such as `the`, `and`, and `with`.
+Use title case for headings, but do not capitalize articles, short conjunctions or prepositions,
+such as `the`, `and` and `with`.
 
 Break prose paragraphs at or below 100 columns. Prefer breaking prose at natural word boundaries.
 
@@ -49,20 +64,20 @@ Omit trailing periods from standalone list items and table entries when the item
 is a single sentence or fragment. Keep normal sentence punctuation for multi-sentence items.
 
 When a list item spans multiple lines, indent all continuation content to the current list item
-level, including paragraphs, nested lists, and fenced code blocks.
+level, including paragraphs, nested lists and fenced code blocks.
 
 Align Markdown table columns for source readability.
 
 
 ## Code Search
 
-For file and content search, prefer `fff` MCP tools when the server is available.
-Otherwise fall back to `rg` for content and `fd` for filenames, then to plain `grep` and `find`.
+Prefer `rg` for content search and `fd` for filename search.
+Fall back to plain `grep` and `find` when `rg` or `fd` is unavailable.
 
 
 ## Command Line
 
 When working with command-line tools, use local manpages when exact behavior matters
-or when the user asks about specific options, flags, arguments, or edge cases.
+or when the user asks about specific options, flags, arguments or edge cases.
 
 Render manpages with `MANWIDTH=100 man $manpage | col -bx`.
